@@ -1,0 +1,58 @@
+﻿<Window x:Class="TabMenu2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TabMenu2"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Height="600" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+    <Grid>
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF9C27B0">
+            <TextBlock Text="FizjoTerm" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines" />
+            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+                <materialDesign:PackIcon Kind="Power"/>
+            </Button>
+        </Grid>
+        <Grid Margin="0 60 0 0">
+            <!--<dragablz:TabablzControl>
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController/>
+                </dragablz:TabablzControl.InterTabController>-->
+            <TabControl>
+                <TabItem Header="PACJENCI">
+                    <Grid>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="170"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="170"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="262,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="PESEL" VerticalAlignment="Top" Width="170"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,139,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Adres" VerticalAlignment="Top" Width="397"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="262,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Telefon" VerticalAlignment="Top" Width="170"/>
+                        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="488,65,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
+                        <Button Content="Wyszukaj" HorizontalAlignment="Left" Margin="488,102,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
+                        <Button Content="Button" HorizontalAlignment="Left" Margin="488,139,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
+                        <DataGrid HorizontalAlignment="Left" Height="295" Margin="10,201,0,0" VerticalAlignment="Top" Width="1048"/>
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="SKIEROWANIA">
+                    <TextBlock Text="Amazing designs!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="242,0,732,0"/>
+                </TabItem>
+                <TabItem Header="WIZYTY">
+                    <TextBlock Text="Ask for any question!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </TabItem>
+                <TabItem Header="FIZJOTERAPEUCI">
+                    <TextBlock Text="Ask for any question!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </TabItem>
+                <TabItem Header="RAPORTY">
+                    <TextBlock Text="Ask for any question!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </TabItem>
+
+
+
+            </TabControl>
+            <!--</dragablz:TabablzControl>-->
+        </Grid>
+    </Grid>
+</Window>
