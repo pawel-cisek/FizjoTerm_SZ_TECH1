@@ -1,13 +1,21 @@
-﻿<Window x:Class="TabMenu2.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TabMenu2"
-        mc:Ignorable="d"
         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Height="600" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        xmlns:Projekt1="clr-namespace:Projekt1" x:Class="TabMenu2.MainWindow"
+        mc:Ignorable="d"
+        Height="600" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <Projekt1:DefaultConnection2DataSet x:Key="defaultConnection2DataSet"/>
+        <CollectionViewSource x:Key="patientsViewSource" Source="{Binding Patients, Source={StaticResource defaultConnection2DataSet}}"/>
+
+    </Window.Resources>
+
 
     <Grid>
         <Grid Height="60" VerticalAlignment="Top" Background="#FF9C27B0">
@@ -23,17 +31,37 @@
                 </dragablz:TabablzControl.InterTabController>-->
             <TabControl>
                 <TabItem Header="PACJENCI">
-                    <Grid>
-                        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="170"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="170"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" Margin="262,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="PESEL" VerticalAlignment="Top" Width="170"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" Margin="35,139,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Adres" VerticalAlignment="Top" Width="397"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" Margin="262,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Telefon" VerticalAlignment="Top" Width="170"/>
-                        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="488,65,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
-                        <Button Content="Wyszukaj" HorizontalAlignment="Left" Margin="488,102,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
-                        <Button Content="Button" HorizontalAlignment="Left" Margin="488,139,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
-                        <DataGrid HorizontalAlignment="Left" Height="295" Margin="10,201,0,0" VerticalAlignment="Top" Width="1048"/>
-
+                    <Grid DataContext="{StaticResource patientsViewSource}">
+                        <TextBox x:Name="TbName" HorizontalAlignment="Left" Height="23" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="170"/>
+                        <TextBox x:Name="TbSurname" HorizontalAlignment="Left" Height="23" Margin="35,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="170"/>
+                        <TextBox x:Name="TbPesel" HorizontalAlignment="Left" Height="23" Margin="262,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="PESEL" VerticalAlignment="Top" Width="170"/>
+                        <TextBox x:Name="TbAdress" HorizontalAlignment="Left" Height="23" Margin="35,139,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Adres" VerticalAlignment="Top" Width="397"/>
+                        <TextBox x:Name="TbPhone" HorizontalAlignment="Left" Height="23" Margin="262,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Telefon" VerticalAlignment="Top" Width="170"/>
+                        <Button x:Name="BtAdd" Content="Dodaj" HorizontalAlignment="Left" Margin="488,80,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="Button_Click"/>
+                        <Button x:Name="BtSearch" Content="Wyszukaj" HorizontalAlignment="Left" Margin="488,45,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtSearch_Click"/>
+                        <Button x:Name="BtDelete" Content="Usuń" HorizontalAlignment="Left" Margin="488,115,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtDelete_Click"/>
+                        <Button x:Name="BtViewAll" Content="Pokaż wszystkich" HorizontalAlignment="Left" Margin="488,150,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtViewAll_Click"/>
+                        
+                        <DataGrid x:Name="patientsDataGrid" MinColumnWidth ="80"  AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding }" Margin="10,245,10,36.6" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserAddRows="False" Background="White">
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="Purple"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Name}" Header="Imię" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="surnameColumn" Binding="{Binding Surname}" Header="Nazwisko" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="peselColumn" Binding="{Binding Pesel}" Header="PESEL" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="adressColumn" Binding="{Binding Adress}" Header="Adres" Width="150"/>
+                                <DataGridTextColumn x:Name="phoneColumn" Binding="{Binding Phone}" Header="Telefon" Width="SizeToHeader"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        
                     </Grid>
                 </TabItem>
                 <TabItem Header="SKIEROWANIA">
@@ -48,6 +76,7 @@
                 <TabItem Header="RAPORTY">
                     <TextBlock Text="Ask for any question!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </TabItem>
+                
 
 
 

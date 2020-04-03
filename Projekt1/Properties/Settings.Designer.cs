@@ -22,5 +22,27 @@ namespace Projekt1.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\DefaultConnec" +
+            "tion1.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string DefaultConnection1ConnectionString {
+            get {
+                return ((string)(this["DefaultConnection1ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Pawel\\DefaultConnect" +
+            "ion2.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string DefaultConnection2ConnectionString {
+            get {
+                return ((string)(this["DefaultConnection2ConnectionString"]));
+            }
+        }
     }
 }
