@@ -1,5 +1,0 @@
-C:\Users\Pawel\Desktop\SZT Projekt\FizjoTerm\Domain\bin\Debug\netstandard2.0\Domain.deps.json
-C:\Users\Pawel\Desktop\SZT Projekt\FizjoTerm\Domain\bin\Debug\netstandard2.0\Domain.dll
-C:\Users\Pawel\Desktop\SZT Projekt\FizjoTerm\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
-C:\Users\Pawel\Desktop\SZT Projekt\FizjoTerm\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
-C:\Users\Pawel\Desktop\SZT Projekt\FizjoTerm\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
