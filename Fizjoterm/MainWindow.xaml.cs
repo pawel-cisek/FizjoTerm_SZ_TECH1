@@ -33,34 +33,47 @@ namespace FizjoTerm
         
         private void BtAdd_Click(object sender, RoutedEventArgs e)
         {
-            Patient p1 = new Patient();
-            p1.Name = TbName.Text;
-            p1.Surname = TbSurname.Text;
-            p1.Adress = TbAdress.Text;
-            p1.Pesel = TbPesel.Text;
-            p1.Phone = TbPhone.Text;
-            Patient.AddPatient(p1, dbcontext);
-            patientDataGrid.Items.Refresh();
-            TbName.Clear(); TbAdress.Clear(); TbPesel.Clear(); TbPhone.Clear(); TbSurname.Clear();
+            if (TbName.Text != "" && TbSurname.Text != "")
+            {
+                if (Patient.PeselValidation(TbPesel.Text))
+                {
+                    MessageBoxResult result = System.Windows.MessageBox.Show("Czy zapisać pacjenta " + TbName.Text + " " + TbSurname.Text + "?", "Zapis", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        Patient.AddPatient(TbName.Text, TbSurname.Text, TbPesel.Text, TbAdress.Text, TbPhone.Text, dbcontext);
+                        patientDataGrid.Items.Refresh();
+                        TbName.Clear(); TbAdress.Clear(); TbPesel.Clear(); TbPhone.Clear(); TbSurname.Clear();
+                    }                    
+                }
+                else
+                {
+                    MessageBox.Show("Podaj poprawny numer PESEL!");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Podaj imię i nazwisko!");
+            }                 
         }
 
         private void BtDelete_Click(object sender, RoutedEventArgs e)
         {
             Patient p1 = (Patient)patientDataGrid.SelectedItem;
-            Patient.DeletePatient(p1, dbcontext);
+            if (p1 != null)
+            {
+                MessageBoxResult result = System.Windows.MessageBox.Show("Czy usunąć pacjenta " + TbName.Text + " " + TbSurname.Text + "?", "Usuwanie pacjenta", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Patient.DeletePatient(p1, dbcontext);
+                }
+            }            
             patientDataGrid.Items.Refresh();
         }
 
         private void BtSearch_Click(object sender, RoutedEventArgs e)
-        {
-            Patient p1 = new Patient();
-            p1.Name = TbName.Text;
-            p1.Surname = TbSurname.Text;
-            p1.Adress = TbAdress.Text;
-            p1.Pesel = TbPesel.Text;
-            p1.Phone = TbPhone.Text;
-
-            patientDataGrid.ItemsSource = Patient.SearchPatient(p1, dbcontext);
+        {           
+            patientDataGrid.ItemsSource = Patient.SearchPatient(TbName.Text, TbSurname.Text, TbPesel.Text, TbAdress.Text, TbPhone.Text, dbcontext);
         }
 
         private void BtViewAll_Click(object sender, RoutedEventArgs e)
@@ -88,22 +101,23 @@ namespace FizjoTerm
             TabMenu2.DefaultConnDataSetTableAdapters.ReferralTableAdapter defaultConnDataSetReferralTableAdapter = new TabMenu2.DefaultConnDataSetTableAdapters.ReferralTableAdapter();
             defaultConnDataSetReferralTableAdapter.Fill(defaultConnDataSet.Referral);
             System.Windows.Data.CollectionViewSource referralViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("referralViewSource")));
-            referralViewSource.View.MoveCurrentToFirst();
+            referralViewSource.Source = dbcontext.Referrals.Local;
         }
 
         private void BtAddReferral_Click(object sender, RoutedEventArgs e)
         {
-            Referral r1 = new Referral();
-            Patient p1 = CbPatient.SelectedItem as Patient;
-            r1.Diagnosis = TbDiagnosis.Text;
-            r1.Icd10 = TbIcd10.Text;
-            int NbOfDays; 
-            bool success = int.TryParse(TbNbOfDays.Text, out NbOfDays);
+            
+            int nbOfDays; 
+            bool success = int.TryParse(TbNbOfDays.Text, out nbOfDays);
             if (success)
-                r1.NbOfDays = NbOfDays;
+            {
+                Referral.AddReferral(TbDiagnosis.Text, TbIcd10.Text, nbOfDays, DpDateReferral.SelectedDate.Value, CbPatient.SelectedItem as Patient, dbcontext);
+            }
             else
+            {
                 MessageBox.Show("Podaj poprawną liczbę wizyt!");
-
+            }
+            referralDataGrid.Items.Refresh();
 
 
         }

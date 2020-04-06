@@ -95,6 +95,14 @@
     <Compile Include="Migrations\202004050741148_m1.designer.cs">
       <DependentUpon>202004050741148_m1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004061931555_p1.cs" />
+    <Compile Include="Migrations\202004061931555_p1.designer.cs">
+      <DependentUpon>202004061931555_p1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061934115_p2.cs" />
+    <Compile Include="Migrations\202004061934115_p2.designer.cs">
+      <DependentUpon>202004061934115_p2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Patient.cs" />
@@ -114,6 +122,12 @@
     </Compile>
     <EmbeddedResource Include="Migrations\202004050741148_m1.resx">
       <DependentUpon>202004050741148_m1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061931555_p1.resx">
+      <DependentUpon>202004061931555_p1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061934115_p2.resx">
+      <DependentUpon>202004061934115_p2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
