@@ -52,6 +52,25 @@ namespace FizjoTerm.Models
             }
         }
 
+        public static void DeleteReferral(Referral referral, ApplicationDbContext dbcontext)
+        {
+            try
+            {
+                dbcontext.Referrals.Remove(referral);
+                dbcontext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public static IEnumerable<Referral> SearchReferral (string diagnosis, string icd10, int nbofdays, DateTime datereferral, Patient patient, ApplicationDbContext dbcontext)
+        {
+            //Referral r1 = new Referral(diagnosis, icd10, nbofdays, datereferral, patient);
+            IEnumerable<Referral> results = dbcontext.Referrals.Local.Where(r => r.Patient.Equals(patient) && r.Diagnosis.Contains(diagnosis) && r.Icd10.Contains(icd10));
+            return results;
+        }
+        
     }
    
 }

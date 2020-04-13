@@ -37,7 +37,7 @@ namespace FizjoTerm
             {
                 if (Patient.PeselValidation(TbPesel.Text))
                 {
-                    MessageBoxResult result = System.Windows.MessageBox.Show("Czy zapisać pacjenta " + TbName.Text + " " + TbSurname.Text + "?", "Zapis", MessageBoxButton.YesNo);
+                    MessageBoxResult result = MessageBox.Show("Czy zapisać pacjenta " + TbName.Text + " " + TbSurname.Text + "?", "Zapis", MessageBoxButton.YesNo);
                     if (result == MessageBoxResult.Yes)
                     {
                         Patient.AddPatient(TbName.Text, TbSurname.Text, TbPesel.Text, TbAdress.Text, TbPhone.Text, dbcontext);
@@ -78,7 +78,8 @@ namespace FizjoTerm
 
         private void BtViewAll_Click(object sender, RoutedEventArgs e)
         {
-            patientDataGrid.ItemsSource = dbcontext.Patients.Local;
+             patientDataGrid.ItemsSource = dbcontext.Patients.Local;
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -93,33 +94,73 @@ namespace FizjoTerm
             dbcontext.Patients.Load();
             CollectionViewSource patientViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("patientViewSource")));
             patientViewSource.Source = dbcontext.Patients.Local;
-            patientDataGrid.SelectedIndex = 0;
-            patientDataGrid.Focus();
+
 
             CbPatient.ItemsSource = dbcontext.Patients.Local;
             // Load data into the table Referral. You can modify this code as needed.
             TabMenu2.DefaultConnDataSetTableAdapters.ReferralTableAdapter defaultConnDataSetReferralTableAdapter = new TabMenu2.DefaultConnDataSetTableAdapters.ReferralTableAdapter();
             defaultConnDataSetReferralTableAdapter.Fill(defaultConnDataSet.Referral);
-            System.Windows.Data.CollectionViewSource referralViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("referralViewSource")));
+            dbcontext.Referrals.Load();
+            CollectionViewSource referralViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("referralViewSource")));
             referralViewSource.Source = dbcontext.Referrals.Local;
+
         }
 
         private void BtAddReferral_Click(object sender, RoutedEventArgs e)
         {
             
-            int nbOfDays; 
-            bool success = int.TryParse(TbNbOfDays.Text, out nbOfDays);
-            if (success)
+            int nbOfDays;
+            bool success; 
+            if (CbPatient.SelectedItem != null && TbDiagnosis.Text != "" && TbIcd10.Text != "" && DpDateReferral.SelectedDate != null)
             {
-                Referral.AddReferral(TbDiagnosis.Text, TbIcd10.Text, nbOfDays, DpDateReferral.SelectedDate.Value, CbPatient.SelectedItem as Patient, dbcontext);
+                success = int.TryParse(TbNbOfDays.Text, out nbOfDays);
+                if (success)
+                {
+                    MessageBoxResult result = MessageBox.Show("Czy zapisać dla pacjenta " + ((Patient)CbPatient.SelectedItem).Name + " " + ((Patient)CbPatient.SelectedItem).Surname + "?", "Zapis", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        Referral.AddReferral(TbDiagnosis.Text, TbIcd10.Text, nbOfDays, DpDateReferral.SelectedDate.Value, CbPatient.SelectedItem as Patient, dbcontext);
+                        TbDiagnosis.Clear(); TbIcd10.Clear(); DpDateReferral.SelectedDate = null; TbNbOfDays.Clear(); CbPatient.SelectedItem = null;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Podaj poprawną liczbę wizyt!");
+                }
             }
             else
             {
-                MessageBox.Show("Podaj poprawną liczbę wizyt!");
+                MessageBox.Show("Uzupełnij wszystkie dane!");
+            }            
+            referralDataGrid.Items.Refresh();            
+        }
+
+        private void BtDeleteReferral_Click(object sender, RoutedEventArgs e)
+        {
+            Referral r1 = (Referral)referralDataGrid.SelectedItem;
+            if (r1 != null)
+            {
+                MessageBoxResult result = MessageBox.Show("Czy usunąć skierowanie dla pacjenta " + r1.Patient.Name + " " + r1.Patient.Surname + "?", "Usuwanie pacjenta", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Referral.DeleteReferral(r1, dbcontext);
+                }
             }
             referralDataGrid.Items.Refresh();
+        }
 
+        private void BtSearchReferral_Click(object sender, RoutedEventArgs e)
+        {
+            int nbOfDays;
+            int.TryParse(TbNbOfDays.Text, out nbOfDays);
+                
+                referralDataGrid.ItemsSource = Referral.SearchReferral(TbDiagnosis.Text, TbIcd10.Text, nbOfDays, DpDateReferral.SelectedDate.GetValueOrDefault(), CbPatient.SelectedItem as Patient, dbcontext);
+        }
 
+        private void BtShowAllReferrals_Click(object sender, RoutedEventArgs e)
+        {
+            referralDataGrid.ItemsSource = dbcontext.Referrals.Local;
+           
         }
     }
 }

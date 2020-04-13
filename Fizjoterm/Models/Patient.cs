@@ -100,5 +100,18 @@ namespace FizjoTerm.Models
         {
             return Surname +" " + Name + " " + Pesel;
         }
+
+        public override bool Equals(object obj)
+        {
+            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                Patient p = (Patient)obj;
+                return (Name == p.Name) && (Surname == p.Surname) && (Pesel == p.Pesel) && (Adress == p.Adress) && (Phone == p.Phone);
+            }
+        }
     }
 }

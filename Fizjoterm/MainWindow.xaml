@@ -70,13 +70,22 @@
 
                         <ComboBox x:Name="CbPatient" materialDesign:HintAssist.Hint="Pacjent"  HorizontalAlignment="Left" Margin="35,41,0,0" VerticalAlignment="Top" Width="334"/>
                         <Button x:Name="BtAddReferral" Content="Dodaj" Width="150" HorizontalAlignment="Left" Margin="469,41,0,0" VerticalAlignment="Top" Click="BtAddReferral_Click" />
-                        <Button x:Name="BtDeleteReferral" Content="Usuń" HorizontalAlignment="Left" Margin="469,78,0,0" VerticalAlignment="Top" Width="150"/>
-                        <Button x:Name="BtSearchReferral" Content="Wyszukaj" HorizontalAlignment="Left" Margin="469,115,0,0" VerticalAlignment="Top" Width="150"/>
-                        <Button x:Name="BtShowAllReferrals" Content="Pokaż wszystkie" HorizontalAlignment="Left" Margin="469,152,0,0" VerticalAlignment="Top" Width="150"/>
+                        <Button x:Name="BtDeleteReferral" Content="Usuń" HorizontalAlignment="Left" Margin="469,78,0,0" VerticalAlignment="Top" Width="150" Click="BtDeleteReferral_Click"/>
+                        <Button x:Name="BtSearchReferral" Content="Wyszukaj" HorizontalAlignment="Left" Margin="469,115,0,0" VerticalAlignment="Top" Width="150" Click="BtSearchReferral_Click"/>
+                        <Button x:Name="BtShowAllReferrals" Content="Pokaż wszystkie" HorizontalAlignment="Left" Margin="469,152,0,0" VerticalAlignment="Top" Width="150" Click="BtShowAllReferrals_Click"/>
                         <DatePicker x:Name="DpDateReferral" HorizontalAlignment="Left" Margin="35,152,0,0"  materialDesign:HintAssist.Hint="Data wystawienia" VerticalAlignment="Top" Width="334"/>
 
 
-                        <DataGrid x:Name="referralDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource referralViewSource}}" Margin="10,226,10.4,69" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        <DataGrid x:Name="referralDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" CanUserAddRows="False" ItemsSource="{Binding Source={StaticResource referralViewSource}}" Margin="10,226,10.4,69" RowDetailsVisibilityMode="VisibleWhenSelected">
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="Purple"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
                             <DataGrid.Columns>
                                 <DataGridTextColumn x:Name="referralIDColumn" Binding="{Binding ReferralID}" Header="Referral ID" IsReadOnly="True" Width="SizeToHeader"/>
                                 <DataGridTextColumn x:Name="patientIDColumn" Binding="{Binding PatientID}" Header="Patient ID" Width="SizeToHeader"/>
