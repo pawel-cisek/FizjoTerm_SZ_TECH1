@@ -15,9 +15,9 @@
         <CollectionViewSource x:Key="referralViewSource" Source="{Binding Referral, Source={StaticResource defaultConnDataSet}}"/>
     </Window.Resources>
     <Grid>
-        <Grid Height="60" VerticalAlignment="Top" Background="#FF9C27B0">
+        <Grid Height="31" VerticalAlignment="Top" Background="#FF9C27B0">
             <TextBlock Text="FizjoTerm" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines" />
-            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="BtClose" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtClose_Click">
                 <materialDesign:PackIcon Kind="Power"/>
             </Button>
         </Grid>
@@ -26,7 +26,7 @@
                 <dragablz:TabablzControl.InterTabController>
                     <dragablz:InterTabController/>
                 </dragablz:TabablzControl.InterTabController>-->
-            <TabControl>
+            <TabControl Margin="0,-30,0,0">
                 <TabItem Header="PACJENCI">
                     <Grid DataContext="{StaticResource patientViewSource}">
                         <TextBox x:Name="TbName" HorizontalAlignment="Left" Height="25" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="200"/>
@@ -87,19 +87,27 @@
                                 </Style>
                             </DataGrid.RowStyle>
                             <DataGrid.Columns>
-                                <DataGridTextColumn x:Name="referralIDColumn" Binding="{Binding ReferralID}" Header="Referral ID" IsReadOnly="True" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="patientIDColumn" Binding="{Binding PatientID}" Header="Patient ID" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="diagnosisColumn" Binding="{Binding Diagnosis}" Header="Diagnosis" Width="SizeToHeader"/>
+                                <!--<DataGridTextColumn x:Name="referralIDColumn" Binding="{Binding ReferralID}" Header="Referral ID" IsReadOnly="True" Width="SizeToHeader"/>-->
+                                <DataGridTextColumn x:Name="patientIDColumn"  Header="Pacjent" Width="200">
+                                <DataGridTextColumn.Binding>
+                                    <MultiBinding StringFormat="{}{0} {1} {2}">
+                                        <Binding Path="Patient.Name" />
+                                        <Binding Path="Patient.Surname" />
+                                        <Binding Path="Patient.Pesel" />
+                                        </MultiBinding>
+                                </DataGridTextColumn.Binding>
+                                </DataGridTextColumn>
+                                <DataGridTextColumn x:Name="diagnosisColumn" Binding="{Binding Diagnosis}" Header="Rozpoznanie" Width="200"/>
                                 <DataGridTextColumn x:Name="icd10Column" Binding="{Binding Icd10}" Header="Icd 10" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="nbOfDaysColumn" Binding="{Binding NbOfDays}" Header="Nb Of Days" Width="SizeToHeader"/>
-                                <DataGridTemplateColumn x:Name="dateReferralColumn" Header="Date Referral" Width="SizeToHeader">
+                                <DataGridTextColumn x:Name="nbOfDaysColumn" Binding="{Binding NbOfDays}" Header="Liczba zabiegów" Width="SizeToHeader"/>
+                                <DataGridTemplateColumn x:Name="dateReferralColumn" Header="Data wystawienia" Width="150">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <DatePicker SelectedDate="{Binding DateReferral, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                 </DataGridTemplateColumn>
-                                <DataGridTemplateColumn x:Name="dateSavedColumn" Header="Date Saved" Width="SizeToHeader">
+                                <DataGridTemplateColumn x:Name="dateSavedColumn" Header="Data zapisu" Width="150">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <DatePicker SelectedDate="{Binding DateSaved, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>

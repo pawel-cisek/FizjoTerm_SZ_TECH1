@@ -162,5 +162,10 @@ namespace FizjoTerm
             referralDataGrid.ItemsSource = dbcontext.Referrals.Local;
            
         }
+
+        private void BtClose_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }
