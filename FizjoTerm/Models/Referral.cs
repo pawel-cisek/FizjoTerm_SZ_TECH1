@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace TabMenu2.Models
 {
@@ -33,5 +34,39 @@ namespace TabMenu2.Models
             this.DateSaved = DateTime.Now;
             this.Patient = patient;
         }
+
+        public static void AddReferral(string diagnosis, string icd10, int nbofdays, DateTime datereferral, Patient patient, ApplicationDbContext dbcontext)
+        {
+            Referral r1 = new Referral(diagnosis, icd10, nbofdays, datereferral, patient);
+            try
+            {
+                dbcontext.Referrals.Add(r1);
+                dbcontext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public static void DeleteReferral(Referral referral, ApplicationDbContext dbcontext)
+        {
+            try
+            {
+                dbcontext.Referrals.Remove(referral);
+                dbcontext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public static IEnumerable<Referral> SearchReferral(string diagnosis, string icd10, int nbofdays, DateTime datereferral, Patient patient, ApplicationDbContext dbcontext)
+        {
+            //Referral r1 = new Referral(diagnosis, icd10, nbofdays, datereferral, patient);
+            IEnumerable<Referral> results = dbcontext.Referrals.Local.Where(r => r.Patient.Equals(patient) && r.Diagnosis.Contains(diagnosis) && r.Icd10.Contains(icd10));
+            return results;
+        }
+
     }
 }
