@@ -13,6 +13,7 @@
         <TabMenu2:DefConnDataSet x:Key="defConnDataSet"/>
         <CollectionViewSource x:Key="patientViewSource" Source="{Binding Patient, Source={StaticResource defConnDataSet}}"/>
         <CollectionViewSource x:Key="referralViewSource" Source="{Binding Referral, Source={StaticResource defConnDataSet}}"/>
+        <CollectionViewSource x:Key="physiotherapistViewSource" Source="{Binding Physiotherapist, Source={StaticResource defConnDataSet}}"/>
     </Window.Resources>
     <Grid>
         <Grid Height="60" VerticalAlignment="Top" Background="#FF9C27B0">
@@ -65,7 +66,7 @@
                         <Button x:Name="BtSearchReferral" Content="Wyszukaj" HorizontalAlignment="Left" Margin="469,115,0,0" VerticalAlignment="Top" Width="150" Click="BtSearchReferral_Click"/>
                         <Button x:Name="BtShowAllReferrals" Content="Pokaż wszystkie" HorizontalAlignment="Left" Margin="469,152,0,0" VerticalAlignment="Top" Width="150" Click="BtShowAllReferrals_Click" />
                         <DatePicker x:Name="DpDateReferral" HorizontalAlignment="Left" Margin="35,152,0,0"  materialDesign:HintAssist.Hint="Data wystawienia" VerticalAlignment="Top" Width="334"/>
-                        
+
                         <DataGrid x:Name="referralDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="230,260,444.4,82.4" RowDetailsVisibilityMode="VisibleWhenSelected">
                             <DataGrid.Columns>
                                 <DataGridTextColumn x:Name="idReferralColumn" Binding="{Binding IdReferral}" Header="Id Referral" IsReadOnly="True" Width="SizeToHeader"/>
@@ -98,18 +99,28 @@
                     <TextBlock Text="Ask for any question!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </TabItem>
                 <TabItem Header="FIZJOTERAPEUCI">
-                    <Grid>
+                    <Grid DataContext="{StaticResource physiotherapistViewSource}">
                         <TextBox x:Name="TbPhysioName" HorizontalAlignment="Left" Height="25" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="200"/>
-                        <TextBox x:Name="TbPhysioSurname" HorizontalAlignment="Left" Height="25" Margin="35,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="200"/>
-                        <TextBox x:Name="TbPhysioPesel" HorizontalAlignment="Left" Height="25" Margin="292,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="PESEL" VerticalAlignment="Top" Width="200"/>
+                        <TextBox x:Name="TbPhysioSurname" HorizontalAlignment="Left" Height="25" Margin="292,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="200"/>
                         <TextBox x:Name="TbPhysioAdress" HorizontalAlignment="Left" Height="25" Margin="35,139,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Adres" VerticalAlignment="Top" Width="457"/>
                         <TextBox x:Name="TbPhysioPhone" HorizontalAlignment="Left" Height="25" Margin="292,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Telefon" VerticalAlignment="Top" Width="200"/>
-                        <TextBox x:Name="TbPhysioEmail" HorizontalAlignment="Left" Height="25" Margin="35,179,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Email" VerticalAlignment="Top" Width="200"/>
-                        <TextBox x:Name="TbPhysioNpwz" HorizontalAlignment="Left" Height="25" Margin="292,179,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="NPWZ" VerticalAlignment="Top" Width="200"/>
-                        <Button x:Name="BtAddPhysio" Content="Dodaj" HorizontalAlignment="Left" Margin="581,70,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
-                        <Button x:Name="BtSearchPhysio" Content="Wyszukaj" HorizontalAlignment="Left" Margin="581,139,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
-                        <Button x:Name="BtDeletePhysio" Content="Usuń" HorizontalAlignment="Left" Margin="581,105,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
-                        <Button x:Name="BtViewAllPhysio" Content="Pokaż wszystkich" HorizontalAlignment="Left" Margin="581,174,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
+                        <TextBox x:Name="TbPhysioEmail" HorizontalAlignment="Left" Height="25" Margin="35,179,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Email" VerticalAlignment="Top" Width="457"/>
+                        <TextBox x:Name="TbPhysioNpwz" HorizontalAlignment="Left" Height="25" Margin="35,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="NPWZ" VerticalAlignment="Top" Width="200"/>
+                        <Button x:Name="BtAddPhysio" Content="Dodaj" HorizontalAlignment="Left" Margin="581,70,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtAddPhysio_Click"/>
+                        <Button x:Name="BtSearchPhysio" Content="Wyszukaj" HorizontalAlignment="Left" Margin="581,139,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtSearchPhysio_Click"/>
+                        <Button x:Name="BtDeletePhysio" Content="Usuń" HorizontalAlignment="Left" Margin="581,105,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtDeletePhysio_Click"/>
+                        <Button x:Name="BtViewAllPhysio" Content="Pokaż wszystkich" HorizontalAlignment="Left" Margin="581,174,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtViewAllPhysio_Click"/>
+                        <DataGrid x:Name="physiotherapistDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="318,264,356.4,78.4" RowDetailsVisibilityMode="VisibleWhenSelected">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn x:Name="idColumn1" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="emailColumn" Binding="{Binding Email}" Header="Email" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="npwzColumn" Binding="{Binding Npwz}" Header="Npwz" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="nameColumn1" Binding="{Binding Name}" Header="Name" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="surnameColumn1" Binding="{Binding Surname}" Header="Surname" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="adressColumn1" Binding="{Binding Adress}" Header="Adress" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="phoneColumn1" Binding="{Binding Phone}" Header="Phone" Width="SizeToHeader"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
 
                     </Grid>
                 </TabItem>

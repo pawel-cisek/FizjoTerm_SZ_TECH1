@@ -50,6 +50,14 @@ namespace FizjoTerm
             CollectionViewSource referralViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("referralViewSource")));
             referralViewSource.Source = dbcontext.Referrals.Local;
             CbPatient.ItemsSource = dbcontext.Patients.Local;
+            // Load data into the table Physiotherapist. You can modify this code as needed.
+            TabMenu2.DefConnDataSetTableAdapters.PhysiotherapistTableAdapter defConnDataSetPhysiotherapistTableAdapter = new TabMenu2.DefConnDataSetTableAdapters.PhysiotherapistTableAdapter();
+            defConnDataSetPhysiotherapistTableAdapter.Fill(defConnDataSet.Physiotherapist);
+            //System.Windows.Data.CollectionViewSource physiotherapistViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("physiotherapistViewSource")));
+            //physiotherapistViewSource.View.MoveCurrentToFirst();
+            dbcontext.Physiotherapists.Load();
+            CollectionViewSource physiotherapistViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("physiotherapistViewSource")));
+            physiotherapistViewSource.Source = dbcontext.Physiotherapists.Local;
         }
 
         private void BtAddPatient_Click(object sender, RoutedEventArgs e)
@@ -155,6 +163,56 @@ namespace FizjoTerm
         private void BtShowAllReferrals_Click(object sender, RoutedEventArgs e)
         {
             referralDataGrid.ItemsSource = dbcontext.Referrals.Local;
+        }
+
+        private void BtAddPhysio_Click(object sender, RoutedEventArgs e)
+        {
+            if (TbPhysioName.Text != "" && TbPhysioSurname.Text != "")
+            {
+                if (Physiotherapist.NwpzValidation(TbPhysioNpwz.Text) && TbPhysioNpwz.Text != "")
+                {
+                    MessageBoxResult result = MessageBox.Show("Czy zapisać fizjoterapeutę " + TbPhysioName.Text + " " + TbPhysioSurname.Text + "?", "Zapis", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        Physiotherapist.AddPhysiotherapist(TbPhysioName.Text, TbPhysioSurname.Text, TbPhysioAdress.Text, TbPhysioPhone.Text, TbPhysioEmail.Text , int.Parse(TbPhysioNpwz.Text), dbcontext);
+                        physiotherapistDataGrid.Items.Refresh();
+                        TbPhysioName.Clear(); TbPhysioAdress.Clear(); TbPhysioNpwz.Clear(); TbPhysioPhone.Clear(); TbPhysioSurname.Clear();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Podaj poprawny numer Numer Prawa Wykonywania Zawodu!");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Podaj imię i nazwisko!");
+            }
+        }
+
+        private void BtDeletePhysio_Click(object sender, RoutedEventArgs e)
+        {
+            Physiotherapist p1 = (Physiotherapist)physiotherapistDataGrid.SelectedItem;
+            if (p1 != null)
+            {
+                MessageBoxResult result = System.Windows.MessageBox.Show("Czy usunąć fizjoterapeutę " + TbPhysioName.Text + " " + TbPhysioSurname.Text + "?", "Usuwanie pacjenta", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Physiotherapist.DeletePhysiotherapist(p1, dbcontext);
+                }
+            }
+            physiotherapistDataGrid.Items.Refresh();
+        }
+
+        private void BtSearchPhysio_Click(object sender, RoutedEventArgs e)
+        {
+            physiotherapistDataGrid.ItemsSource = Physiotherapist.SearchPhysiotherapist(TbPhysioName.Text, TbPhysioSurname.Text, TbPhysioAdress.Text, TbPhysioPhone.Text, TbPhysioEmail.Text, TbPhysioNpwz.Text, dbcontext);
+        }
+
+        private void BtViewAllPhysio_Click(object sender, RoutedEventArgs e)
+        {
+            physiotherapistDataGrid.ItemsSource = dbcontext.Physiotherapists.Local;
         }
     }
 }

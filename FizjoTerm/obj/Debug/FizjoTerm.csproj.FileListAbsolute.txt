@@ -55,3 +55,4 @@ C:\Users\Pawel\Desktop\1\FizjoTerm\bin\Debug\DefConn.mdf
 C:\Users\Pawel\Desktop\1\FizjoTerm\bin\Debug\DefConn_log.ldf
 C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\TabMenu2_Content.g.cs
 C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\FizjoTerm.csprojAssemblyReference.cache
