@@ -23,6 +23,7 @@ namespace FizjoTerm
     public partial class MainWindow : Window
     {
         public ApplicationDbContext dbcontext = new ApplicationDbContext();
+        //CollectionViewSource visitViewSource = new CollectionViewSource();
         public MainWindow()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace FizjoTerm
             CollectionViewSource referralViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("referralViewSource")));
             referralViewSource.Source = dbcontext.Referrals.Local;
             CbPatient.ItemsSource = dbcontext.Patients.Local;
+
             // Load data into the table Physiotherapist. You can modify this code as needed.
             TabMenu2.DefConnDataSetTableAdapters.PhysiotherapistTableAdapter defConnDataSetPhysiotherapistTableAdapter = new TabMenu2.DefConnDataSetTableAdapters.PhysiotherapistTableAdapter();
             defConnDataSetPhysiotherapistTableAdapter.Fill(defConnDataSet.Physiotherapist);
@@ -58,6 +60,19 @@ namespace FizjoTerm
             dbcontext.Physiotherapists.Load();
             CollectionViewSource physiotherapistViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("physiotherapistViewSource")));
             physiotherapistViewSource.Source = dbcontext.Physiotherapists.Local;
+
+            // Load data into the table Visit. You can modify this code as needed.
+            TabMenu2.DefConnDataSetTableAdapters.VisitTableAdapter defConnDataSetVisitTableAdapter = new TabMenu2.DefConnDataSetTableAdapters.VisitTableAdapter();
+            defConnDataSetVisitTableAdapter.Fill(defConnDataSet.Visit);
+            //System.Windows.Data.CollectionViewSource visitViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("visitViewSource")));
+            //visitViewSource.View.MoveCurrentToFirst();
+            dbcontext.Visits.Load();
+            CollectionViewSource visitViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("visitViewSource")));
+            visitViewSource.Source = dbcontext.Visits.Local;
+            CbPatient2.ItemsSource = dbcontext.Patients.Local;
+            CbPhysiotherapist.ItemsSource = dbcontext.Physiotherapists.Local;
+
+            RbAdding.IsChecked = true;
         }
 
         private void BtAddPatient_Click(object sender, RoutedEventArgs e)
@@ -213,6 +228,100 @@ namespace FizjoTerm
         private void BtViewAllPhysio_Click(object sender, RoutedEventArgs e)
         {
             physiotherapistDataGrid.ItemsSource = dbcontext.Physiotherapists.Local;
+        }
+
+        private void BtAddVisit_Click(object sender, RoutedEventArgs e)
+        {
+            if (RbAdding.IsChecked == true)
+            {
+                if (CbPatient2.SelectedIndex < 0)
+                    MessageBox.Show("Wybierz pacjenta!");
+                else
+                {
+                    if (CbReferral.SelectedIndex < 0)
+                        MessageBox.Show("Wybierz skierowanie!");
+                    else
+                    {
+                        if (CbPhysiotherapist.SelectedIndex < 0)
+                        {
+                            MessageBox.Show("Wybierz fizjoterapeutę!");
+                        }
+                        else
+                        {
+                            if (CalendarVisit.SelectedDates.Count() < 1)
+                                MessageBox.Show("Wybierz datę!");
+                            else
+                            {
+                                foreach (var date in CalendarVisit.SelectedDates)
+                                {
+                                    Visit.AddVisit((Physiotherapist)CbPhysiotherapist.SelectedItem, (Referral)CbReferral.SelectedItem, date, TbVisitTime.Text, dbcontext);
+                                }
+                                CbPhysiotherapist.SelectedIndex = -1; CbReferral.SelectedIndex = -1; CbPatient2.SelectedIndex = -1; TbVisitTime.Clear(); CalendarVisit.SelectedDates.Clear();
+                                visitDataGrid.ItemsSource = dbcontext.Visits.Local.Where(v => v.VisitDate.Date.Equals(DateTime.Now.Date));
+                                visitDataGrid.Items.Refresh();
+                               
+                            }
+                        }
+                    }
+                }
+            }
+                
+        }
+
+        private void CbPatient2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            List<Referral> referrals = dbcontext.Referrals.Local.Where(r => r.Patient.Equals(CbPatient2.SelectedItem as Patient)).ToList();
+            if (referrals.Count() > 0)
+            {
+                CbReferral.ItemsSource = dbcontext.Referrals.Local.Where(r => r.Patient.Equals(CbPatient2.SelectedItem as Patient));
+            }
+            else if (CbPatient2.SelectedIndex > -1)
+                MessageBox.Show("Brak zarejestrowanych skierowań dla pacjenta " + CbPatient2.SelectedItem.ToString());
+        }
+
+        private void BtDeleteVisit_Click(object sender, RoutedEventArgs e)
+        {
+            Visit v1 = (Visit)visitDataGrid.SelectedItem;
+            if (v1 != null)
+            {
+                MessageBoxResult result = System.Windows.MessageBox.Show("Czy usunąć wizytę dla pacjenta " + v1.Referral.Patient.Name + " " + v1.Referral.Patient.Surname + " z dnia " + v1.VisitDate.ToShortDateString() + "?", "Usuwanie pacjenta", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Visit.DeleteVisit(v1, dbcontext);
+                }
+            }
+            physiotherapistDataGrid.Items.Refresh();
+        }
+
+        private void RbAdding_Checked(object sender, RoutedEventArgs e)
+        {
+            BtSearchVisit.IsEnabled = false;
+            BtAddVisit.IsEnabled = true;
+            TbVisitTime.IsEnabled = true;
+            LabTodayVisits.Content = "Dzisiejsze wizyty:";
+            CbReferral.IsEnabled = true;
+            //visitViewSource.Source = dbcontext.Visits.Local.Where(v => v.VisitDate.Date.Equals(DateTime.Now.Date));
+            visitDataGrid.ItemsSource = dbcontext.Visits.Local.Where(v => v.VisitDate.Date.Equals(DateTime.Now.Date));
+            visitDataGrid.Items.Refresh();
+
+        }
+
+        private void RbSearching_Checked(object sender, RoutedEventArgs e)
+        {
+            BtSearchVisit.IsEnabled = true;
+            BtAddVisit.IsEnabled = false;
+            TbVisitTime.IsEnabled = false;
+            LabTodayVisits.Content = "Znalezione wizyty:";
+            CbReferral.IsEnabled = false;
+            //visitViewSource.Source = dbcontext.Visits.Local;
+            //visitDataGrid.Items.Refresh();
+            visitDataGrid.ItemsSource = dbcontext.Visits.Local;
+
+        }
+
+        private void BtSearchVisit_Click(object sender, RoutedEventArgs e)
+        {
+            visitDataGrid.ItemsSource = Visit.SearchVisit(CbPatient2.SelectedItem as Patient, dbcontext);
         }
     }
 }

@@ -67,7 +67,10 @@ namespace TabMenu2.Models
                 return false;
             }
         }
-        
 
+        public override string ToString()
+        {
+            return Surname + " " + Name;
+        }
     }
 }

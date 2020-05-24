@@ -68,5 +68,9 @@ namespace TabMenu2.Models
             return results;
         }
 
+        public override string ToString()
+        {
+            return "Data wystawienia: " + DateReferral.Date.ToShortDateString() + " Rozpoznanie: " + Diagnosis + " Liczba zabiegów " + NbOfDays ;
+        }
     }
 }

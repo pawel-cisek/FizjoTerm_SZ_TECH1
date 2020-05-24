@@ -16,7 +16,7 @@ namespace TabMenu2.Models
 
         public Patient() { }
 
-        public Patient(string name, string surname, string adress, string phone, string pesel) : base(name, surname, adress, phone)
+        public Patient(string name, string surname, string pesel, string adress, string phone) : base(name, surname, adress, phone)
         {
             this.Pesel = pesel;
         }
@@ -86,7 +86,7 @@ namespace TabMenu2.Models
 
         public override string ToString()
         {
-            return Surname + " " + Name + " " + Pesel;
+            return Surname + " " + Name + " " + "'" + Pesel + "'";
         }
 
         public override bool Equals(object obj)
