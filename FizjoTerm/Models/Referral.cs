@@ -64,7 +64,7 @@ namespace TabMenu2.Models
         public static IEnumerable<Referral> SearchReferral(string diagnosis, string icd10, int nbofdays, DateTime datereferral, Patient patient, ApplicationDbContext dbcontext)
         {
             //Referral r1 = new Referral(diagnosis, icd10, nbofdays, datereferral, patient);
-            IEnumerable<Referral> results = dbcontext.Referrals.Local.Where(r => r.Patient.Equals(patient) && r.Diagnosis.Contains(diagnosis) && r.Icd10.Contains(icd10));
+            IEnumerable<Referral> results = dbcontext.Referrals.Local.Where(r => patient!=null ? r.Patient.Equals(patient) : true && r.Diagnosis.Contains(diagnosis) && r.Icd10.Contains(icd10));
             return results;
         }
 

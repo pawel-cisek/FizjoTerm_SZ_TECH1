@@ -18,17 +18,23 @@
     </Window.Resources>
     <Grid>
         <Grid Height="60" VerticalAlignment="Top" Background="#FF9C27B0">
-            <TextBlock Text="Design com WPF" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines" />
-            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
-                <materialDesign:PackIcon Kind="Power"/>
+            <TextBlock Text="FizjoTerm" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines" Margin="486,6,502,28" />
+            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,28" Click="Button_Click_2">
+                <materialDesign:PackIcon Kind="Close"/>
+            </Button>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,76,28" Click="Button_Click_2">
+                <materialDesign:PackIcon Kind="WindowMinimize"/>
+            </Button>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,39,28" Click="Button_Click_1">
+                <materialDesign:PackIcon Kind="WindowMaximize"/>
             </Button>
         </Grid>
         <Grid Margin="0 60 0 0">
-            <!--dragablz:TabablzControl>
+            <!--<dragablz:TabablzControl>
                 <dragablz:TabablzControl.InterTabController>
                     <dragablz:InterTabController/>
                 </dragablz:TabablzControl.InterTabController>-->
-            <TabControl Margin="0,-30,0,0">
+            <TabControl Margin="0,-30,-168,-329">
                 <TabItem Header="PACJENCI">
                     <Grid DataContext="{StaticResource patientViewSource}">
                         <TextBox x:Name="TbPatientName" HorizontalAlignment="Left" Height="25" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="200"/>
@@ -98,18 +104,18 @@
                 </TabItem>
                 <TabItem Header="WIZYTY">
                     <Grid DataContext="{StaticResource visitViewSource}">
-                        <TextBox x:Name="TbVisitTime" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="278" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Godzina wizyty" Margin="20,164,0,0"/>
-                        <ComboBox x:Name="CbPatient2" materialDesign:HintAssist.Hint="Pacjent"  HorizontalAlignment="Left" Margin="20,37,0,0" VerticalAlignment="Top" Width="278" SelectionChanged="CbPatient2_SelectionChanged"/>
-                        <ComboBox x:Name="CbReferral" materialDesign:HintAssist.Hint="Skierowanie"  HorizontalAlignment="Left" Margin="20,79,0,0" VerticalAlignment="Top" Width="278"/>
-                        <ComboBox x:Name="CbPhysiotherapist" materialDesign:HintAssist.Hint="Fizjoterapeuta"  HorizontalAlignment="Left" Margin="20,131,0,0" VerticalAlignment="Top" Width="278"/>
-                        <Button x:Name="BtAddVisit" Content="Dodaj" Width="150" HorizontalAlignment="Left" Margin="346,18,0,0" VerticalAlignment="Top" Click="BtAddVisit_Click"/>
-                        <Button x:Name="BtDeleteVisit" Content="Usuń" HorizontalAlignment="Left" Margin="346,55,0,0" VerticalAlignment="Top" Width="150" Click="BtDeleteVisit_Click"/>
-                        <Button x:Name="BtSearchVisit" Content="Wyszukaj" HorizontalAlignment="Left" Margin="346,92,0,0" VerticalAlignment="Top" Width="150" Click="BtSearchVisit_Click"/>
-                        <Button x:Name="BtShowAllVisit" Content="Pokaż wszystkie" HorizontalAlignment="Left" Margin="346,129,0,0" VerticalAlignment="Top" Width="150" Click="BtShowAllReferrals_Click" />
-                        <Label x:Name="LabTodayVisits" Content="Dzisiejsze wizyty:" Margin="517,138,381.4,373.4" FontSize="15" FontWeight="Bold"/>
+                        <ComboBox x:Name="CbVisitTime"  materialDesign:HintAssist.Hint="Godzina wizyty" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Width="278"/>
+                        <ComboBox x:Name="CbPatient2" materialDesign:HintAssist.Hint="Pacjent"  HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="278" SelectionChanged="CbPatient2_SelectionChanged" KeyDown="CbPatient2_KeyDown"/>
+                        <ComboBox x:Name="CbReferral" materialDesign:HintAssist.Hint="Skierowanie"  HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="278"/>
+                        <ComboBox x:Name="CbPhysiotherapist" materialDesign:HintAssist.Hint="Fizjoterapeuta"  HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="278"/>
 
-                        <Calendar x:Name="CalendarVisit" Margin="20,194,776.4,0.4" IsTodayHighlighted="False" SelectionMode="MultipleRange" />
-                        <DataGrid x:Name="visitDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="346,174,10.4,22.4" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        <Button x:Name="BtSearchVisit" Content="Wyszukaj" HorizontalAlignment="Left" Margin="10,673,0,0" VerticalAlignment="Top" Width="278" Click="BtSearchVisit_Click"/>
+                        <Button x:Name="BtShowAllVisit" Content="Pokaż wszystkie" HorizontalAlignment="Left" Margin="10,710,0,0" VerticalAlignment="Top" Width="278" Click="BtShowAllReferrals_Click" />
+                        <Label x:Name="LabTodayVisits" Content="Dzisiejsze wizyty:" Margin="320,30,718.4,808.2" FontSize="15" FontWeight="Bold"/>
+
+
+                        <Calendar x:Name="CalendarVisit" Margin="10,218,954.4,10.2" IsTodayHighlighted="False" SelectionMode="MultipleRange" />
+                        <DataGrid x:Name="visitDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="320,68,10.4,22.2" RowDetailsVisibilityMode="VisibleWhenSelected">
                             <DataGrid.Columns>
                                 <DataGridTextColumn x:Name="idVisitColumn" Binding="{Binding IdVisit}" Header="Id Visit" IsReadOnly="True" Width="SizeToHeader"/>
                                 <DataGridTextColumn x:Name="idPhysiotherapistColumn" Binding="{Binding IdPhysiotherapist}" Header="Id Physiotherapist" Width="SizeToHeader"/>
@@ -132,8 +138,10 @@
                                 <DataGridTextColumn x:Name="report_IdReportColumn" Binding="{Binding Report_IdReport}" Header="Report Id Report" Width="SizeToHeader"/>
                             </DataGrid.Columns>
                         </DataGrid>
-                        <RadioButton x:Name="RbAdding" Content="Tryb dodawania" HorizontalAlignment="Left" Margin="536,18,0,0" VerticalAlignment="Top" Checked="RbAdding_Checked"/>
-                        <RadioButton x:Name="RbSearching" Content="Tryb wyszukiwania" HorizontalAlignment="Left" Margin="536,41,0,0" VerticalAlignment="Top" Checked="RbSearching_Checked"/>
+                        <RadioButton x:Name="RbAdding" Content="Tryb dodawania" HorizontalAlignment="Left" Margin="10,758,0,0" VerticalAlignment="Top" Checked="RbAdding_Checked"/>
+                        <RadioButton x:Name="RbSearching" Content="Tryb wyszukiwania" HorizontalAlignment="Left" Margin="10,781,0,0" VerticalAlignment="Top" Checked="RbSearching_Checked"/>
+                        <Button x:Name="BtAddVisit" Content="Dodaj" Width="278" HorizontalAlignment="Left" Margin="10,599,0,0" VerticalAlignment="Top" Click="BtAddVisit_Click"/>
+                        <Button x:Name="BtDeleteVisit" Content="Usuń" HorizontalAlignment="Left" Margin="10,636,0,0" VerticalAlignment="Top" Width="278" Click="BtDeleteVisit_Click"/>
 
                     </Grid>
                 </TabItem>
@@ -166,6 +174,7 @@
                 <TabItem Header="RAPORTY">
                     <TextBlock Text="Ask for any question!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </TabItem>
+
 
 
                 <!--</dragablz:TabablzControl>-->

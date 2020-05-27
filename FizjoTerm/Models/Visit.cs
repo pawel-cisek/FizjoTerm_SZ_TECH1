@@ -62,9 +62,11 @@ namespace TabMenu2.Models
             }
         }
 
-        public static IEnumerable<Visit> SearchVisit(Patient patient, ApplicationDbContext dbcontext)
+        public static IEnumerable<Visit> SearchVisit(Patient patient, Physiotherapist physio, DateTime? selDate, ApplicationDbContext dbcontext)
         {
-            IEnumerable<Visit> results = dbcontext.Visits.Local.Where(v => v.Referral.Patient.Equals(patient));
+            IEnumerable<Visit> results = dbcontext.Visits.Local.Where(v => patient!= null ? v.Referral.Patient.Equals(patient) : true 
+                                                                        && physio!=null ? v.Physiotherapist.Equals(physio) : true
+                                                                        && selDate!= null ? v.VisitDate.Equals(selDate) : true);
             return results;
         }
     }

@@ -73,6 +73,9 @@ namespace FizjoTerm
             CbPhysiotherapist.ItemsSource = dbcontext.Physiotherapists.Local;
 
             RbAdding.IsChecked = true;
+
+            List<string> godziny = new List<string>() {"6:00", "6:30" };
+            CbVisitTime.ItemsSource = godziny;
         }
 
         private void BtAddPatient_Click(object sender, RoutedEventArgs e)
@@ -254,9 +257,9 @@ namespace FizjoTerm
                             {
                                 foreach (var date in CalendarVisit.SelectedDates)
                                 {
-                                    Visit.AddVisit((Physiotherapist)CbPhysiotherapist.SelectedItem, (Referral)CbReferral.SelectedItem, date, TbVisitTime.Text, dbcontext);
+                                    Visit.AddVisit((Physiotherapist)CbPhysiotherapist.SelectedItem, (Referral)CbReferral.SelectedItem, date, CbVisitTime.SelectedItem.ToString(), dbcontext);
                                 }
-                                CbPhysiotherapist.SelectedIndex = -1; CbReferral.SelectedIndex = -1; CbPatient2.SelectedIndex = -1; TbVisitTime.Clear(); CalendarVisit.SelectedDates.Clear();
+                                CbPhysiotherapist.SelectedIndex = -1; CbReferral.SelectedIndex = -1; CbPatient2.SelectedIndex = -1; CbVisitTime.SelectedIndex = -1; CalendarVisit.SelectedDates.Clear();
                                 visitDataGrid.ItemsSource = dbcontext.Visits.Local.Where(v => v.VisitDate.Date.Equals(DateTime.Now.Date));
                                 visitDataGrid.Items.Refresh();
                                
@@ -297,7 +300,7 @@ namespace FizjoTerm
         {
             BtSearchVisit.IsEnabled = false;
             BtAddVisit.IsEnabled = true;
-            TbVisitTime.IsEnabled = true;
+            CbVisitTime.IsEnabled = true;
             LabTodayVisits.Content = "Dzisiejsze wizyty:";
             CbReferral.IsEnabled = true;
             //visitViewSource.Source = dbcontext.Visits.Local.Where(v => v.VisitDate.Date.Equals(DateTime.Now.Date));
@@ -310,7 +313,7 @@ namespace FizjoTerm
         {
             BtSearchVisit.IsEnabled = true;
             BtAddVisit.IsEnabled = false;
-            TbVisitTime.IsEnabled = false;
+            CbVisitTime.IsEnabled = false;
             LabTodayVisits.Content = "Znalezione wizyty:";
             CbReferral.IsEnabled = false;
             //visitViewSource.Source = dbcontext.Visits.Local;
@@ -321,7 +324,37 @@ namespace FizjoTerm
 
         private void BtSearchVisit_Click(object sender, RoutedEventArgs e)
         {
-            visitDataGrid.ItemsSource = Visit.SearchVisit(CbPatient2.SelectedItem as Patient, dbcontext);
+            visitDataGrid.ItemsSource = Visit.SearchVisit(CbPatient2.SelectedItem as Patient, CbPhysiotherapist.SelectedItem as Physiotherapist, CalendarVisit.SelectedDate, dbcontext);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == System.Windows.WindowState.Normal)
+            {
+                this.WindowState = System.Windows.WindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = System.Windows.WindowState.Normal;
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = System.Windows.WindowState.Minimized;
+        }
+
+        private void CbPatient2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Back)
+            {
+                CbPatient2.SelectedIndex = -1;
+            }
         }
     }
 }
