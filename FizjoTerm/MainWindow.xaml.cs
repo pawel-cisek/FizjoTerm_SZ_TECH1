@@ -74,8 +74,22 @@ namespace FizjoTerm
 
             RbAdding.IsChecked = true;
 
-            List<string> godziny = new List<string>() {"6:00", "6:30" };
-            CbVisitTime.ItemsSource = godziny;
+            List<string> hours = new List<string>() { "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30" };
+            CbVisitTime.ItemsSource = hours;
+            List<string> reportTypes = new List<string>() { "Dzienny", "Miesięczny", "Roczny" };
+            CbReportType.ItemsSource = reportTypes;
+
+            // Load data into the table Report. You can modify this code as needed.
+            TabMenu2.DefConnDataSetTableAdapters.ReportTableAdapter defConnDataSetReportTableAdapter = new TabMenu2.DefConnDataSetTableAdapters.ReportTableAdapter();
+            defConnDataSetReportTableAdapter.Fill(defConnDataSet.Report);
+            //System.Windows.Data.CollectionViewSource reportViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("reportViewSource")));
+            //reportViewSource.View.MoveCurrentToFirst();
+            dbcontext.Reports.Load();
+            CollectionViewSource reportViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("reportViewSource")));
+            reportViewSource.Source = dbcontext.Reports.Local;
+
+            reportDataGrid.SelectedIndex = -1;
+            visitsFromReport.ItemsSource = null;
         }
 
         private void BtAddPatient_Click(object sender, RoutedEventArgs e)
@@ -351,10 +365,52 @@ namespace FizjoTerm
 
         private void CbPatient2_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key == Key.Back)
+            if(e.Key == Key.Back || e.Key == Key.Delete)
             {
                 CbPatient2.SelectedIndex = -1;
             }
         }
+
+        private void CalendarVisit_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back || e.Key == Key.Delete)
+            {
+                CalendarVisit.SelectedDate = null;
+            }
+        }
+
+        private void BtGenerateReport_Click(object sender, RoutedEventArgs e)
+        {
+            switch (CbReportType.SelectedItem.ToString().Trim())
+            {
+                case "Dzienny":
+                    ICollection<Visit> dayResults = dbcontext.Visits.Local.Where(r => r.VisitDate.Equals(CalendarReport.SelectedDate)).ToList();
+                    Report.AddReport(CbReportType.SelectedItem.ToString() + "_" + DateTime.Now, dayResults, dbcontext);
+                    break;
+
+                case "Miesięczny":
+                    ICollection<Visit> monthResults = dbcontext.Visits.Local.Where(r => r.VisitDate.Month.Equals(CalendarReport.SelectedDate.Value.Month) && r.VisitDate.Year.Equals(CalendarReport.SelectedDate.Value.Year)).ToList();
+                    Report.AddReport(CbReportType.SelectedItem.ToString() + "_" + DateTime.Now, monthResults, dbcontext);
+
+                    break;
+
+                case "Roczny":
+                    CalendarReport.DisplayMode = CalendarMode.Decade;
+                    break;
+
+                default:
+                    
+                    break;
+            }
+            
+        }
+
+        private void reportDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Report r1 = reportDataGrid.SelectedItem as Report;
+            if (r1 != null)
+                visitsFromReport.ItemsSource = r1.Visits.ToList();
+
+        }        
     }
 }

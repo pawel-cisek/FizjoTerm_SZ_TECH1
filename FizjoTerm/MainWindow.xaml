@@ -15,6 +15,7 @@
         <CollectionViewSource x:Key="referralViewSource" Source="{Binding Referral, Source={StaticResource defConnDataSet}}"/>
         <CollectionViewSource x:Key="physiotherapistViewSource" Source="{Binding Physiotherapist, Source={StaticResource defConnDataSet}}"/>
         <CollectionViewSource x:Key="visitViewSource" Source="{Binding Visit, Source={StaticResource defConnDataSet}}"/>
+        <CollectionViewSource x:Key="reportViewSource" Source="{Binding Report, Source={StaticResource defConnDataSet}}"/>
     </Window.Resources>
     <Grid>
         <Grid Height="60" VerticalAlignment="Top" Background="#FF9C27B0">
@@ -114,7 +115,7 @@
                         <Label x:Name="LabTodayVisits" Content="Dzisiejsze wizyty:" Margin="320,30,718.4,808.2" FontSize="15" FontWeight="Bold"/>
 
 
-                        <Calendar x:Name="CalendarVisit" Margin="10,218,954.4,10.2" IsTodayHighlighted="False" SelectionMode="MultipleRange" />
+                        <Calendar x:Name="CalendarVisit" Margin="10,218,954.4,10.2" IsTodayHighlighted="False" SelectionMode="MultipleRange" KeyDown="CalendarVisit_KeyDown" />
                         <DataGrid x:Name="visitDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="320,68,10.4,22.2" RowDetailsVisibilityMode="VisibleWhenSelected">
                             <DataGrid.Columns>
                                 <DataGridTextColumn x:Name="idVisitColumn" Binding="{Binding IdVisit}" Header="Id Visit" IsReadOnly="True" Width="SizeToHeader"/>
@@ -172,8 +173,31 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="RAPORTY">
-                    <TextBlock Text="Ask for any question!" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Grid DataContext="{StaticResource reportViewSource}">
+                        <ComboBox x:Name="CbReportType" materialDesign:HintAssist.Hint="Typ raportu:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="288" />
+
+                        <Button x:Name="BtGenerateReport" Content="Generuj raport" HorizontalAlignment="Left" Margin="10,433,0,0" VerticalAlignment="Top" Width="278" Height="30" Click="BtGenerateReport_Click"/>
+                        <Label Content="Lista raportów:" HorizontalAlignment="Left" Margin="10,515,0,0" VerticalAlignment="Top" Width="242"/>
+                        <Calendar x:Name="CalendarReport" Margin="10,62,954.4,438.2"  KeyDown="CalendarVisit_KeyDown"  />
+                        <DataGrid x:Name="reportDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,546,1008.4,10.2" RowDetailsVisibilityMode="VisibleWhenSelected" SelectionChanged="reportDataGrid_SelectionChanged" CanUserAddRows="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn x:Name="idReportColumn" Binding="{Binding IdReport}" Header="Id Report" IsReadOnly="True" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="nameColumn2" Binding="{Binding Name}" Header="Name" Width="SizeToHeader"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <ListView x:Name="visitsFromReport" HorizontalAlignment="Left" Height="799" Margin="383,62,0,0" VerticalAlignment="Top" Width="675">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Label x:Name="LbPreviewReport" Content="Podgląd raportu:" HorizontalAlignment="Left" Margin="389,31,0,0" VerticalAlignment="Top" Width="184"/>
+
+                    </Grid>
                 </TabItem>
+
+
 
 
 

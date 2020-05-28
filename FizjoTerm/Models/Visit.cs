@@ -69,5 +69,10 @@ namespace TabMenu2.Models
                                                                         && selDate!= null ? v.VisitDate.Equals(selDate) : true);
             return results;
         }
+
+        public override string ToString()
+        {
+            return VisitDate + " " + Referral.Patient.ToString();
+        }
     }
 }
