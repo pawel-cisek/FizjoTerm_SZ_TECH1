@@ -70,7 +70,7 @@ namespace TabMenu2.Models
 
         public override string ToString()
         {
-            return "Data wystawienia: " + DateReferral.Date.ToShortDateString() + " Rozpoznanie: " + Diagnosis + " Liczba zabiegów " + NbOfDays ;
+            return Patient.Name + " " + Patient.Surname + " " + Diagnosis + " " + DateReferral.Date.ToShortDateString();
         }
     }
 }

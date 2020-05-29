@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace TabMenu2.Models
         public DateTime DateSaved { get; set; }
         public virtual Physiotherapist Physiotherapist { get; set; }
         public virtual Referral Referral { get; set; }
+        public virtual ICollection<Report> Reports { get; set; }
 
         public Visit() { }
         public Visit(Physiotherapist physio, Referral referral, DateTime date, string time)
@@ -64,9 +66,11 @@ namespace TabMenu2.Models
 
         public static IEnumerable<Visit> SearchVisit(Patient patient, Physiotherapist physio, DateTime? selDate, ApplicationDbContext dbcontext)
         {
-            IEnumerable<Visit> results = dbcontext.Visits.Local.Where(v => patient!= null ? v.Referral.Patient.Equals(patient) : true 
-                                                                        && physio!=null ? v.Physiotherapist.Equals(physio) : true
-                                                                        && selDate!= null ? v.VisitDate.Equals(selDate) : true);
+
+            //Visit w = dbcontext.Visits.Local.Where(ww => ww.IdVisit == 36) as Visit;
+            //DateTime dt = DateTime.Now;
+            //MessageBox.Show(selDate.Value.ToShortDateString() + " " + dt.ToShortDateString());
+            IEnumerable <Visit> results = dbcontext.Visits.Local.Where(v => (patient != null ? v.Referral.Patient.Equals(patient) : true) && (physio != null ? v.Physiotherapist.Equals(physio) : true) && (selDate != null ? v.VisitDate.Equals(selDate) : true));
             return results;
         }
 

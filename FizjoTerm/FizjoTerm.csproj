@@ -66,6 +66,7 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.1.1101, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.2.4.1.1101\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -110,6 +111,10 @@
     <Compile Include="Migrations\202004201753455_m1.designer.cs">
       <DependentUpon>202004201753455_m1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005041626232_r1.cs" />
+    <Compile Include="Migrations\202005041626232_r1.designer.cs">
+      <DependentUpon>202005041626232_r1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Patient.cs" />
@@ -133,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\202004201753455_m1.resx">
       <DependentUpon>202004201753455_m1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005041626232_r1.resx">
+      <DependentUpon>202005041626232_r1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

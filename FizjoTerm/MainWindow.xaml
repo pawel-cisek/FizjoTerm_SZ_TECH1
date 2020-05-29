@@ -8,8 +8,9 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:TabMenu2="clr-namespace:TabMenu2" x:Class="FizjoTerm.MainWindow"
         mc:Ignorable="d"
-        Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Loaded="Window_Loaded">
+        Height="750" Width="1200" ResizeMode="CanResize" WindowStyle="None" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Normal">
     <Window.Resources>
+
         <TabMenu2:DefConnDataSet x:Key="defConnDataSet"/>
         <CollectionViewSource x:Key="patientViewSource" Source="{Binding Patient, Source={StaticResource defConnDataSet}}"/>
         <CollectionViewSource x:Key="referralViewSource" Source="{Binding Referral, Source={StaticResource defConnDataSet}}"/>
@@ -18,9 +19,10 @@
         <CollectionViewSource x:Key="reportViewSource" Source="{Binding Report, Source={StaticResource defConnDataSet}}"/>
     </Window.Resources>
     <Grid>
-        <Grid Height="60" VerticalAlignment="Top" Background="#FF9C27B0">
-            <TextBlock Text="FizjoTerm" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines" Margin="486,6,502,28" />
-            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,28" Click="Button_Click_2">
+
+        <Grid Height="60" VerticalAlignment="Top" Background="#FF9C27B0" UseLayoutRounding="False" ScrollViewer.CanContentScroll="True" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <TextBlock Text="FizjoTerm" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines" Margin="462,1,506.6,32" Width="105" />
+            <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,28" Click="Button_Click">
                 <materialDesign:PackIcon Kind="Close"/>
             </Button>
             <Button HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,76,28" Click="Button_Click_2">
@@ -30,32 +32,44 @@
                 <materialDesign:PackIcon Kind="WindowMaximize"/>
             </Button>
         </Grid>
-        <Grid Margin="0 60 0 0">
-            <!--<dragablz:TabablzControl>
+        <Grid Margin="0,33,-0.4,0">
+            <dragablz:TabablzControl>
                 <dragablz:TabablzControl.InterTabController>
                     <dragablz:InterTabController/>
-                </dragablz:TabablzControl.InterTabController>-->
-            <TabControl Margin="0,-30,-168,-329">
+                </dragablz:TabablzControl.InterTabController>
+            <!--<TabControl Margin="0,-30,-0.4,-329.4">-->
                 <TabItem Header="PACJENCI">
                     <Grid DataContext="{StaticResource patientViewSource}">
-                        <TextBox x:Name="TbPatientName" HorizontalAlignment="Left" Height="25" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="200"/>
-                        <TextBox x:Name="TbPatientSurname" HorizontalAlignment="Left" Height="25" Margin="35,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="200"/>
-                        <TextBox x:Name="TbPatientPesel" HorizontalAlignment="Left" Height="25" Margin="292,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="PESEL" VerticalAlignment="Top" Width="200"/>
-                        <TextBox x:Name="TbPatientAdress" HorizontalAlignment="Left" Height="25" Margin="35,139,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Adres" VerticalAlignment="Top" Width="457"/>
-                        <TextBox x:Name="TbPatientPhone" HorizontalAlignment="Left" Height="25" Margin="292,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Telefon" VerticalAlignment="Top" Width="200"/>
-                        <Button x:Name="BtAddPatient" Content="Dodaj" HorizontalAlignment="Left" Margin="581,42,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtAddPatient_Click"/>
-                        <Button x:Name="BtSearchPatient" Content="Wyszukaj" HorizontalAlignment="Left" Margin="581,112,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtSearchPatient_Click"/>
-                        <Button x:Name="BtDeletePatient" Content="Usuń" HorizontalAlignment="Left" Margin="581,77,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtDeletePatient_Click"/>
-                        <Button x:Name="BtViewAllPatient" Content="Pokaż wszystkich" HorizontalAlignment="Left" Margin="581,147,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtViewAllPatient_Click"/>
+                        <TextBox x:Name="TbPatientName"  HorizontalAlignment="Left" Height="30" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="250" BorderThickness="0,0,0,1" FontSize="14">
 
-                        <DataGrid x:Name="patientDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,213,10.4,10.4" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        </TextBox>
+
+                        <TextBox x:Name="TbPatientSurname"  HorizontalAlignment="Left" Height="30" Margin="35,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="250" FontSize="14" />
+                        <TextBox x:Name="TbPatientPesel" HorizontalAlignment="Left" Height="30" Margin="335,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="PESEL" VerticalAlignment="Top" Width="250" FontSize="14"/>
+                        <TextBox x:Name="TbPatientAdress" HorizontalAlignment="Left" Height="30" Margin="35,139,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Adres" VerticalAlignment="Top" Width="550" FontSize="14"/>
+                        <TextBox x:Name="TbPatientPhone" HorizontalAlignment="Left" Height="30" Margin="335,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Telefon" VerticalAlignment="Top" Width="250" FontSize="14"/>
+                        <Button x:Name="BtAddPatient" Content="Dodaj" HorizontalAlignment="Right" Margin="0,42,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtAddPatient_Click"/>
+                        <Button x:Name="BtSearchPatient" Content="Wyszukaj" HorizontalAlignment="Right" Margin="0,112,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtSearchPatient_Click"/>
+                        <Button x:Name="BtDeletePatient" Content="Usuń" HorizontalAlignment="Right" Margin="0,77,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtDeletePatient_Click"/>
+                        <Button x:Name="BtViewAllPatient" Content="Pokaż wszystkich" HorizontalAlignment="Right" Margin="0,147,45,0" VerticalAlignment="Top" Width="200" Height="30" Click="BtViewAllPatient_Click"/>
+
+                        <DataGrid x:Name="patientDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,213,10.4,10.4" RowDetailsVisibilityMode="VisibleWhenSelected" GridLinesVisibility="Horizontal" CanUserAddRows="False" CanUserDeleteRows="False" MinWidth="100">
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FF9C27B0"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
                             <DataGrid.Columns>
-                                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="peselColumn" Binding="{Binding Pesel}" Header="Pesel" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Name}" Header="Name" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="surnameColumn" Binding="{Binding Surname}" Header="Surname" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="adressColumn" Binding="{Binding Adress}" Header="Adress" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="phoneColumn" Binding="{Binding Phone}" Header="Phone" Width="SizeToHeader"/>
+                                <!--<DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>-->
+                                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding Name}" Header="Imię" Width="150"/>
+                                <DataGridTextColumn x:Name="surnameColumn" Binding="{Binding Surname}" Header="Nazwisko" Width="150" DisplayIndex="1"/>
+                                <DataGridTextColumn x:Name="peselColumn" Binding="{Binding Pesel}" Header="PESEL" Width="150"/>
+                                <DataGridTextColumn x:Name="adressColumn" Binding="{Binding Adress}" Header="Adres" Width="300"/>
+                                <DataGridTextColumn x:Name="phoneColumn" Binding="{Binding Phone}" Header="Telefon" Width="150"/>
                             </DataGrid.Columns>
                         </DataGrid>
 
@@ -64,32 +78,41 @@
                 <TabItem Header="SKIEROWANIA">
                     <Grid DataContext="{StaticResource referralViewSource}">
 
-                        <TextBox x:Name="TbDiagnosis" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" Width="334" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Rozpoznanie" Margin="35,78,0,0"/>
-                        <TextBox x:Name="TbIcd10" HorizontalAlignment="Left" Height="25" Width="136" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Kod ICD10" Margin="35,115,0,0" VerticalAlignment="Top"/>
-                        <TextBox x:Name="TbNbOfDays" HorizontalAlignment="Left" Height="25" Width="145" Margin="224,115,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Liczba wizyt" VerticalAlignment="Top"/>
+                        <TextBox x:Name="TbDiagnosis" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="400" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Rozpoznanie" Margin="35,82,0,0" FontSize="14"/>
+                        <TextBox x:Name="TbIcd10" HorizontalAlignment="Left" Height="30" Width="188" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Kod ICD10" Margin="35,125,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        <TextBox x:Name="TbNbOfDays" HorizontalAlignment="Left" Height="30" Width="191" Margin="244,128,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Liczba wizyt" VerticalAlignment="Top" FontSize="14"/>
 
-                        <ComboBox x:Name="CbPatient" materialDesign:HintAssist.Hint="Pacjent"  HorizontalAlignment="Left" Margin="35,41,0,0" VerticalAlignment="Top" Width="334"/>
-                        <Button x:Name="BtAddReferral" Content="Dodaj" Width="150" HorizontalAlignment="Left" Margin="469,41,0,0" VerticalAlignment="Top" Click="BtAddReferral_Click"/>
-                        <Button x:Name="BtDeleteReferral" Content="Usuń" HorizontalAlignment="Left" Margin="469,78,0,0" VerticalAlignment="Top" Width="150" Click="BtDeleteReferral_Click" />
-                        <Button x:Name="BtSearchReferral" Content="Wyszukaj" HorizontalAlignment="Left" Margin="469,115,0,0" VerticalAlignment="Top" Width="150" Click="BtSearchReferral_Click"/>
-                        <Button x:Name="BtShowAllReferrals" Content="Pokaż wszystkie" HorizontalAlignment="Left" Margin="469,152,0,0" VerticalAlignment="Top" Width="150" Click="BtShowAllReferrals_Click" />
-                        <DatePicker x:Name="DpDateReferral" HorizontalAlignment="Left" Margin="35,152,0,0"  materialDesign:HintAssist.Hint="Data wystawienia" VerticalAlignment="Top" Width="334"/>
+                        <ComboBox x:Name="CbPatient" materialDesign:HintAssist.Hint="Pacjent" Height="30" HorizontalAlignment="Left" Margin="35,41,0,0" VerticalAlignment="Top" Width="400" FontSize="14"/>
+                        <Button x:Name="BtAddReferral" Content="Dodaj" Width="200" HorizontalAlignment="Right" Margin="0,39,45,0" VerticalAlignment="Top" Click="BtAddReferral_Click"/>
+                        <Button x:Name="BtDeleteReferral" Content="Usuń" HorizontalAlignment="Right" Margin="0,76,45,0" VerticalAlignment="Top" Width="200" Click="BtDeleteReferral_Click" />
+                        <Button x:Name="BtSearchReferral" Content="Wyszukaj" HorizontalAlignment="Right" Margin="0,113,45,0" VerticalAlignment="Top" Width="200" Click="BtSearchReferral_Click"/>
+                        <Button x:Name="BtShowAllReferrals" Content="Pokaż wszystkie" HorizontalAlignment="Right" Margin="0,150,45,0" VerticalAlignment="Top" Width="200" Click="BtShowAllReferrals_Click" />
+                        <DatePicker x:Name="DpDateReferral" HorizontalAlignment="Left" Height="30" Margin="35,163,0,0"  materialDesign:HintAssist.Hint="Data wystawienia" VerticalAlignment="Top" Width="400" FontSize="14"/>
 
-                        <DataGrid x:Name="referralDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,260,10.4,10.4" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        <DataGrid x:Name="referralDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,224,10,10.2" RowDetailsVisibilityMode="VisibleWhenSelected">
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FF9C27B0"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
                             <DataGrid.Columns>
-                                <DataGridTextColumn x:Name="idReferralColumn" Binding="{Binding IdReferral}" Header="Id Referral" IsReadOnly="True" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="idPatientColumn" Binding="{Binding IdPatient}" Header="Id Patient" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="diagnosisColumn" Binding="{Binding Diagnosis}" Header="Diagnosis" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="icd10Column" Binding="{Binding Icd10}" Header="Icd 10" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="nbOfDaysColumn" Binding="{Binding NbOfDays}" Header="Nb Of Days" Width="SizeToHeader"/>
-                                <DataGridTemplateColumn x:Name="dateReferralColumn" Header="Date Referral" Width="SizeToHeader">
+                                <!--<DataGridTextColumn x:Name="idReferralColumn" Binding="{Binding IdReferral}" Header="Id Referral" IsReadOnly="True" Width="SizeToHeader"/>-->
+                                <DataGridTextColumn x:Name="idPatientColumn" Binding="{Binding Patient}" Header="Pacjent" Width="250"/>
+                                <DataGridTextColumn x:Name="diagnosisColumn" Binding="{Binding Diagnosis}" Header="Diagnoza" Width="250"/>
+                                <DataGridTextColumn x:Name="icd10Column" Binding="{Binding Icd10}" Header="ICD10" Width="100"/>
+                                <DataGridTextColumn x:Name="nbOfDaysColumn" Binding="{Binding NbOfDays}" Header="Liczba wizyt" Width="100"/>
+                                <DataGridTemplateColumn x:Name="dateReferralColumn" Header="Data skierowania" Width="SizeToHeader">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <DatePicker SelectedDate="{Binding DateReferral, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                 </DataGridTemplateColumn>
-                                <DataGridTemplateColumn x:Name="dateSavedColumn" Header="Date Saved" Width="SizeToHeader">
+                                <DataGridTemplateColumn x:Name="dateSavedColumn" Header="Data zapisu" Width="120">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <DatePicker SelectedDate="{Binding DateSaved, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
@@ -105,44 +128,51 @@
                 </TabItem>
                 <TabItem Header="WIZYTY">
                     <Grid DataContext="{StaticResource visitViewSource}">
-                        <ComboBox x:Name="CbVisitTime"  materialDesign:HintAssist.Hint="Godzina wizyty" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Width="278"/>
-                        <ComboBox x:Name="CbPatient2" materialDesign:HintAssist.Hint="Pacjent"  HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="278" SelectionChanged="CbPatient2_SelectionChanged" KeyDown="CbPatient2_KeyDown"/>
-                        <ComboBox x:Name="CbReferral" materialDesign:HintAssist.Hint="Skierowanie"  HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="278"/>
-                        <ComboBox x:Name="CbPhysiotherapist" materialDesign:HintAssist.Hint="Fizjoterapeuta"  HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="278"/>
-
-                        <Button x:Name="BtSearchVisit" Content="Wyszukaj" HorizontalAlignment="Left" Margin="10,673,0,0" VerticalAlignment="Top" Width="278" Click="BtSearchVisit_Click"/>
-                        <Button x:Name="BtShowAllVisit" Content="Pokaż wszystkie" HorizontalAlignment="Left" Margin="10,710,0,0" VerticalAlignment="Top" Width="278" Click="BtShowAllReferrals_Click" />
-                        <Label x:Name="LabTodayVisits" Content="Dzisiejsze wizyty:" Margin="320,30,718.4,808.2" FontSize="15" FontWeight="Bold"/>
+                        <ComboBox x:Name="CbVisitTime"  materialDesign:HintAssist.Hint="Godzina wizyty" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Width="278" Height="30" FontSize="14"/>
+                        <ComboBox x:Name="CbPatient2" materialDesign:HintAssist.Hint="Pacjent"  HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="278" Height="30" SelectionChanged="CbPatient2_SelectionChanged" KeyDown="CbPatient2_KeyDown" FontSize="14"/>
+                        <ComboBox x:Name="CbReferral" materialDesign:HintAssist.Hint="Skierowanie"  HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Width="278" Height="30" FontSize="14"/>
+                        <ComboBox x:Name="CbPhysiotherapist" materialDesign:HintAssist.Hint="Fizjoterapeuta"  HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Width="278" Height="30" FontSize="14"/>
+                        <Label x:Name="LabTodayVisits" Content="Dzisiejsze wizyty:" Margin="320,30,441,996.8" FontSize="15" FontWeight="Bold"/>
 
 
-                        <Calendar x:Name="CalendarVisit" Margin="10,218,954.4,10.2" IsTodayHighlighted="False" SelectionMode="MultipleRange" KeyDown="CalendarVisit_KeyDown" />
-                        <DataGrid x:Name="visitDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="320,68,10.4,22.2" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        <Calendar x:Name="CalendarVisit" SelectionMode="MultipleRange" KeyDown="CalendarVisit_KeyDown" Margin="10,180,-10,-179.8" />
+                        <DataGrid x:Name="visitDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="320,68,10,10.2" RowDetailsVisibilityMode="VisibleWhenSelected">
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FF9C27B0"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
                             <DataGrid.Columns>
-                                <DataGridTextColumn x:Name="idVisitColumn" Binding="{Binding IdVisit}" Header="Id Visit" IsReadOnly="True" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="idPhysiotherapistColumn" Binding="{Binding IdPhysiotherapist}" Header="Id Physiotherapist" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="idReferralColumn1" Binding="{Binding IdReferral}" Header="Id Referral" Width="SizeToHeader"/>
-                                <DataGridTemplateColumn x:Name="visitDateColumn" Header="Visit Date" Width="SizeToHeader">
+                                <!--<DataGridTextColumn x:Name="idVisitColumn" Binding="{Binding IdVisit}" Header="Id Visit" IsReadOnly="True" Width="SizeToHeader"/>-->
+                                <DataGridTextColumn x:Name="idPhysiotherapistColumn" Binding="{Binding Physiotherapist}" Header="Fizjoterapeuta" Width="200"/>
+                                <DataGridTextColumn x:Name="idReferralColumn1" Binding="{Binding Referral}" Header="Pacjent/Skierowanie" Width="300"/>
+                                <DataGridTemplateColumn x:Name="visitDateColumn" Header="Data wizyty" Width="110">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <DatePicker SelectedDate="{Binding VisitDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                 </DataGridTemplateColumn>
-                                <DataGridTextColumn x:Name="visitTimeColumn" Binding="{Binding VisitTime}" Header="Visit Time" Width="SizeToHeader"/>
-                                <DataGridTemplateColumn x:Name="dateSavedColumn1" Header="Date Saved" Width="SizeToHeader">
+                                <DataGridTextColumn x:Name="visitTimeColumn" Binding="{Binding VisitTime}" Header="Godzina wizyty" Width="SizeToHeader"/>
+                                <DataGridTemplateColumn x:Name="dateSavedColumn1" Header="Data zapisu" Width="110">
                                     <DataGridTemplateColumn.CellTemplate>
                                         <DataTemplate>
                                             <DatePicker SelectedDate="{Binding DateSaved, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </DataGridTemplateColumn.CellTemplate>
                                 </DataGridTemplateColumn>
-                                <DataGridTextColumn x:Name="report_IdReportColumn" Binding="{Binding Report_IdReport}" Header="Report Id Report" Width="SizeToHeader"/>
+                                <!--<DataGridTextColumn x:Name="report_IdReportColumn" Binding="{Binding Report_IdReport}" Header="Report Id Report" Width="SizeToHeader"/>-->
                             </DataGrid.Columns>
                         </DataGrid>
-                        <RadioButton x:Name="RbAdding" Content="Tryb dodawania" HorizontalAlignment="Left" Margin="10,758,0,0" VerticalAlignment="Top" Checked="RbAdding_Checked"/>
-                        <RadioButton x:Name="RbSearching" Content="Tryb wyszukiwania" HorizontalAlignment="Left" Margin="10,781,0,0" VerticalAlignment="Top" Checked="RbSearching_Checked"/>
-                        <Button x:Name="BtAddVisit" Content="Dodaj" Width="278" HorizontalAlignment="Left" Margin="10,599,0,0" VerticalAlignment="Top" Click="BtAddVisit_Click"/>
-                        <Button x:Name="BtDeleteVisit" Content="Usuń" HorizontalAlignment="Left" Margin="10,636,0,0" VerticalAlignment="Top" Width="278" Click="BtDeleteVisit_Click"/>
+                        <RadioButton x:Name="RbAdding" Content="Tryb dodawania" HorizontalAlignment="Right" Margin="0,7,46,0" VerticalAlignment="Top" Checked="RbAdding_Checked"/>
+                        <RadioButton x:Name="RbSearching" Content="Tryb wyszukiwania" HorizontalAlignment="Right" Margin="0,30,32,0" VerticalAlignment="Top" Checked="RbSearching_Checked"/>
+                        <Button x:Name="BtAddVisit" Content="Dodaj" Width="278" HorizontalAlignment="Left" Margin="10,564,0,0" VerticalAlignment="Top" Click="BtAddVisit_Click"/>
+                        <Button x:Name="BtDeleteVisit" Content="Usuń" HorizontalAlignment="Left" Margin="10,601,0,0" VerticalAlignment="Top" Width="278" Click="BtDeleteVisit_Click"/>
+                        <Button x:Name="BtSearchVisit" Content="Wyszukaj" HorizontalAlignment="Left" Margin="10,638,0,0" VerticalAlignment="Top" Width="278" Click="BtSearchVisit_Click"/>
 
                     </Grid>
                 </TabItem>
@@ -159,6 +189,15 @@
                         <Button x:Name="BtDeletePhysio" Content="Usuń" HorizontalAlignment="Left" Margin="581,105,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtDeletePhysio_Click"/>
                         <Button x:Name="BtViewAllPhysio" Content="Pokaż wszystkich" HorizontalAlignment="Left" Margin="581,174,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="BtViewAllPhysio_Click"/>
                         <DataGrid x:Name="physiotherapistDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="35,264,10.4,10.4" RowDetailsVisibilityMode="VisibleWhenSelected">
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FF9C27B0"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
                             <DataGrid.Columns>
                                 <DataGridTextColumn x:Name="idColumn1" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="SizeToHeader"/>
                                 <DataGridTextColumn x:Name="emailColumn" Binding="{Binding Email}" Header="Email" Width="SizeToHeader"/>
@@ -177,32 +216,50 @@
                         <ComboBox x:Name="CbReportType" materialDesign:HintAssist.Hint="Typ raportu:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="288" />
 
                         <Button x:Name="BtGenerateReport" Content="Generuj raport" HorizontalAlignment="Left" Margin="10,433,0,0" VerticalAlignment="Top" Width="278" Height="30" Click="BtGenerateReport_Click"/>
-                        <Label Content="Lista raportów:" HorizontalAlignment="Left" Margin="10,515,0,0" VerticalAlignment="Top" Width="242"/>
-                        <Calendar x:Name="CalendarReport" Margin="10,62,954.4,438.2"  KeyDown="CalendarVisit_KeyDown"  />
-                        <DataGrid x:Name="reportDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,546,1008.4,10.2" RowDetailsVisibilityMode="VisibleWhenSelected" SelectionChanged="reportDataGrid_SelectionChanged" CanUserAddRows="False">
+                        <Label Content="Lista raportów:" HorizontalAlignment="Left" Margin="10,477,0,0" VerticalAlignment="Top" Width="242"/>
+                        <Calendar x:Name="CalendarReport"  KeyDown="CalendarVisit_KeyDown" Margin="10,52,-10,-51.8"  />
+                        <DataGrid x:Name="reportDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="10,503,0,10.2" RowDetailsVisibilityMode="VisibleWhenSelected" SelectionChanged="reportDataGrid_SelectionChanged" CanUserAddRows="False" Width="278">
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#FF9C27B0"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
                             <DataGrid.Columns>
-                                <DataGridTextColumn x:Name="idReportColumn" Binding="{Binding IdReport}" Header="Id Report" IsReadOnly="True" Width="SizeToHeader"/>
-                                <DataGridTextColumn x:Name="nameColumn2" Binding="{Binding Name}" Header="Name" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="idReportColumn" Binding="{Binding IdReport}" Header="Nr Raportu" IsReadOnly="True" Width="SizeToHeader"/>
+                                <DataGridTextColumn x:Name="nameColumn2" Binding="{Binding Name}" Header="Nazwa" Width="200"/>
                             </DataGrid.Columns>
                         </DataGrid>
-                        <ListView x:Name="visitsFromReport" HorizontalAlignment="Left" Height="799" Margin="383,62,0,0" VerticalAlignment="Top" Width="675">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                        <Label x:Name="LbPreviewReport" Content="Podgląd raportu:" HorizontalAlignment="Left" Margin="389,31,0,0" VerticalAlignment="Top" Width="184"/>
+                        <Grid>
+                            <ListView x:Name="visitsFromReport" HorizontalAlignment="Left" Height="799" Margin="383,62,0,0" VerticalAlignment="Top" Width="664" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="False">
+
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                        </Grid>
+                        <Label x:Name="LbPreviewReport" Content="Wybierz raport aby zobaczyć podgląd" HorizontalAlignment="Left" Margin="389,31,0,0" VerticalAlignment="Top" Width="310"/>
+                        <Button x:Name="BtPrintReport" Content="Drukuj raport" HorizontalAlignment="Left" Margin="791,20,0,0" VerticalAlignment="Top" Width="201" Click="BtPrintReport_Click"/>
+
+
+
 
                     </Grid>
+
                 </TabItem>
 
 
 
 
 
-                <!--</dragablz:TabablzControl>-->
-            </TabControl>
+
+                </dragablz:TabablzControl>
+            <!--</TabControl>-->
         </Grid>
     </Grid>
 </Window>

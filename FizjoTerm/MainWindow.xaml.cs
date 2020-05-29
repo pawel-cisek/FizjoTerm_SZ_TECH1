@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Xps.Packaging;
 using TabMenu2.Models;
 
 namespace FizjoTerm
@@ -90,6 +92,9 @@ namespace FizjoTerm
 
             reportDataGrid.SelectedIndex = -1;
             visitsFromReport.ItemsSource = null;
+            LbPreviewReport.Content = "Wybierz raport aby zobaczyć podgląd";
+
+
         }
 
         private void BtAddPatient_Click(object sender, RoutedEventArgs e)
@@ -292,7 +297,7 @@ namespace FizjoTerm
             {
                 CbReferral.ItemsSource = dbcontext.Referrals.Local.Where(r => r.Patient.Equals(CbPatient2.SelectedItem as Patient));
             }
-            else if (CbPatient2.SelectedIndex > -1)
+            else if (CbPatient2.SelectedIndex > -1 && RbAdding.IsChecked == true)
                 MessageBox.Show("Brak zarejestrowanych skierowań dla pacjenta " + CbPatient2.SelectedItem.ToString());
         }
 
@@ -381,36 +386,66 @@ namespace FizjoTerm
 
         private void BtGenerateReport_Click(object sender, RoutedEventArgs e)
         {
-            switch (CbReportType.SelectedItem.ToString().Trim())
+            if (CbReportType.SelectedIndex < 0)
             {
-                case "Dzienny":
-                    ICollection<Visit> dayResults = dbcontext.Visits.Local.Where(r => r.VisitDate.Equals(CalendarReport.SelectedDate)).ToList();
-                    Report.AddReport(CbReportType.SelectedItem.ToString() + "_" + DateTime.Now, dayResults, dbcontext);
-                    break;
-
-                case "Miesięczny":
-                    ICollection<Visit> monthResults = dbcontext.Visits.Local.Where(r => r.VisitDate.Month.Equals(CalendarReport.SelectedDate.Value.Month) && r.VisitDate.Year.Equals(CalendarReport.SelectedDate.Value.Year)).ToList();
-                    Report.AddReport(CbReportType.SelectedItem.ToString() + "_" + DateTime.Now, monthResults, dbcontext);
-
-                    break;
-
-                case "Roczny":
-                    CalendarReport.DisplayMode = CalendarMode.Decade;
-                    break;
-
-                default:
-                    
-                    break;
+                MessageBox.Show("Wybierz typ raportu!");
             }
-            
+            else
+            {
+                switch (CbReportType.SelectedItem.ToString().Trim())
+                {
+                    case "Dzienny":
+                        ICollection<Visit> dayResults = dbcontext.Visits.Local.Where(r => r.VisitDate.Equals(CalendarReport.SelectedDate)).ToList();
+                        Report.AddReport("Raport_" + CbReportType.SelectedItem.ToString() + "_" + CalendarReport.SelectedDate.Value.ToShortDateString(), dayResults, dbcontext);
+                        break;
+
+                    case "Miesięczny":
+                        ICollection<Visit> monthResults = dbcontext.Visits.Local.Where(r => r.VisitDate.Month.Equals(CalendarReport.SelectedDate.Value.Month) && r.VisitDate.Year.Equals(CalendarReport.SelectedDate.Value.Year)).ToList();
+                        Report.AddReport("Raport_" + CbReportType.SelectedItem.ToString() + "_" + CalendarReport.SelectedDate.Value.Month + "." + CalendarReport.SelectedDate.Value.Year, monthResults, dbcontext);
+
+                        break;
+
+                    case "Roczny":
+                        ICollection<Visit> yearResults = dbcontext.Visits.Local.Where(r => r.VisitDate.Year.Equals(CalendarReport.SelectedDate.Value.Year)).ToList();
+                        Report.AddReport("Raport_" + CbReportType.SelectedItem.ToString() + "_" + CalendarReport.SelectedDate.Value.Year, yearResults, dbcontext);
+
+                        break;
+
+                }
+            }
         }
 
         private void reportDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Report r1 = reportDataGrid.SelectedItem as Report;
             if (r1 != null)
+            {
                 visitsFromReport.ItemsSource = r1.Visits.ToList();
+                LbPreviewReport.Content = "Podgląd raportu:";
+            }
+        }
 
-        }        
+        private void BtPrintReport_Click(object sender, RoutedEventArgs e)
+        {
+
+            // Create the print dialog object and set options
+            PrintDialog pDialog = new PrintDialog();
+            pDialog.PageRangeSelection = PageRangeSelection.AllPages;
+            pDialog.UserPageRangeEnabled = true;
+
+            // Display the dialog. This returns true if the user presses the Print button.
+            Nullable<Boolean> print = pDialog.ShowDialog();
+            if (print == true)
+            {
+                pDialog.PrintVisual(visitsFromReport, "Grid Printing.");
+            }
+        }
+
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+
     }
 }
