@@ -76,7 +76,7 @@ namespace TabMenu2.Models
 
         public override string ToString()
         {
-            return VisitDate + " " + Referral.Patient.ToString();
+            return VisitDate.ToShortDateString() + " " + VisitTime + " " + Referral.Patient.ToString() + " " + Physiotherapist.ToString();
         }
     }
 }
