@@ -1,6 +1,7 @@
 ﻿using FizjoTerm;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace TabMenu2
         public LoginWindow()
         {
             InitializeComponent();
+            dbcontext.Physiotherapists.Load();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,6 +37,18 @@ namespace TabMenu2
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();
+            }
+            else if (dbcontext.Physiotherapists.Local.Any<Physiotherapist>(p => p.Surname.Equals(TbLogin.Text) && p.Npwz.ToString().Equals(TbPassword.Password)))
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                mainWindow.TiPhysio.Visibility = Visibility.Collapsed;
+                mainWindow.TiReport.Visibility = Visibility.Collapsed;
+                this.Close();
+            }
+            else
+            {
+                LbValidation.Visibility = Visibility.Visible;
             }
         }
     }

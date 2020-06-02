@@ -86,7 +86,7 @@ namespace TabMenu2.Models
 
         public override string ToString()
         {
-            return Surname + " " + Name + " " + Pesel ;
+            return Surname + " " + Name + " " + "'" + Pesel + "'";
         }
 
         public override bool Equals(object obj)

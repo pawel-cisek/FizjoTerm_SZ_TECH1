@@ -37,8 +37,8 @@
                 <dragablz:TabablzControl.InterTabController>
                     <dragablz:InterTabController/>
                 </dragablz:TabablzControl.InterTabController>-->
-            <TabControl Margin="0,-26,0,10">
-                <TabItem Header="PACJENCI">
+            <TabControl x:Name="TabControl" Margin="0,-26,0,10">
+                <TabItem x:Name="TiPatient" Header="PACJENCI">
                     <Grid DataContext="{StaticResource patientViewSource}" Margin="0,0,0,67">
                         <TextBox x:Name="TbPatientName"  HorizontalAlignment="Left" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="250" BorderThickness="0,0,0,1" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                         <TextBox x:Name="TbPatientSurname"  HorizontalAlignment="Left" Margin="35,102,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="250" FontSize="14" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
@@ -146,7 +146,7 @@
 
                     </Grid>
                 </TabItem>
-                <TabItem Header="FIZJOTERAPEUCI">
+                <TabItem x:Name="TiPhysio" Header="FIZJOTERAPEUCI">
                     <Grid DataContext="{StaticResource physiotherapistViewSource}">
                         <TextBox x:Name="TbPhysioName" HorizontalAlignment="Left" Margin="35,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Imię" VerticalAlignment="Top" Width="200" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
                         <TextBox x:Name="TbPhysioSurname" HorizontalAlignment="Left" Margin="292,64,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Nazwisko" VerticalAlignment="Top" Width="200" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
@@ -172,7 +172,7 @@
 
                     </Grid>
                 </TabItem>
-                <TabItem Header="RAPORTY">
+                <TabItem x:Name="TiReport" Header="RAPORTY">
                     <Grid DataContext="{StaticResource reportViewSource}">
                         <ComboBox x:Name="CbReportType" materialDesign:HintAssist.Hint="Typ raportu:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="288" />
 

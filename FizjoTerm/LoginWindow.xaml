@@ -11,20 +11,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TabMenu2"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="360" Width="350" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF9C27B0" WindowState="Normal" ResizeMode="NoResize">
+        Title="LoginWindow" Height="418.4" Width="350" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF9C27B0" WindowState="Normal" ResizeMode="NoResize">
 
     <Grid>
         <Grid>
-            <StackPanel >
+            <StackPanel Margin="0,0,0.4,0.4" >
                 <Border Background="WhiteSmoke" Margin="10 20" CornerRadius="5">
                     <StackPanel Margin="25">
-                        
+
 
                         <TextBox x:Name="TbLogin" Margin="20" materialDesign:HintAssist.Hint="Login" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
                         <PasswordBox x:Name="TbPassword" Margin="20" materialDesign:HintAssist.Hint="Hasło" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontSize="14" />
+                        <Label x:Name="LbValidation" Content="Podaj poprawne dane!"  Margin="62,20,58.8,20" Visibility="Hidden"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="110" Margin="4,0,4.8,0">
                             <Button Margin="15 20" Content="Zaloguj" Width="242" Click="Button_Click"/>
-                        </StackPanel>              
+                        </StackPanel>
 
                     </StackPanel>
                 </Border>
