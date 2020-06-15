@@ -9,6 +9,9 @@ using System.Windows;
 
 namespace TabMenu2.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca dane raportu
+    /// </summary>
     [Table("Report")]
     public class Report
     {

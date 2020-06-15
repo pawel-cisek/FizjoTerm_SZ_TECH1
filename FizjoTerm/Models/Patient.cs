@@ -8,6 +8,9 @@ using System.Windows;
 
 namespace TabMenu2.Models
 {
+/// <summary>
+/// Klasa reprezentująca dane pacjenta
+/// </summary>
     [Table("Patient")]
     public class Patient : Person
 
@@ -54,7 +57,11 @@ namespace TabMenu2.Models
             IEnumerable<Patient> results = dbcontext.Patients.Local.Where(p => p.Name.Contains(pat.Name) && p.Surname.Contains(pat.Surname) && p.Pesel.Contains(pat.Pesel) && p.Phone.Contains(pat.Phone) && p.Adress.Contains(pat.Adress));
             return results;
         }
-
+        /// <summary>
+        /// Metoda sprawdzająca czy podany numer jest numerem PESEL
+        /// </summary>
+        /// <param name="pesel"></param>
+        /// <returns>True - PESEL poprawny, False - PESEL błędny</returns>
         public static bool PeselValidation(string pesel)
         {
             int[] weights = { 1, 3, 7, 9, 1, 3, 7, 9, 1, 3 };
@@ -73,7 +80,13 @@ namespace TabMenu2.Models
             }
             return result;
         }
-
+        /// <summary>
+        /// Metoda obliczająca sumę kontrolną dla numeru PESEL
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="weights"></param>
+        /// <param name="offset"></param>
+        /// <returns>Metoda zwraca sumę kontrolną</returns>
         private static int CalculateControlSum(string input, int[] weights, int offset = 0)
         {
             int controlSum = 0;
@@ -88,7 +101,11 @@ namespace TabMenu2.Models
         {
             return Surname + " " + Name + " " + "'" + Pesel + "'";
         }
-
+        /// <summary>
+        /// Metoda porównująca dwa obiekty
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>True - obiekty posiadają takie same dane, False - obiekty posiadają różne dane</returns>
         public override bool Equals(object obj)
         {
             if ((obj == null) || !this.GetType().Equals(obj.GetType()))

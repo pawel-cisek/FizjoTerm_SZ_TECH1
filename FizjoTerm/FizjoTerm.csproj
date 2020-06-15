@@ -122,6 +122,26 @@
     <Compile Include="Migrations\202005041626232_r1.designer.cs">
       <DependentUpon>202005041626232_r1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005181739354_vc.cs" />
+    <Compile Include="Migrations\202005181739354_vc.designer.cs">
+      <DependentUpon>202005181739354_vc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005261310007_t1.cs" />
+    <Compile Include="Migrations\202005261310007_t1.designer.cs">
+      <DependentUpon>202005261310007_t1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005261400556_d1.cs" />
+    <Compile Include="Migrations\202005261400556_d1.designer.cs">
+      <DependentUpon>202005261400556_d1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005270855527_s1.cs" />
+    <Compile Include="Migrations\202005270855527_s1.designer.cs">
+      <DependentUpon>202005270855527_s1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005270912061_rc1.cs" />
+    <Compile Include="Migrations\202005270912061_rc1.designer.cs">
+      <DependentUpon>202005270912061_rc1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Patient.cs" />
@@ -148,6 +168,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005041626232_r1.resx">
       <DependentUpon>202005041626232_r1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005181739354_vc.resx">
+      <DependentUpon>202005181739354_vc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005261310007_t1.resx">
+      <DependentUpon>202005261310007_t1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005261400556_d1.resx">
+      <DependentUpon>202005261400556_d1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005270855527_s1.resx">
+      <DependentUpon>202005270855527_s1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005270912061_rc1.resx">
+      <DependentUpon>202005270912061_rc1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

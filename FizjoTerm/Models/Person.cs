@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace TabMenu2.Models
 {
+    /// <summary>
+    /// Klasa bazowa dla Patient i Physiotherapist
+    /// </summary>
     public abstract class Person
     {
         [Key]

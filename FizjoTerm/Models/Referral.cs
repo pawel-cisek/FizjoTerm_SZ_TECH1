@@ -9,6 +9,9 @@ using System.Windows;
 
 namespace TabMenu2.Models
 {
+    /// <summary>
+    /// Klasa reprezentująca dane skierowania
+    /// </summary>
     [Table("Referral")]
     public class Referral
     {
@@ -18,26 +21,32 @@ namespace TabMenu2.Models
         public int IdPatient { get; set; }
         public string Diagnosis { get; set; }
         public string Icd10 { get; set; }
+        public string Treatments { get; set; }
+        public string Doctor { get; set; }
         public int NbOfDays { get; set; }
         public DateTime DateReferral { get; set; }
         public DateTime DateSaved { get; set; }
+        public bool ReferralCompleted { get; set; }
         public virtual Patient Patient { get; set; }
 
         public Referral() { }
 
-        public Referral(string diagnosis, string icd10, int nbofdays, DateTime datereferral, Patient patient)
+        public Referral(string diagnosis, string icd10, string treatments, string doctor, int nbofdays, DateTime datereferral, Patient patient, bool referralCompleted = false)
         {
             this.Diagnosis = diagnosis;
             this.Icd10 = icd10;
+            this.Treatments = treatments;
+            this.Doctor = doctor;
             this.NbOfDays = nbofdays;
             this.DateReferral = datereferral;
             this.DateSaved = DateTime.Now;
             this.Patient = patient;
+            this.ReferralCompleted = referralCompleted;
         }
 
-        public static void AddReferral(string diagnosis, string icd10, int nbofdays, DateTime datereferral, Patient patient, ApplicationDbContext dbcontext)
+        public static void AddReferral(string diagnosis, string icd10, string treatments, string doctor,  int nbofdays, DateTime datereferral, Patient patient, ApplicationDbContext dbcontext)
         {
-            Referral r1 = new Referral(diagnosis, icd10, nbofdays, datereferral, patient);
+            Referral r1 = new Referral(diagnosis, icd10, treatments, doctor, nbofdays, datereferral, patient);
             try
             {
                 dbcontext.Referrals.Add(r1);
@@ -61,7 +70,7 @@ namespace TabMenu2.Models
                 MessageBox.Show(ex.Message);
             }
         }
-        public static IEnumerable<Referral> SearchReferral(string diagnosis, string icd10, int nbofdays, DateTime datereferral, Patient patient, ApplicationDbContext dbcontext)
+        public static IEnumerable<Referral> SearchReferral(string diagnosis, string icd10, string treatments, string doctor, int nbofdays, DateTime datereferral, Patient patient, ApplicationDbContext dbcontext)
         {
             //Referral r1 = new Referral(diagnosis, icd10, nbofdays, datereferral, patient);
             IEnumerable<Referral> results = dbcontext.Referrals.Local.Where(r => patient!=null ? r.Patient.Equals(patient) : true && r.Diagnosis.Contains(diagnosis) && r.Icd10.Contains(icd10));

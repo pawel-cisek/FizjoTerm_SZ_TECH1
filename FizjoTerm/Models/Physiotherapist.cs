@@ -9,6 +9,9 @@ using System.Windows;
 
 namespace TabMenu2.Models
 {
+/// <summary>
+/// Klasa reprezentująca dane fizjoteraapeuty
+/// </summary>
     [Table("Physiotherapist")]
     public class Physiotherapist : Person
     {
@@ -56,6 +59,11 @@ namespace TabMenu2.Models
             IEnumerable<Physiotherapist> results = dbcontext.Physiotherapists.Local.Where(p => p.Name.Contains(name) && p.Surname.Contains(surname) && p.Npwz.ToString().Contains(npwz) && p.Phone.Contains(phone) && p.Adress.Contains(adress));
             return results;
         }
+        /// <summary>
+        /// Metoda sprawdzająca czy podany ciąg znaków jest numerem
+        /// </summary>
+        /// <param name="nwpz"></param>
+        /// <returns>True - podany ciąg jest numerem</returns>
         public static bool NwpzValidation(string nwpz)
         {
             if (Int32.TryParse(nwpz, out var outParse))

@@ -59,3 +59,8 @@ C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\TabMenu2.Migrations.r1.resources
 C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\LoginWindow.g.cs
 C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\LoginWindow.baml
 C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\FizjoTerm.csprojAssemblyReference.cache
+C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\TabMenu2.Migrations.vc.resources
+C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\TabMenu2.Migrations.t1.resources
+C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\TabMenu2.Migrations.d1.resources
+C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\TabMenu2.Migrations.s1.resources
+C:\Users\Pawel\Desktop\1\FizjoTerm\obj\Debug\TabMenu2.Migrations.rc1.resources

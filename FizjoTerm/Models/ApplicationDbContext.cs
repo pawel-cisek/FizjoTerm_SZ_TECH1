@@ -7,11 +7,16 @@ using System.Threading.Tasks;
 
 namespace TabMenu2.Models
 {
+    /// <summary>
+    /// Klasa zapewniająca połączenie z bazą danych
+    /// </summary>
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext() : base("DefConn")
         {
+
             Database.Initialize(false);
+
         }
 
         public DbSet<Patient> Patients { get; set; }

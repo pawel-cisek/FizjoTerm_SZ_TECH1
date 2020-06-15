@@ -11,19 +11,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TabMenu2"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="418.4" Width="350" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF9C27B0" WindowState="Normal" ResizeMode="NoResize">
+        Title="LoginWindow" Height="480" Width="497.2" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF009688" WindowState="Normal" ResizeMode="NoResize">
 
-    <Grid>
-        <Grid>
-            <StackPanel Margin="0,0,0.4,0.4" >
-                <Border Background="WhiteSmoke" Margin="10 20" CornerRadius="5">
+    <Grid Margin="0,0,49.4,-19">
+        <Grid Margin="0,0,22,26">
+            <StackPanel Margin="0,0,-71,9.2" >
+                <Button x:Name="CloseButton" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,28" Click="CloseButton_Click">
+                    <materialDesign:PackIcon Kind="Close"/>
+                </Button>
+                <Border Background="WhiteSmoke" Margin="10,20,9.8,20" CornerRadius="5" Height="376">
                     <StackPanel Margin="25">
 
 
                         <TextBox x:Name="TbLogin" Margin="20" materialDesign:HintAssist.Hint="Login" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="14"/>
                         <PasswordBox x:Name="TbPassword" Margin="20" materialDesign:HintAssist.Hint="Hasło" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontSize="14" />
                         <Label x:Name="LbValidation" Content="Podaj poprawne dane!"  Margin="62,20,58.8,20" Visibility="Hidden"/>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="110" Margin="4,0,4.8,0">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="94" Margin="4,0">
                             <Button Margin="15 20" Content="Zaloguj" Width="242" Click="Button_Click"/>
                         </StackPanel>
 

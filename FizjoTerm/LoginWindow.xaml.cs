@@ -18,7 +18,7 @@ using TabMenu2.Models;
 namespace TabMenu2
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Okno logowania
     /// </summary>
     public partial class LoginWindow : Window
     {
@@ -50,6 +50,11 @@ namespace TabMenu2
             {
                 LbValidation.Visibility = Visibility.Visible;
             }
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
