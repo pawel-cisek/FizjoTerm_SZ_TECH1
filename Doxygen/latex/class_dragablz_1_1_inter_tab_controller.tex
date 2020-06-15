@@ -1,0 +1,106 @@
+\hypertarget{class_dragablz_1_1_inter_tab_controller}{}\doxysection{Dragablz.\+Inter\+Tab\+Controller Class Reference}
+\label{class_dragablz_1_1_inter_tab_controller}\index{Dragablz.InterTabController@{Dragablz.InterTabController}}
+Inheritance diagram for Dragablz.\+Inter\+Tab\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dragablz_1_1_inter_tab_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly Dependency\+Property {\bfseries Horizontal\+Popout\+Grace\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Vertical\+Popout\+Grace\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Move\+Window\+With\+Solitary\+Tabs\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Inter\+Tab\+Client\+Property}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_a19a24b677411ea818be706cc736dc0c4}\label{class_dragablz_1_1_inter_tab_controller_a19a24b677411ea818be706cc736dc0c4}} 
+double {\bfseries Horizontal\+Popout\+Grace}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_a25d56f3b77d9ae7b5aa4b867a0dbc7da}\label{class_dragablz_1_1_inter_tab_controller_a25d56f3b77d9ae7b5aa4b867a0dbc7da}} 
+double {\bfseries Vertical\+Popout\+Grace}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_af70b8eb53a0b6990b66032b9c432a847}\label{class_dragablz_1_1_inter_tab_controller_af70b8eb53a0b6990b66032b9c432a847}} 
+bool {\bfseries Move\+Window\+With\+Solitary\+Tabs}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_a34e300ac13efc7c736115254abb36ee8}\label{class_dragablz_1_1_inter_tab_controller_a34e300ac13efc7c736115254abb36ee8}} 
+\mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client}{I\+Inter\+Tab\+Client}} {\bfseries Inter\+Tab\+Client}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_dragablz_1_1_inter_tab_controller_a820813af20f10808a8bac83d35f0aa84}{Partition}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The partition allows on or more tab environments in a single application. Only tabs which have a tab controller with a common partition will be allowed to have tabs dragged between them. {\ttfamily null} is a valid partition (i.\+e global). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_a2b089ce323fede743b9993f6a12a276d}\label{class_dragablz_1_1_inter_tab_controller_a2b089ce323fede743b9993f6a12a276d}} 
+\index{Dragablz.InterTabController@{Dragablz.InterTabController}!HorizontalPopoutGraceProperty@{HorizontalPopoutGraceProperty}}
+\index{HorizontalPopoutGraceProperty@{HorizontalPopoutGraceProperty}!Dragablz.InterTabController@{Dragablz.InterTabController}}
+\doxysubsubsection{\texorpdfstring{HorizontalPopoutGraceProperty}{HorizontalPopoutGraceProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Inter\+Tab\+Controller.\+Horizontal\+Popout\+Grace\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HorizontalPopoutGrace"}, typeof (\textcolor{keywordtype}{double}), typeof (InterTabController), \textcolor{keyword}{new} PropertyMetadata(8.0))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_ae36de74fe66040c5702c0f8ca03b8df0}\label{class_dragablz_1_1_inter_tab_controller_ae36de74fe66040c5702c0f8ca03b8df0}} 
+\index{Dragablz.InterTabController@{Dragablz.InterTabController}!InterTabClientProperty@{InterTabClientProperty}}
+\index{InterTabClientProperty@{InterTabClientProperty}!Dragablz.InterTabController@{Dragablz.InterTabController}}
+\doxysubsubsection{\texorpdfstring{InterTabClientProperty}{InterTabClientProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Inter\+Tab\+Controller.\+Inter\+Tab\+Client\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"InterTabClient"}, typeof (IInterTabClient), typeof (InterTabController),}
+\DoxyCodeLine{            \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{new} DefaultInterTabClient()))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_adbac720f6668764942cd222ab782f810}\label{class_dragablz_1_1_inter_tab_controller_adbac720f6668764942cd222ab782f810}} 
+\index{Dragablz.InterTabController@{Dragablz.InterTabController}!MoveWindowWithSolitaryTabsProperty@{MoveWindowWithSolitaryTabsProperty}}
+\index{MoveWindowWithSolitaryTabsProperty@{MoveWindowWithSolitaryTabsProperty}!Dragablz.InterTabController@{Dragablz.InterTabController}}
+\doxysubsubsection{\texorpdfstring{MoveWindowWithSolitaryTabsProperty}{MoveWindowWithSolitaryTabsProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Inter\+Tab\+Controller.\+Move\+Window\+With\+Solitary\+Tabs\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"MoveWindowWithSolitaryTabs"}, typeof (\textcolor{keywordtype}{bool}), typeof (InterTabController), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{true}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_a1280e7e7c929138ac6786159d3d14e1d}\label{class_dragablz_1_1_inter_tab_controller_a1280e7e7c929138ac6786159d3d14e1d}} 
+\index{Dragablz.InterTabController@{Dragablz.InterTabController}!VerticalPopoutGraceProperty@{VerticalPopoutGraceProperty}}
+\index{VerticalPopoutGraceProperty@{VerticalPopoutGraceProperty}!Dragablz.InterTabController@{Dragablz.InterTabController}}
+\doxysubsubsection{\texorpdfstring{VerticalPopoutGraceProperty}{VerticalPopoutGraceProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Inter\+Tab\+Controller.\+Vertical\+Popout\+Grace\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"VerticalPopoutGrace"}, typeof (\textcolor{keywordtype}{double}), typeof (InterTabController), \textcolor{keyword}{new} PropertyMetadata(8.0))}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_dragablz_1_1_inter_tab_controller_a820813af20f10808a8bac83d35f0aa84}\label{class_dragablz_1_1_inter_tab_controller_a820813af20f10808a8bac83d35f0aa84}} 
+\index{Dragablz.InterTabController@{Dragablz.InterTabController}!Partition@{Partition}}
+\index{Partition@{Partition}!Dragablz.InterTabController@{Dragablz.InterTabController}}
+\doxysubsubsection{\texorpdfstring{Partition}{Partition}}
+{\footnotesize\ttfamily string Dragablz.\+Inter\+Tab\+Controller.\+Partition\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The partition allows on or more tab environments in a single application. Only tabs which have a tab controller with a common partition will be allowed to have tabs dragged between them. {\ttfamily null} is a valid partition (i.\+e global). 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Dragablz.\+0.\+0.\+3.\+203/src/net40/Inter\+Tab\+Controller.\+cs\end{DoxyCompactItemize}

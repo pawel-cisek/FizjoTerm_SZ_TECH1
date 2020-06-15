@@ -1,0 +1,74 @@
+\hypertarget{class_tab_menu2_1_1_models_1_1_referral}{}\doxysection{Tab\+Menu2.\+Models.\+Referral Class Reference}
+\label{class_tab_menu2_1_1_models_1_1_referral}\index{TabMenu2.Models.Referral@{TabMenu2.Models.Referral}}
+
+
+Klasa reprezentująca dane skierowania  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a90eb09455701c4b25d4c8503c500c4e2}\label{class_tab_menu2_1_1_models_1_1_referral_a90eb09455701c4b25d4c8503c500c4e2}} 
+{\bfseries Referral} (string diagnosis, string icd10, string treatments, string doctor, int nbofdays, Date\+Time datereferral, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient}{Patient}} patient, bool referral\+Completed=false)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a431789f2dfb65f55eff641b159349f45}\label{class_tab_menu2_1_1_models_1_1_referral_a431789f2dfb65f55eff641b159349f45}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a43034195aba21a6a4e3b4b661a010568}\label{class_tab_menu2_1_1_models_1_1_referral_a43034195aba21a6a4e3b4b661a010568}} 
+static void {\bfseries Add\+Referral} (string diagnosis, string icd10, string treatments, string doctor, int nbofdays, Date\+Time datereferral, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient}{Patient}} patient, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a8da7b97dde780a4495c342e963a15647}\label{class_tab_menu2_1_1_models_1_1_referral_a8da7b97dde780a4495c342e963a15647}} 
+static void {\bfseries Delete\+Referral} (\mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_referral}{Referral}} referral, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a86298dbf8b6c806e01f0169aaf85b747}\label{class_tab_menu2_1_1_models_1_1_referral_a86298dbf8b6c806e01f0169aaf85b747}} 
+static I\+Enumerable$<$ \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_referral}{Referral}} $>$ {\bfseries Search\+Referral} (string diagnosis, string icd10, string treatments, string doctor, int nbofdays, Date\+Time datereferral, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient}{Patient}} patient, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_af3026832a4a429f6a2f75a749dc26346}\label{class_tab_menu2_1_1_models_1_1_referral_af3026832a4a429f6a2f75a749dc26346}} 
+int {\bfseries Id\+Referral}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_afa2c4b6e99420084c5d1023ccaad21a1}\label{class_tab_menu2_1_1_models_1_1_referral_afa2c4b6e99420084c5d1023ccaad21a1}} 
+int {\bfseries Id\+Patient}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a3ff3c7656d59dca07eaa301af009288c}\label{class_tab_menu2_1_1_models_1_1_referral_a3ff3c7656d59dca07eaa301af009288c}} 
+string {\bfseries Diagnosis}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_ae80860a02cf6eb2100d1e66878bbf6ae}\label{class_tab_menu2_1_1_models_1_1_referral_ae80860a02cf6eb2100d1e66878bbf6ae}} 
+string {\bfseries Icd10}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a3e300d389b530d6668346dbba552f475}\label{class_tab_menu2_1_1_models_1_1_referral_a3e300d389b530d6668346dbba552f475}} 
+string {\bfseries Treatments}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a86c386632545eb694d5b0d060bbdd9d2}\label{class_tab_menu2_1_1_models_1_1_referral_a86c386632545eb694d5b0d060bbdd9d2}} 
+string {\bfseries Doctor}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a06a545e954688078b16a4d3ea1b2a375}\label{class_tab_menu2_1_1_models_1_1_referral_a06a545e954688078b16a4d3ea1b2a375}} 
+int {\bfseries Nb\+Of\+Days}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_acf6adea94cb596a9e18c83853276db9f}\label{class_tab_menu2_1_1_models_1_1_referral_acf6adea94cb596a9e18c83853276db9f}} 
+Date\+Time {\bfseries Date\+Referral}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a8fa9cc66c98a753b96925ab63ce8b145}\label{class_tab_menu2_1_1_models_1_1_referral_a8fa9cc66c98a753b96925ab63ce8b145}} 
+Date\+Time {\bfseries Date\+Saved}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_a491406bbd7dec597046a071e6fe906c7}\label{class_tab_menu2_1_1_models_1_1_referral_a491406bbd7dec597046a071e6fe906c7}} 
+bool {\bfseries Referral\+Completed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_referral_ad458039db44e8d5566a610548059e524}\label{class_tab_menu2_1_1_models_1_1_referral_ad458039db44e8d5566a610548059e524}} 
+virtual \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient}{Patient}} {\bfseries Patient}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca dane skierowania 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Fizjo\+Term/\+Models/Referral.\+cs\end{DoxyCompactItemize}

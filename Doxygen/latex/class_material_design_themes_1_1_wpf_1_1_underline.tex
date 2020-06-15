@@ -1,0 +1,80 @@
+\hypertarget{class_material_design_themes_1_1_wpf_1_1_underline}{}\doxysection{Material\+Design\+Themes.\+Wpf.\+Underline Class Reference}
+\label{class_material_design_themes_1_1_wpf_1_1_underline}\index{MaterialDesignThemes.Wpf.Underline@{MaterialDesignThemes.Wpf.Underline}}
+
+
+ 
+
+
+Inheritance diagram for Material\+Design\+Themes.\+Wpf.\+Underline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_material_design_themes_1_1_wpf_1_1_underline}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_underline_a3c082d11c03f4f8748b39e6b5d68702a}\label{class_material_design_themes_1_1_wpf_1_1_underline_a3c082d11c03f4f8748b39e6b5d68702a}} 
+override void {\bfseries On\+Apply\+Template} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_underline_a28eaf914bcdbe484f667f7b7e464288d}\label{class_material_design_themes_1_1_wpf_1_1_underline_a28eaf914bcdbe484f667f7b7e464288d}} 
+const string {\bfseries Active\+State\+Name} = \char`\"{}Active\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_underline_ace60e377bcb7e167b3ce98d75adeb630}\label{class_material_design_themes_1_1_wpf_1_1_underline_ace60e377bcb7e167b3ce98d75adeb630}} 
+const string {\bfseries Inactive\+State\+Name} = \char`\"{}Inactive\char`\"{}
+\item 
+static readonly Dependency\+Property {\bfseries Is\+Active\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Corner\+Radius\+Property}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_underline_ae34b0e13f67676ea8862e215a7dabdd9}\label{class_material_design_themes_1_1_wpf_1_1_underline_ae34b0e13f67676ea8862e215a7dabdd9}} 
+bool {\bfseries Is\+Active}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_underline_a1339a59465df8c3450cd0ab839f68cf6}\label{class_material_design_themes_1_1_wpf_1_1_underline_a1339a59465df8c3450cd0ab839f68cf6}} 
+Corner\+Radius {\bfseries Corner\+Radius}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_underline_a2bae23b21fdbcc8e784aa8b4e830fa4e}\label{class_material_design_themes_1_1_wpf_1_1_underline_a2bae23b21fdbcc8e784aa8b4e830fa4e}} 
+\index{MaterialDesignThemes.Wpf.Underline@{MaterialDesignThemes.Wpf.Underline}!CornerRadiusProperty@{CornerRadiusProperty}}
+\index{CornerRadiusProperty@{CornerRadiusProperty}!MaterialDesignThemes.Wpf.Underline@{MaterialDesignThemes.Wpf.Underline}}
+\doxysubsubsection{\texorpdfstring{CornerRadiusProperty}{CornerRadiusProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Underline.\+Corner\+Radius\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(CornerRadius), typeof(CornerRadius), typeof(Underline),}
+\DoxyCodeLine{            \textcolor{keyword}{new} FrameworkPropertyMetadata(\textcolor{keyword}{new} CornerRadius(0), FrameworkPropertyMetadataOptions.AffectsRender, \textcolor{keyword}{null}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_underline_ae7dfce43f5fc43be6fbbc859b06e4699}\label{class_material_design_themes_1_1_wpf_1_1_underline_ae7dfce43f5fc43be6fbbc859b06e4699}} 
+\index{MaterialDesignThemes.Wpf.Underline@{MaterialDesignThemes.Wpf.Underline}!IsActiveProperty@{IsActiveProperty}}
+\index{IsActiveProperty@{IsActiveProperty}!MaterialDesignThemes.Wpf.Underline@{MaterialDesignThemes.Wpf.Underline}}
+\doxysubsubsection{\texorpdfstring{IsActiveProperty}{IsActiveProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Underline.\+Is\+Active\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(IsActive), typeof(\textcolor{keywordtype}{bool}), typeof(Underline),}
+\DoxyCodeLine{            \textcolor{keyword}{new} FrameworkPropertyMetadata(\textcolor{keyword}{false}, FrameworkPropertyMetadataOptions.AffectsRender, IsActivePropertyChangedCallback))}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Material\+Design\+Themes.\+2.\+4.\+1.\+1101/src/net45/Underline.\+cs\end{DoxyCompactItemize}

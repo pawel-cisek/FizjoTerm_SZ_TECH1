@@ -1,0 +1,115 @@
+\hypertarget{class_material_design_themes_1_1_wpf_1_1_dialog_session}{}\doxysection{Material\+Design\+Themes.\+Wpf.\+Dialog\+Session Class Reference}
+\label{class_material_design_themes_1_1_wpf_1_1_dialog_session}\index{MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}}
+
+
+Allows an open dialog to be managed. Use is only permitted during a single display operation.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_dialog_session_aae9e264dc4008128a2af6b8892d09bfd}{Update\+Content}} (object content)
+\begin{DoxyCompactList}\small\item\em Update the currrent content in the dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_dialog_session_abcca519ab405a6a46ef0be8b696ea989}{Close}} ()
+\begin{DoxyCompactList}\small\item\em Closes the dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_dialog_session_abfd3ae4a4d6abefc10b0ba808527b235}{Close}} (object parameter)
+\begin{DoxyCompactList}\small\item\em Closes the dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_dialog_session_a571174167c468899ed59a06a9b0d4e30}{Content}} =$>$ \+\_\+owner.\+Dialog\+Content
+\begin{DoxyCompactList}\small\item\em Gets the Dialog\+Host.\+Dialog\+Content which is currently displayed, so this could be a view model or a UI element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_dialog_session_a914fa3ed4a24bc3ef3c528a69b16cb82}{Is\+Ended}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if the dialog session has ended. Once ended no further method calls will be permitted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Allows an open dialog to be managed. Use is only permitted during a single display operation. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_dialog_session_abcca519ab405a6a46ef0be8b696ea989}\label{class_material_design_themes_1_1_wpf_1_1_dialog_session_abcca519ab405a6a46ef0be8b696ea989}} 
+\index{MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}!Close@{Close}}
+\index{Close@{Close}!MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Material\+Design\+Themes.\+Wpf.\+Dialog\+Session.\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes the dialog. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown if the dialog session has ended, or a close operation is currently in progress.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_dialog_session_abfd3ae4a4d6abefc10b0ba808527b235}\label{class_material_design_themes_1_1_wpf_1_1_dialog_session_abfd3ae4a4d6abefc10b0ba808527b235}} 
+\index{MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}!Close@{Close}}
+\index{Close@{Close}!MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Material\+Design\+Themes.\+Wpf.\+Dialog\+Session.\+Close (\begin{DoxyParamCaption}\item[{object}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Closes the dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Result parameter which will be returned in \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_dialog_closing_event_args_aad113e883e078752b25e84e3197c10b3}{Dialog\+Closing\+Event\+Args.\+Parameter}} or from \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_dialog_host_a4b56cdc5c36f698a6bf9d4b81f2f80c4}{Dialog\+Host.\+Show(object)}} method.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown if the dialog session has ended, or a close operation is currently in progress.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_dialog_session_aae9e264dc4008128a2af6b8892d09bfd}\label{class_material_design_themes_1_1_wpf_1_1_dialog_session_aae9e264dc4008128a2af6b8892d09bfd}} 
+\index{MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}!UpdateContent@{UpdateContent}}
+\index{UpdateContent@{UpdateContent}!MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}}
+\doxysubsubsection{\texorpdfstring{UpdateContent()}{UpdateContent()}}
+{\footnotesize\ttfamily void Material\+Design\+Themes.\+Wpf.\+Dialog\+Session.\+Update\+Content (\begin{DoxyParamCaption}\item[{object}]{content }\end{DoxyParamCaption})}
+
+
+
+Update the currrent content in the dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em content} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_dialog_session_a571174167c468899ed59a06a9b0d4e30}\label{class_material_design_themes_1_1_wpf_1_1_dialog_session_a571174167c468899ed59a06a9b0d4e30}} 
+\index{MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}!Content@{Content}}
+\index{Content@{Content}!MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}}
+\doxysubsubsection{\texorpdfstring{Content}{Content}}
+{\footnotesize\ttfamily object Material\+Design\+Themes.\+Wpf.\+Dialog\+Session.\+Content =$>$ \+\_\+owner.\+Dialog\+Content}
+
+
+
+Gets the Dialog\+Host.\+Dialog\+Content which is currently displayed, so this could be a view model or a UI element. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_dialog_session_a914fa3ed4a24bc3ef3c528a69b16cb82}\label{class_material_design_themes_1_1_wpf_1_1_dialog_session_a914fa3ed4a24bc3ef3c528a69b16cb82}} 
+\index{MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}!IsEnded@{IsEnded}}
+\index{IsEnded@{IsEnded}!MaterialDesignThemes.Wpf.DialogSession@{MaterialDesignThemes.Wpf.DialogSession}}
+\doxysubsubsection{\texorpdfstring{IsEnded}{IsEnded}}
+{\footnotesize\ttfamily bool Material\+Design\+Themes.\+Wpf.\+Dialog\+Session.\+Is\+Ended\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates if the dialog session has ended. Once ended no further method calls will be permitted. 
+
+Client code cannot set this directly, this is internally managed. To end the dicalog session use \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_dialog_session_abcca519ab405a6a46ef0be8b696ea989}{Close()}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Material\+Design\+Themes.\+2.\+4.\+1.\+1101/src/net45/Dialog\+Session.\+cs\end{DoxyCompactItemize}

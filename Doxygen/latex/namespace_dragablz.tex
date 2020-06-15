@@ -1,0 +1,401 @@
+\hypertarget{namespace_dragablz}{}\doxysection{Dragablz Namespace Reference}
+\label{namespace_dragablz}\index{Dragablz@{Dragablz}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_canvas_organiser}{Canvas\+Organiser}}
+\item 
+class {\bfseries Container\+Customisations}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_default_inter_layout_client}{Default\+Inter\+Layout\+Client}}
+\begin{DoxyCompactList}\small\item\em Provides a simple implementation of \mbox{\hyperlink{interface_dragablz_1_1_i_inter_layout_client}{I\+Inter\+Layout\+Client}}, but only really useful if Tab\+Item instances are specified in X\+A\+ML. If you are binding via Items\+Source then you most likely want to create your own implementation of \mbox{\hyperlink{interface_dragablz_1_1_i_inter_layout_client}{I\+Inter\+Layout\+Client}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client}{Default\+Inter\+Tab\+Client}}
+\item 
+class {\bfseries Dragablz\+Colors}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dragablz_drag_completed_event_args}{Dragablz\+Drag\+Completed\+Event\+Args}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dragablz_drag_delta_event_args}{Dragablz\+Drag\+Delta\+Event\+Args}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dragablz_drag_started_event_args}{Dragablz\+Drag\+Started\+Event\+Args}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dragablz_icon}{Dragablz\+Icon}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dragablz_item}{Dragablz\+Item}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dragablz_item_event_args}{Dragablz\+Item\+Event\+Args}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dragablz_items_control}{Dragablz\+Items\+Control}}
+\begin{DoxyCompactList}\small\item\em Items control which typically uses a canvas and \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dragablz_window}{Dragablz\+Window}}
+\begin{DoxyCompactList}\small\item\em It is not necessary to use a \mbox{\hyperlink{class_dragablz_1_1_dragablz_window}{Dragablz\+Window}} to gain tab dragging features. What this Window does is allow a quick way to remove the Window border, and support transparency whilst dragging. ~\newline
+ \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_headered_dragablz_item}{Headered\+Dragablz\+Item}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_headered_item_view_model}{Headered\+Item\+View\+Model}}
+\begin{DoxyCompactList}\small\item\em Helper class to create view models, particularly for tool/\+M\+DI windows. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_horizontal_organiser}{Horizontal\+Organiser}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_horizontal_position_monitor}{Horizontal\+Position\+Monitor}}
+\item 
+interface \mbox{\hyperlink{interface_dragablz_1_1_i_inter_layout_client}{I\+Inter\+Layout\+Client}}
+\begin{DoxyCompactList}\small\item\em Implementors should provide a mechanism to provide a new host control which contains a new \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client}{I\+Inter\+Tab\+Client}}
+\begin{DoxyCompactList}\small\item\em Implementors should provide mechanisms for providing new windows and closing old windows. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_dragablz_1_1_i_items_organiser}{I\+Items\+Organiser}}
+\item 
+interface \mbox{\hyperlink{interface_dragablz_1_1_i_manual_inter_tab_client}{I\+Manual\+Inter\+Tab\+Client}}
+\item 
+interface \mbox{\hyperlink{interface_dragablz_1_1_i_new_tab_host}{I\+New\+Tab\+Host}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_inter_tab_controller}{Inter\+Tab\+Controller}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_item_action_callback_args}{Item\+Action\+Callback\+Args}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_location_changed_event_args}{Location\+Changed\+Event\+Args}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_move_item_request}{Move\+Item\+Request}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_new_tab_host}{New\+Tab\+Host}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_order_changed_event_args}{Order\+Changed\+Event\+Args}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_position_monitor}{Position\+Monitor}}
+\begin{DoxyCompactList}\small\item\em Consumers can provide a position monitor to receive updates regarding the location of an item. ~\newline
+ \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_stack_organiser}{Stack\+Organiser}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_stack_position_monitor}{Stack\+Position\+Monitor}}
+\begin{DoxyCompactList}\small\item\em A linear position monitor simplifies the montoring of the order of items, where they are laid out horizontally or vertically (typically via a \mbox{\hyperlink{class_dragablz_1_1_stack_organiser}{Stack\+Organiser}}. \end{DoxyCompactList}\item 
+class {\bfseries Storyboard\+Completion\+Listener}
+\item 
+class {\bfseries Storyboard\+Completion\+Listener\+Extension}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}
+\begin{DoxyCompactList}\small\item\em Extended tab control which supports tab repositioning, and drag and drop. Also uses the common W\+PF technique for pesisting the visual tree across tabs. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_tabablz_header_size_converter}{Tabablz\+Header\+Size\+Converter}}
+\begin{DoxyCompactList}\small\item\em Provides a little help for sizing the header panel in the tab control \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_tabablz_item_style_selector}{Tabablz\+Item\+Style\+Selector}}
+\begin{DoxyCompactList}\small\item\em Selects style to apply to a \mbox{\hyperlink{class_dragablz_1_1_dragablz_item}{Dragablz\+Item}} according to the tab item content itself. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_trapezoid}{Trapezoid}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_vertical_organiser}{Vertical\+Organiser}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_vertical_position_monitor}{Vertical\+Position\+Monitor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_dragablz_a58818d700460bc1754091ac09e0a4158}\label{namespace_dragablz_a58818d700460bc1754091ac09e0a4158}} 
+enum {\bfseries Size\+Grip} \{ \newline
+{\bfseries Not\+Applicable}, 
+{\bfseries Left}, 
+{\bfseries Top\+Left}, 
+{\bfseries Top}, 
+\newline
+{\bfseries Top\+Right}, 
+{\bfseries Right}, 
+{\bfseries Bottom\+Right}, 
+{\bfseries Bottom}, 
+\newline
+{\bfseries Bottom\+Left}, 
+{\bfseries Not\+Applicable}, 
+{\bfseries Left}, 
+{\bfseries Top\+Left}, 
+\newline
+{\bfseries Top}, 
+{\bfseries Top\+Right}, 
+{\bfseries Right}, 
+{\bfseries Bottom\+Right}, 
+\newline
+{\bfseries Bottom}, 
+{\bfseries Bottom\+Left}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}{Empty\+Header\+Sizing\+Hint}} \{ \mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}{Empty\+Header\+Sizing\+Hint.\+Collapse}}, 
+\mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}{Empty\+Header\+Sizing\+Hint.\+Previous\+Tab}}, 
+\mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}{Empty\+Header\+Sizing\+Hint.\+Collapse}}, 
+\mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}{Empty\+Header\+Sizing\+Hint.\+Previous\+Tab}}
+ \}
+\begin{DoxyCompactList}\small\item\em Provide a hint for how the header should size itself if there are no tabs left (and a Window is still open). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Add\+Location\+Hint}} \{ \newline
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}{Add\+Location\+Hint.\+First}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}{Add\+Location\+Hint.\+Last}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}{Add\+Location\+Hint.\+Prior}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}{Add\+Location\+Hint.\+After}}, 
+\newline
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}{Add\+Location\+Hint.\+First}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}{Add\+Location\+Hint.\+Last}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}{Add\+Location\+Hint.\+Prior}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}{Add\+Location\+Hint.\+After}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies where an item should appear when added to tab control, as the headers order do not specifically correlate to the order of the the source items. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}{Tab\+Emptied\+Response}} \{ \mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}{Tab\+Emptied\+Response.\+Close\+Window\+Or\+Layout\+Branch}}, 
+\mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}{Tab\+Emptied\+Response.\+Do\+Nothing}}, 
+\mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}{Tab\+Emptied\+Response.\+Close\+Window\+Or\+Layout\+Branch}}, 
+\mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}{Tab\+Emptied\+Response.\+Do\+Nothing}}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_dragablz_a917a4c241428ea24c2d65dff5edcac41}\label{namespace_dragablz_a917a4c241428ea24c2d65dff5edcac41}} 
+enum {\bfseries Size\+Grip} \{ \newline
+{\bfseries Not\+Applicable}, 
+{\bfseries Left}, 
+{\bfseries Top\+Left}, 
+{\bfseries Top}, 
+\newline
+{\bfseries Top\+Right}, 
+{\bfseries Right}, 
+{\bfseries Bottom\+Right}, 
+{\bfseries Bottom}, 
+\newline
+{\bfseries Bottom\+Left}, 
+{\bfseries Not\+Applicable}, 
+{\bfseries Left}, 
+{\bfseries Top\+Left}, 
+\newline
+{\bfseries Top}, 
+{\bfseries Top\+Right}, 
+{\bfseries Right}, 
+{\bfseries Bottom\+Right}, 
+\newline
+{\bfseries Bottom}, 
+{\bfseries Bottom\+Left}
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}{Empty\+Header\+Sizing\+Hint}} \{ \mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}{Empty\+Header\+Sizing\+Hint.\+Collapse}}, 
+\mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}{Empty\+Header\+Sizing\+Hint.\+Previous\+Tab}}, 
+\mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}{Empty\+Header\+Sizing\+Hint.\+Collapse}}, 
+\mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}{Empty\+Header\+Sizing\+Hint.\+Previous\+Tab}}
+ \}
+\begin{DoxyCompactList}\small\item\em Provide a hint for how the header should size itself if there are no tabs left (and a Window is still open). \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Add\+Location\+Hint}} \{ \newline
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}{Add\+Location\+Hint.\+First}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}{Add\+Location\+Hint.\+Last}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}{Add\+Location\+Hint.\+Prior}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}{Add\+Location\+Hint.\+After}}, 
+\newline
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}{Add\+Location\+Hint.\+First}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}{Add\+Location\+Hint.\+Last}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}{Add\+Location\+Hint.\+Prior}}, 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}{Add\+Location\+Hint.\+After}}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies where an item should appear when added to tab control, as the headers order do not specifically correlate to the order of the the source items. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}{Tab\+Emptied\+Response}} \{ \mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}{Tab\+Emptied\+Response.\+Close\+Window\+Or\+Layout\+Branch}}, 
+\mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}{Tab\+Emptied\+Response.\+Do\+Nothing}}, 
+\mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}{Tab\+Emptied\+Response.\+Close\+Window\+Or\+Layout\+Branch}}, 
+\mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}{Tab\+Emptied\+Response.\+Do\+Nothing}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_dragablz_a2458d6232bb8abe49714963047fb3177}\label{namespace_dragablz_a2458d6232bb8abe49714963047fb3177}} 
+delegate void {\bfseries Dragablz\+Drag\+Completed\+Event\+Handler} (object sender, \mbox{\hyperlink{class_dragablz_1_1_dragablz_drag_completed_event_args}{Dragablz\+Drag\+Completed\+Event\+Args}} e)
+\item 
+\mbox{\Hypertarget{namespace_dragablz_a53ec4a2ffbf438b54b197e0d6f19b042}\label{namespace_dragablz_a53ec4a2ffbf438b54b197e0d6f19b042}} 
+delegate void {\bfseries Dragablz\+Drag\+Delta\+Event\+Handler} (object sender, \mbox{\hyperlink{class_dragablz_1_1_dragablz_drag_delta_event_args}{Dragablz\+Drag\+Delta\+Event\+Args}} e)
+\item 
+\mbox{\Hypertarget{namespace_dragablz_a43081448344ad0ffffe26ef26e5042d6}\label{namespace_dragablz_a43081448344ad0ffffe26ef26e5042d6}} 
+delegate void {\bfseries Dragablz\+Drag\+Started\+Event\+Handler} (object sender, \mbox{\hyperlink{class_dragablz_1_1_dragablz_drag_started_event_args}{Dragablz\+Drag\+Started\+Event\+Args}} e)
+\item 
+\mbox{\Hypertarget{namespace_dragablz_ad9ae24761a1955e5d388f0eb3a967dfa}\label{namespace_dragablz_ad9ae24761a1955e5d388f0eb3a967dfa}} 
+delegate void {\bfseries Dragablz\+Item\+Event\+Handler} (object sender, \mbox{\hyperlink{class_dragablz_1_1_dragablz_item_event_args}{Dragablz\+Item\+Event\+Args}} e)
+\item 
+\mbox{\Hypertarget{namespace_dragablz_ab636b72fbf9f7d8f1d9fa9b6b9b4fabb}\label{namespace_dragablz_ab636b72fbf9f7d8f1d9fa9b6b9b4fabb}} 
+delegate void {\bfseries Item\+Action\+Callback} (\mbox{\hyperlink{class_dragablz_1_1_item_action_callback_args}{Item\+Action\+Callback\+Args}}$<$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} $>$ args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}} 
+\index{Dragablz@{Dragablz}!AddLocationHint@{AddLocationHint}}
+\index{AddLocationHint@{AddLocationHint}!Dragablz@{Dragablz}}
+\doxysubsubsection{\texorpdfstring{AddLocationHint}{AddLocationHint}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Dragablz.\+Add\+Location\+Hint}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Specifies where an item should appear when added to tab control, as the headers order do not specifically correlate to the order of the the source items. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{First@{First}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!First@{First}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}} 
+First&Display item in the first position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Last@{Last}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Last@{Last}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}} 
+Last&Display item in the first position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Prior@{Prior}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Prior@{Prior}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}} 
+Prior&Display an item prior to the selected, or specified item. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{After@{After}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!After@{After}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}} 
+After&Display an item after the selected, or specified item. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{First@{First}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!First@{First}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}} 
+First&Display item in the first position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Last@{Last}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Last@{Last}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}} 
+Last&Display item in the first position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Prior@{Prior}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Prior@{Prior}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}} 
+Prior&Display an item prior to the selected, or specified item. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{After@{After}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!After@{After}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}} 
+After&Display an item after the selected, or specified item. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}} 
+\index{Dragablz@{Dragablz}!AddLocationHint@{AddLocationHint}}
+\index{AddLocationHint@{AddLocationHint}!Dragablz@{Dragablz}}
+\doxysubsubsection{\texorpdfstring{AddLocationHint}{AddLocationHint}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Dragablz.\+Add\+Location\+Hint}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Specifies where an item should appear when added to tab control, as the headers order do not specifically correlate to the order of the the source items. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{First@{First}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!First@{First}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}} 
+First&Display item in the first position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Last@{Last}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Last@{Last}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}} 
+Last&Display item in the first position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Prior@{Prior}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Prior@{Prior}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}} 
+Prior&Display an item prior to the selected, or specified item. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{After@{After}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!After@{After}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}} 
+After&Display an item after the selected, or specified item. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{First@{First}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!First@{First}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7fb55ed0b7a30342ba6da306428cae04}} 
+First&Display item in the first position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Last@{Last}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Last@{Last}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bead55b30607c2a9a2616347d6edb789f6b}} 
+Last&Display item in the first position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Prior@{Prior}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Prior@{Prior}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3beae3d5e88745fd884d551c7f25237a5b5e}} 
+Prior&Display an item prior to the selected, or specified item. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{After@{After}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!After@{After}}}\mbox{\Hypertarget{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}\label{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3bea7bfcadb5535fe8aad5032762b7bfe159}} 
+After&Display an item after the selected, or specified item. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}} 
+\index{Dragablz@{Dragablz}!EmptyHeaderSizingHint@{EmptyHeaderSizingHint}}
+\index{EmptyHeaderSizingHint@{EmptyHeaderSizingHint}!Dragablz@{Dragablz}}
+\doxysubsubsection{\texorpdfstring{EmptyHeaderSizingHint}{EmptyHeaderSizingHint}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}{Dragablz.\+Empty\+Header\+Sizing\+Hint}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Provide a hint for how the header should size itself if there are no tabs left (and a Window is still open). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Collapse@{Collapse}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Collapse@{Collapse}}}\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}} 
+Collapse&The header size collapses to zero along the correct axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PreviousTab@{PreviousTab}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!PreviousTab@{PreviousTab}}}\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}} 
+Previous\+Tab&The header size remains that of the last tab prior to the tab header becoming empty. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Collapse@{Collapse}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Collapse@{Collapse}}}\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}} 
+Collapse&The header size collapses to zero along the correct axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PreviousTab@{PreviousTab}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!PreviousTab@{PreviousTab}}}\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}} 
+Previous\+Tab&The header size remains that of the last tab prior to the tab header becoming empty. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}} 
+\index{Dragablz@{Dragablz}!EmptyHeaderSizingHint@{EmptyHeaderSizingHint}}
+\index{EmptyHeaderSizingHint@{EmptyHeaderSizingHint}!Dragablz@{Dragablz}}
+\doxysubsubsection{\texorpdfstring{EmptyHeaderSizingHint}{EmptyHeaderSizingHint}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}{Dragablz.\+Empty\+Header\+Sizing\+Hint}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Provide a hint for how the header should size itself if there are no tabs left (and a Window is still open). 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Collapse@{Collapse}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Collapse@{Collapse}}}\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}} 
+Collapse&The header size collapses to zero along the correct axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PreviousTab@{PreviousTab}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!PreviousTab@{PreviousTab}}}\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}} 
+Previous\+Tab&The header size remains that of the last tab prior to the tab header becoming empty. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Collapse@{Collapse}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!Collapse@{Collapse}}}\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68a2b31634e3cfef1bfdd7d0d2cdfdc3f9d}} 
+Collapse&The header size collapses to zero along the correct axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PreviousTab@{PreviousTab}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!PreviousTab@{PreviousTab}}}\mbox{\Hypertarget{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}\label{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68ab7bacb96202d589dc8cb9e0d4402c661}} 
+Previous\+Tab&The header size remains that of the last tab prior to the tab header becoming empty. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}} 
+\index{Dragablz@{Dragablz}!TabEmptiedResponse@{TabEmptiedResponse}}
+\index{TabEmptiedResponse@{TabEmptiedResponse}!Dragablz@{Dragablz}}
+\doxysubsubsection{\texorpdfstring{TabEmptiedResponse}{TabEmptiedResponse}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}{Dragablz.\+Tab\+Emptied\+Response}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CloseWindowOrLayoutBranch@{CloseWindowOrLayoutBranch}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!CloseWindowOrLayoutBranch@{CloseWindowOrLayoutBranch}}}\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}} 
+Close\+Window\+Or\+Layout\+Branch&Allow the Window to be closed automatically. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DoNothing@{DoNothing}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!DoNothing@{DoNothing}}}\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}} 
+Do\+Nothing&The window will not be closed by the \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}, probably meaning the implementor will close the window manually \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CloseWindowOrLayoutBranch@{CloseWindowOrLayoutBranch}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!CloseWindowOrLayoutBranch@{CloseWindowOrLayoutBranch}}}\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}} 
+Close\+Window\+Or\+Layout\+Branch&Allow the Window to be closed automatically. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DoNothing@{DoNothing}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!DoNothing@{DoNothing}}}\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}} 
+Do\+Nothing&The window will not be closed by the \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}, probably meaning the implementor will close the window manually \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}} 
+\index{Dragablz@{Dragablz}!TabEmptiedResponse@{TabEmptiedResponse}}
+\index{TabEmptiedResponse@{TabEmptiedResponse}!Dragablz@{Dragablz}}
+\doxysubsubsection{\texorpdfstring{TabEmptiedResponse}{TabEmptiedResponse}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}{Dragablz.\+Tab\+Emptied\+Response}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CloseWindowOrLayoutBranch@{CloseWindowOrLayoutBranch}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!CloseWindowOrLayoutBranch@{CloseWindowOrLayoutBranch}}}\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}} 
+Close\+Window\+Or\+Layout\+Branch&Allow the Window to be closed automatically. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DoNothing@{DoNothing}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!DoNothing@{DoNothing}}}\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}} 
+Do\+Nothing&The window will not be closed by the \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}, probably meaning the implementor will close the window manually \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CloseWindowOrLayoutBranch@{CloseWindowOrLayoutBranch}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!CloseWindowOrLayoutBranch@{CloseWindowOrLayoutBranch}}}\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a512967656659f3e0e369dbe77da28cd9}} 
+Close\+Window\+Or\+Layout\+Branch&Allow the Window to be closed automatically. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DoNothing@{DoNothing}!Dragablz@{Dragablz}}\index{Dragablz@{Dragablz}!DoNothing@{DoNothing}}}\mbox{\Hypertarget{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}\label{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4a71b7f3fcd4098ebf8a3b387579d90dd7}} 
+Do\+Nothing&The window will not be closed by the \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}, probably meaning the implementor will close the window manually \\
+\hline
+
+\end{DoxyEnumFields}

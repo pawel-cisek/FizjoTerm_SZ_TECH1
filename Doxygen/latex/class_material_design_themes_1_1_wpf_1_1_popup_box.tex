@@ -1,0 +1,556 @@
+\hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box}{}\doxysection{Material\+Design\+Themes.\+Wpf.\+Popup\+Box Class Reference}
+\label{class_material_design_themes_1_1_wpf_1_1_popup_box}\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+
+
+Popup box, similar to a Combo\+Box, but allows more customizable content. ~\newline
+  
+
+
+Inheritance diagram for Material\+Design\+Themes.\+Wpf.\+Popup\+Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_material_design_themes_1_1_wpf_1_1_popup_box}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_acb31be85e9f598f259fec331f32dd907}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_acb31be85e9f598f259fec331f32dd907}} 
+override void {\bfseries On\+Apply\+Template} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Custom\+Popup\+Placement\+Callback \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a699f201511033789f0f2ad847e879d8d}{Popup\+Placement\+Method}} =$>$ Get\+Popup\+Placement
+\begin{DoxyCompactList}\small\item\em Framework use. Provides the method used to position the popup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a0a04b7a0ac5464d1aa94abcb1a5e7b09}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a0a04b7a0ac5464d1aa94abcb1a5e7b09}} 
+const string {\bfseries Popup\+Part\+Name} = \char`\"{}P\+A\+R\+T\+\_\+\+Popup\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_afc63b9493b20576617ee61f7bfdce404}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_afc63b9493b20576617ee61f7bfdce404}} 
+const string {\bfseries Toggle\+Part\+Name} = \char`\"{}P\+A\+R\+T\+\_\+\+Toggle\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a36e071bd6ebf6b30d91052c38749a9f8}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a36e071bd6ebf6b30d91052c38749a9f8}} 
+const string {\bfseries Popup\+Content\+Control\+Part\+Name} = \char`\"{}P\+A\+R\+T\+\_\+\+Popup\+Content\+Control\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ab8116e6620d68b92cb70f0dd7f7c3035}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ab8116e6620d68b92cb70f0dd7f7c3035}} 
+const string {\bfseries Popup\+Is\+Open\+State\+Name} = \char`\"{}Is\+Open\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_af8dc8756c13ccf83370d175d7443b9ef}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_af8dc8756c13ccf83370d175d7443b9ef}} 
+const string {\bfseries Popup\+Is\+Closed\+State\+Name} = \char`\"{}Is\+Closed\char`\"{}
+\item 
+static readonly Dependency\+Property {\bfseries Toggle\+Content\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Toggle\+Content\+Template\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Toggle\+Checked\+Content\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Toggle\+Checked\+Content\+Template\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Toggle\+Checked\+Content\+Command\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Toggle\+Checked\+Content\+Command\+Parameter\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Popup\+Content\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Popup\+Content\+Template\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Is\+Popup\+Open\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Stays\+Open\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Placement\+Mode\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Popup\+Mode\+Property}
+\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a31e2abaaf069a945fc9b8320e935e1c6}{Unfurl\+Orientation\+Property}}
+\begin{DoxyCompactList}\small\item\em Get or sets how to unfurl controls when opening the popups. Only child elements of type Button\+Base are animated. \end{DoxyCompactList}\item 
+static readonly Routed\+Event \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ad3d2ae1385ab8c98e3f84df886b4fedf}{Toggle\+Checked\+Content\+Click\+Event}} = Event\+Manager.\+Register\+Routed\+Event(\char`\"{}Toggle\+Checked\+Content\+Click\char`\"{}, Routing\+Strategy.\+Bubble, typeof(Routed\+Event\+Handler), typeof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box}{Popup\+Box}}))
+\begin{DoxyCompactList}\small\item\em Event raised when the checked toggled content (if set) is clicked. \end{DoxyCompactList}\item 
+static readonly Routed\+Event {\bfseries Opened\+Event}
+\item 
+static readonly Routed\+Event {\bfseries Closed\+Event}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_abc1377afd4e93a44c60c1e39cb8285f7}{On\+Toggle\+Checked\+Content\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Raises \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ad3d2ae1385ab8c98e3f84df886b4fedf}{Toggle\+Checked\+Content\+Click\+Event}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ab4342e606148a56e5e9382b06bbfa433}{On\+Opened}} ()
+\begin{DoxyCompactList}\small\item\em Raises Opened\+Event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a10014211ecf644044c89c3bf08c30a77}{On\+Closed}} ()
+\begin{DoxyCompactList}\small\item\em Raises Closed\+Event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a763f9810d3d63fb52b41301b360d3d2b}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a763f9810d3d63fb52b41301b360d3d2b}} 
+override void {\bfseries On\+Is\+Keyboard\+Focus\+Within\+Changed} (Dependency\+Property\+Changed\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ad72cee030387333d780bf5fe24238d49}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ad72cee030387333d780bf5fe24238d49}} 
+override void {\bfseries On\+Mouse\+Enter} (Mouse\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a4024077cc1e62056279caf183b8f6194}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a4024077cc1e62056279caf183b8f6194}} 
+override void {\bfseries On\+Mouse\+Leave} (Mouse\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_aae1f0b006180af8f79751ec95ff32f2b}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_aae1f0b006180af8f79751ec95ff32f2b}} 
+void {\bfseries Close} ()
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a1f26d6c566033ec793c2081f61fa03e4}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a1f26d6c566033ec793c2081f61fa03e4}} 
+override void {\bfseries On\+Mouse\+Left\+Button\+Up} (Mouse\+Button\+Event\+Args e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_aab81ff1385029b1c336ba7f4822c4c98}{Toggle\+Content}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Content to display in the toggle button. \end{DoxyCompactList}\item 
+Data\+Template \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a3c043b1ac3c62ad36890b328aebeb5f3}{Toggle\+Content\+Template}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Template for \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_aab81ff1385029b1c336ba7f4822c4c98}{Toggle\+Content}}. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ab937cb98354fe80504b920a7a1dbc46d}{Toggle\+Checked\+Content}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Content to display in the toggle when it\textquotesingle{}s checked (when the popup is open). Optional; if not provided the \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_aab81ff1385029b1c336ba7f4822c4c98}{Toggle\+Content}} is used. \end{DoxyCompactList}\item 
+Data\+Template \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_af79ead8903c726a97f80f754ea064ab7}{Toggle\+Checked\+Content\+Template}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Template for \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ab937cb98354fe80504b920a7a1dbc46d}{Toggle\+Checked\+Content}}. \end{DoxyCompactList}\item 
+I\+Command \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a4ed410dc6c45f400513696e60f1c2d2b}{Toggle\+Checked\+Content\+Command}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command to execute if toggle is checked (popup is open) and \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ab937cb98354fe80504b920a7a1dbc46d}{Toggle\+Checked\+Content}} is set. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ae7ffa54470e811587010520e6c16c323}{Toggle\+Checked\+Content\+Command\+Parameter}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Command parameter to use in conjunction with \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a4ed410dc6c45f400513696e60f1c2d2b}{Toggle\+Checked\+Content\+Command}}. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a3a864de07bba3d68f25a2fef02d046d6}{Popup\+Content}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Content to display in the content. \end{DoxyCompactList}\item 
+Data\+Template \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ad1de44df3b42d9fdaed68985a956ccb7}{Popup\+Content\+Template}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Popup content template. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a63416131b4e04764d0358ce568132ac2}{Is\+Popup\+Open}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets whether the popup is currently open. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a3d221754b314f30bfb002513f3096995}{Stays\+Open}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates of the popup should stay open if a click occurs inside the popup. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_material_design_themes_1_1_wpf_aa5ff74ea870d218ca527b0313b4f89a7}{Popup\+Box\+Placement\+Mode}} \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a8fac833fb72a96c6265deeb301da40d4}{Placement\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets how the popup is aligned in relation to the toggle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_material_design_themes_1_1_wpf_ad51a6b0571cab3f9b83c1be65f78a0b9}{Popup\+Box\+Popup\+Mode}} \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_aafb69076f3bc84fe420cc6ce2dab2d43}{Popup\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets what trigger causes the popup to open. \end{DoxyCompactList}\item 
+Orientation \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a4099294243dfa82b9654f17bfbb9ed97}{Unfurl\+Orientation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets how to unfurl controls when opening the popups. Only child elements of type Button\+Base are animated. \end{DoxyCompactList}\item 
+Routed\+Event\+Handler \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a3a46cd100b5088b8c5f8603cc94be404}{Toggle\+Checked\+Content\+Click}}
+\begin{DoxyCompactList}\small\item\em Event raised when the checked toggled content (if set) is clicked. \end{DoxyCompactList}\item 
+Routed\+Event\+Handler \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a6e8721a6b7ebc8544915b967423db977}{Opened}}
+\begin{DoxyCompactList}\small\item\em Raised when the popup is opened. \end{DoxyCompactList}\item 
+Routed\+Event\+Handler \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a53fff9d791e6467646eb1021e7d32c87}{Closed}}
+\begin{DoxyCompactList}\small\item\em Raised when the popup is opened. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Popup box, similar to a Combo\+Box, but allows more customizable content. ~\newline
+ 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a10014211ecf644044c89c3bf08c30a77}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a10014211ecf644044c89c3bf08c30a77}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!OnClosed@{OnClosed}}
+\index{OnClosed@{OnClosed}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{OnClosed()}{OnClosed()}}
+{\footnotesize\ttfamily virtual void Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+On\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Raises Closed\+Event. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ab4342e606148a56e5e9382b06bbfa433}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ab4342e606148a56e5e9382b06bbfa433}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!OnOpened@{OnOpened}}
+\index{OnOpened@{OnOpened}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{OnOpened()}{OnOpened()}}
+{\footnotesize\ttfamily virtual void Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+On\+Opened (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Raises Opened\+Event. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_abc1377afd4e93a44c60c1e39cb8285f7}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_abc1377afd4e93a44c60c1e39cb8285f7}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!OnToggleCheckedContentClick@{OnToggleCheckedContentClick}}
+\index{OnToggleCheckedContentClick@{OnToggleCheckedContentClick}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{OnToggleCheckedContentClick()}{OnToggleCheckedContentClick()}}
+{\footnotesize\ttfamily virtual void Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+On\+Toggle\+Checked\+Content\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Raises \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ad3d2ae1385ab8c98e3f84df886b4fedf}{Toggle\+Checked\+Content\+Click\+Event}}. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a2c64bb97c4b38ab0ab35d4f6f7c72d9b}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a2c64bb97c4b38ab0ab35d4f6f7c72d9b}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ClosedEvent@{ClosedEvent}}
+\index{ClosedEvent@{ClosedEvent}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ClosedEvent}{ClosedEvent}}
+{\footnotesize\ttfamily readonly Routed\+Event Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Closed\+Event\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            EventManager.RegisterRoutedEvent(}
+\DoxyCodeLine{                \textcolor{stringliteral}{"Closed"},}
+\DoxyCodeLine{                RoutingStrategy.Bubble,}
+\DoxyCodeLine{                typeof(EventHandler),}
+\DoxyCodeLine{                typeof(PopupBox))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a87af67550a24af6ab016312b453f9255}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a87af67550a24af6ab016312b453f9255}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!IsPopupOpenProperty@{IsPopupOpenProperty}}
+\index{IsPopupOpenProperty@{IsPopupOpenProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{IsPopupOpenProperty}{IsPopupOpenProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Is\+Popup\+Open\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a63416131b4e04764d0358ce568132ac2}{IsPopupOpen}}), typeof (\textcolor{keywordtype}{bool}), typeof (PopupBox), \textcolor{keyword}{new} FrameworkPropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{bool}), IsPopupOpenPropertyChangedCallback))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_af0aae3c0ea413e9dcd43689d82a21431}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_af0aae3c0ea413e9dcd43689d82a21431}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!OpenedEvent@{OpenedEvent}}
+\index{OpenedEvent@{OpenedEvent}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{OpenedEvent}{OpenedEvent}}
+{\footnotesize\ttfamily readonly Routed\+Event Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Opened\+Event\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            EventManager.RegisterRoutedEvent(}
+\DoxyCodeLine{                \textcolor{stringliteral}{"Opened"},}
+\DoxyCodeLine{                RoutingStrategy.Bubble,}
+\DoxyCodeLine{                typeof(EventHandler),}
+\DoxyCodeLine{                typeof(PopupBox))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a499f8c7ff272cc11ed2c90a3e28cc1c5}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a499f8c7ff272cc11ed2c90a3e28cc1c5}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PlacementModeProperty@{PlacementModeProperty}}
+\index{PlacementModeProperty@{PlacementModeProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PlacementModeProperty}{PlacementModeProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Placement\+Mode\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a8fac833fb72a96c6265deeb301da40d4}{PlacementMode}}), typeof (\mbox{\hyperlink{namespace_material_design_themes_1_1_wpf_aa5ff74ea870d218ca527b0313b4f89a7}{PopupBoxPlacementMode}}), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\mbox{\hyperlink{namespace_material_design_themes_1_1_wpf_aa5ff74ea870d218ca527b0313b4f89a7}{PopupBoxPlacementMode}}), PlacementModePropertyChangedCallback))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a2c3982be6f279e599b914c90fbf35575}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a2c3982be6f279e599b914c90fbf35575}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PopupContentProperty@{PopupContentProperty}}
+\index{PopupContentProperty@{PopupContentProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PopupContentProperty}{PopupContentProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Popup\+Content\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a3a864de07bba3d68f25a2fef02d046d6}{PopupContent}}), typeof (\textcolor{keywordtype}{object}), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{object})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a241f6e3157fddd48de13c4556d689b40}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a241f6e3157fddd48de13c4556d689b40}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PopupContentTemplateProperty@{PopupContentTemplateProperty}}
+\index{PopupContentTemplateProperty@{PopupContentTemplateProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PopupContentTemplateProperty}{PopupContentTemplateProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Popup\+Content\+Template\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ad1de44df3b42d9fdaed68985a956ccb7}{PopupContentTemplate}}), typeof (DataTemplate), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplate)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a66eef20b86606ff26c80cf5dcc343ab4}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a66eef20b86606ff26c80cf5dcc343ab4}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PopupModeProperty@{PopupModeProperty}}
+\index{PopupModeProperty@{PopupModeProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PopupModeProperty}{PopupModeProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Popup\+Mode\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_aafb69076f3bc84fe420cc6ce2dab2d43}{PopupMode}}), typeof (\mbox{\hyperlink{namespace_material_design_themes_1_1_wpf_ad51a6b0571cab3f9b83c1be65f78a0b9}{PopupBoxPopupMode}}), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\mbox{\hyperlink{namespace_material_design_themes_1_1_wpf_ad51a6b0571cab3f9b83c1be65f78a0b9}{PopupBoxPopupMode}})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a699f201511033789f0f2ad847e879d8d}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a699f201511033789f0f2ad847e879d8d}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PopupPlacementMethod@{PopupPlacementMethod}}
+\index{PopupPlacementMethod@{PopupPlacementMethod}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PopupPlacementMethod}{PopupPlacementMethod}}
+{\footnotesize\ttfamily Custom\+Popup\+Placement\+Callback Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Popup\+Placement\+Method =$>$ Get\+Popup\+Placement}
+
+
+
+Framework use. Provides the method used to position the popup. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a8b270c5c7108608de204635bfa8ff610}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a8b270c5c7108608de204635bfa8ff610}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!StaysOpenProperty@{StaysOpenProperty}}
+\index{StaysOpenProperty@{StaysOpenProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{StaysOpenProperty}{StaysOpenProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Stays\+Open\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a3d221754b314f30bfb002513f3096995}{StaysOpen}}), typeof (\textcolor{keywordtype}{bool}), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{bool})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ad3d2ae1385ab8c98e3f84df886b4fedf}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ad3d2ae1385ab8c98e3f84df886b4fedf}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentClickEvent@{ToggleCheckedContentClickEvent}}
+\index{ToggleCheckedContentClickEvent@{ToggleCheckedContentClickEvent}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentClickEvent}{ToggleCheckedContentClickEvent}}
+{\footnotesize\ttfamily readonly Routed\+Event Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Click\+Event = Event\+Manager.\+Register\+Routed\+Event(\char`\"{}Toggle\+Checked\+Content\+Click\char`\"{}, Routing\+Strategy.\+Bubble, typeof(Routed\+Event\+Handler), typeof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box}{Popup\+Box}}))\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Event raised when the checked toggled content (if set) is clicked. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ae7329e4745c3656585fd9384a6a543c7}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ae7329e4745c3656585fd9384a6a543c7}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentCommandParameterProperty@{ToggleCheckedContentCommandParameterProperty}}
+\index{ToggleCheckedContentCommandParameterProperty@{ToggleCheckedContentCommandParameterProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentCommandParameterProperty}{ToggleCheckedContentCommandParameterProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Command\+Parameter\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ae7ffa54470e811587010520e6c16c323}{ToggleCheckedContentCommandParameter}}), typeof (\textcolor{keywordtype}{object}), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{object})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ace486086e6fc475555b658a99b3bfdbd}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ace486086e6fc475555b658a99b3bfdbd}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentCommandProperty@{ToggleCheckedContentCommandProperty}}
+\index{ToggleCheckedContentCommandProperty@{ToggleCheckedContentCommandProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentCommandProperty}{ToggleCheckedContentCommandProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Command\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a4ed410dc6c45f400513696e60f1c2d2b}{ToggleCheckedContentCommand}}), typeof (ICommand), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(ICommand)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a240b933a99b374804c8c242bd50bb6fc}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a240b933a99b374804c8c242bd50bb6fc}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentProperty@{ToggleCheckedContentProperty}}
+\index{ToggleCheckedContentProperty@{ToggleCheckedContentProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentProperty}{ToggleCheckedContentProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ab937cb98354fe80504b920a7a1dbc46d}{ToggleCheckedContent}}), typeof (\textcolor{keywordtype}{object}), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{object})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ad86ec19d1372ae5e7435ab5200324fef}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ad86ec19d1372ae5e7435ab5200324fef}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentTemplateProperty@{ToggleCheckedContentTemplateProperty}}
+\index{ToggleCheckedContentTemplateProperty@{ToggleCheckedContentTemplateProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentTemplateProperty}{ToggleCheckedContentTemplateProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Template\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_af79ead8903c726a97f80f754ea064ab7}{ToggleCheckedContentTemplate}}), typeof (DataTemplate), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplate)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a2a40da46030702169cd9373545cacccc}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a2a40da46030702169cd9373545cacccc}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleContentProperty@{ToggleContentProperty}}
+\index{ToggleContentProperty@{ToggleContentProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleContentProperty}{ToggleContentProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Content\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_aab81ff1385029b1c336ba7f4822c4c98}{ToggleContent}}), typeof (\textcolor{keywordtype}{object}), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{object})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_aa432689dba1f2a9c0e402b4775a50b49}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_aa432689dba1f2a9c0e402b4775a50b49}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleContentTemplateProperty@{ToggleContentTemplateProperty}}
+\index{ToggleContentTemplateProperty@{ToggleContentTemplateProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleContentTemplateProperty}{ToggleContentTemplateProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Content\+Template\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a3c043b1ac3c62ad36890b328aebeb5f3}{ToggleContentTemplate}}), typeof (DataTemplate), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplate)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a31e2abaaf069a945fc9b8320e935e1c6}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a31e2abaaf069a945fc9b8320e935e1c6}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!UnfurlOrientationProperty@{UnfurlOrientationProperty}}
+\index{UnfurlOrientationProperty@{UnfurlOrientationProperty}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{UnfurlOrientationProperty}{UnfurlOrientationProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Unfurl\+Orientation\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(\mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a4099294243dfa82b9654f17bfbb9ed97}{UnfurlOrientation}}), typeof (Orientation), typeof (PopupBox), \textcolor{keyword}{new} PropertyMetadata(Orientation.Vertical))}
+
+\end{DoxyCode}
+
+
+Get or sets how to unfurl controls when opening the popups. Only child elements of type Button\+Base are animated. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a53fff9d791e6467646eb1021e7d32c87}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a53fff9d791e6467646eb1021e7d32c87}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!Closed@{Closed}}
+\index{Closed@{Closed}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{Closed}{Closed}}
+{\footnotesize\ttfamily Routed\+Event\+Handler Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Closed\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Raised when the popup is opened. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a63416131b4e04764d0358ce568132ac2}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a63416131b4e04764d0358ce568132ac2}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!IsPopupOpen@{IsPopupOpen}}
+\index{IsPopupOpen@{IsPopupOpen}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{IsPopupOpen}{IsPopupOpen}}
+{\footnotesize\ttfamily bool Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Is\+Popup\+Open\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets whether the popup is currently open. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a6e8721a6b7ebc8544915b967423db977}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a6e8721a6b7ebc8544915b967423db977}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!Opened@{Opened}}
+\index{Opened@{Opened}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{Opened}{Opened}}
+{\footnotesize\ttfamily Routed\+Event\+Handler Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Opened\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Raised when the popup is opened. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a8fac833fb72a96c6265deeb301da40d4}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a8fac833fb72a96c6265deeb301da40d4}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PlacementMode@{PlacementMode}}
+\index{PlacementMode@{PlacementMode}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PlacementMode}{PlacementMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_material_design_themes_1_1_wpf_aa5ff74ea870d218ca527b0313b4f89a7}{Popup\+Box\+Placement\+Mode}} Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Placement\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets how the popup is aligned in relation to the toggle. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a3a864de07bba3d68f25a2fef02d046d6}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a3a864de07bba3d68f25a2fef02d046d6}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PopupContent@{PopupContent}}
+\index{PopupContent@{PopupContent}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PopupContent}{PopupContent}}
+{\footnotesize\ttfamily object Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Popup\+Content\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Content to display in the content. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ad1de44df3b42d9fdaed68985a956ccb7}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ad1de44df3b42d9fdaed68985a956ccb7}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PopupContentTemplate@{PopupContentTemplate}}
+\index{PopupContentTemplate@{PopupContentTemplate}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PopupContentTemplate}{PopupContentTemplate}}
+{\footnotesize\ttfamily Data\+Template Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Popup\+Content\+Template\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Popup content template. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_aafb69076f3bc84fe420cc6ce2dab2d43}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_aafb69076f3bc84fe420cc6ce2dab2d43}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!PopupMode@{PopupMode}}
+\index{PopupMode@{PopupMode}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{PopupMode}{PopupMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_material_design_themes_1_1_wpf_ad51a6b0571cab3f9b83c1be65f78a0b9}{Popup\+Box\+Popup\+Mode}} Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Popup\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets what trigger causes the popup to open. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a3d221754b314f30bfb002513f3096995}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a3d221754b314f30bfb002513f3096995}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!StaysOpen@{StaysOpen}}
+\index{StaysOpen@{StaysOpen}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{StaysOpen}{StaysOpen}}
+{\footnotesize\ttfamily bool Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Stays\+Open\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates of the popup should stay open if a click occurs inside the popup. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ab937cb98354fe80504b920a7a1dbc46d}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ab937cb98354fe80504b920a7a1dbc46d}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContent@{ToggleCheckedContent}}
+\index{ToggleCheckedContent@{ToggleCheckedContent}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContent}{ToggleCheckedContent}}
+{\footnotesize\ttfamily object Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Content to display in the toggle when it\textquotesingle{}s checked (when the popup is open). Optional; if not provided the \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_aab81ff1385029b1c336ba7f4822c4c98}{Toggle\+Content}} is used. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a3a46cd100b5088b8c5f8603cc94be404}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a3a46cd100b5088b8c5f8603cc94be404}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentClick@{ToggleCheckedContentClick}}
+\index{ToggleCheckedContentClick@{ToggleCheckedContentClick}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentClick}{ToggleCheckedContentClick}}
+{\footnotesize\ttfamily Routed\+Event\+Handler Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Click\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Event raised when the checked toggled content (if set) is clicked. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a4ed410dc6c45f400513696e60f1c2d2b}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a4ed410dc6c45f400513696e60f1c2d2b}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentCommand@{ToggleCheckedContentCommand}}
+\index{ToggleCheckedContentCommand@{ToggleCheckedContentCommand}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentCommand}{ToggleCheckedContentCommand}}
+{\footnotesize\ttfamily I\+Command Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Command\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Command to execute if toggle is checked (popup is open) and \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ab937cb98354fe80504b920a7a1dbc46d}{Toggle\+Checked\+Content}} is set. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_ae7ffa54470e811587010520e6c16c323}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_ae7ffa54470e811587010520e6c16c323}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentCommandParameter@{ToggleCheckedContentCommandParameter}}
+\index{ToggleCheckedContentCommandParameter@{ToggleCheckedContentCommandParameter}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentCommandParameter}{ToggleCheckedContentCommandParameter}}
+{\footnotesize\ttfamily object Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Command\+Parameter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Command parameter to use in conjunction with \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_a4ed410dc6c45f400513696e60f1c2d2b}{Toggle\+Checked\+Content\+Command}}. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_af79ead8903c726a97f80f754ea064ab7}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_af79ead8903c726a97f80f754ea064ab7}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleCheckedContentTemplate@{ToggleCheckedContentTemplate}}
+\index{ToggleCheckedContentTemplate@{ToggleCheckedContentTemplate}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleCheckedContentTemplate}{ToggleCheckedContentTemplate}}
+{\footnotesize\ttfamily Data\+Template Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Checked\+Content\+Template\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Template for \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_ab937cb98354fe80504b920a7a1dbc46d}{Toggle\+Checked\+Content}}. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_aab81ff1385029b1c336ba7f4822c4c98}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_aab81ff1385029b1c336ba7f4822c4c98}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleContent@{ToggleContent}}
+\index{ToggleContent@{ToggleContent}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleContent}{ToggleContent}}
+{\footnotesize\ttfamily object Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Content\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Content to display in the toggle button. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a3c043b1ac3c62ad36890b328aebeb5f3}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a3c043b1ac3c62ad36890b328aebeb5f3}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!ToggleContentTemplate@{ToggleContentTemplate}}
+\index{ToggleContentTemplate@{ToggleContentTemplate}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{ToggleContentTemplate}{ToggleContentTemplate}}
+{\footnotesize\ttfamily Data\+Template Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Toggle\+Content\+Template\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Template for \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_popup_box_aab81ff1385029b1c336ba7f4822c4c98}{Toggle\+Content}}. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_popup_box_a4099294243dfa82b9654f17bfbb9ed97}\label{class_material_design_themes_1_1_wpf_1_1_popup_box_a4099294243dfa82b9654f17bfbb9ed97}} 
+\index{MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}!UnfurlOrientation@{UnfurlOrientation}}
+\index{UnfurlOrientation@{UnfurlOrientation}!MaterialDesignThemes.Wpf.PopupBox@{MaterialDesignThemes.Wpf.PopupBox}}
+\doxysubsubsection{\texorpdfstring{UnfurlOrientation}{UnfurlOrientation}}
+{\footnotesize\ttfamily Orientation Material\+Design\+Themes.\+Wpf.\+Popup\+Box.\+Unfurl\+Orientation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets how to unfurl controls when opening the popups. Only child elements of type Button\+Base are animated. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Material\+Design\+Themes.\+2.\+4.\+1.\+1101/src/net45/Popup\+Box.\+cs\end{DoxyCompactItemize}

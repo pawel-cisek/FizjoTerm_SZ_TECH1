@@ -1,0 +1,90 @@
+\hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy}{}\doxysection{Material\+Design\+Themes.\+Wpf.\+I\+Hint\+Proxy Interface Reference}
+\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy}\index{MaterialDesignThemes.Wpf.IHintProxy@{MaterialDesignThemes.Wpf.IHintProxy}}
+
+
+This interface is the adapter from Ui\+Control (like Text\+Box, Combo\+Box and others) to \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_smart_hint}{Smart\+Hint}} 
+
+You should implement this interface in order to use \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_smart_hint}{Smart\+Hint}} for your own control.  
+
+
+Inheritance diagram for Material\+Design\+Themes.\+Wpf.\+I\+Hint\+Proxy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a41912ed1e32df1b8485d4b1c50f0fa46}{Is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks to see if the targetted control can be deemed as logically empty, even if not null, affecting the current hint display. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a3b834df8aff96a44935f982b2894e15f}{Is\+Focused}} ()
+\begin{DoxyCompactList}\small\item\em Targeted control has keyboard focus \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_acbd0b3ffd9673f345fffab19de6f9b3f}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_acbd0b3ffd9673f345fffab19de6f9b3f}} 
+object {\bfseries Content}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a75e1384f07ee9b0143f13250ba0e3ce3}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a75e1384f07ee9b0143f13250ba0e3ce3}} 
+bool {\bfseries Is\+Loaded}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a6666d5963e6b860554ea39db2164b92f}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a6666d5963e6b860554ea39db2164b92f}} 
+bool {\bfseries Is\+Visible}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a8857c1c0fb45ca9c00fd2ac95efadec8}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a8857c1c0fb45ca9c00fd2ac95efadec8}} 
+Event\+Handler {\bfseries Content\+Changed}
+\item 
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a91ec96f9ce9f5646f29a16573675ba55}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a91ec96f9ce9f5646f29a16573675ba55}} 
+Event\+Handler {\bfseries Is\+Visible\+Changed}
+\item 
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a42f92649563918ecded97002027cfe0f}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a42f92649563918ecded97002027cfe0f}} 
+Event\+Handler {\bfseries Loaded}
+\item 
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a6a3a18ea9ac11ede4f48f4ba1f872321}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a6a3a18ea9ac11ede4f48f4ba1f872321}} 
+Event\+Handler {\bfseries Focused\+Changed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface is the adapter from Ui\+Control (like Text\+Box, Combo\+Box and others) to \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_smart_hint}{Smart\+Hint}} 
+
+You should implement this interface in order to use \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_smart_hint}{Smart\+Hint}} for your own control. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a41912ed1e32df1b8485d4b1c50f0fa46}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a41912ed1e32df1b8485d4b1c50f0fa46}} 
+\index{MaterialDesignThemes.Wpf.IHintProxy@{MaterialDesignThemes.Wpf.IHintProxy}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!MaterialDesignThemes.Wpf.IHintProxy@{MaterialDesignThemes.Wpf.IHintProxy}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily bool Material\+Design\+Themes.\+Wpf.\+I\+Hint\+Proxy.\+Is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks to see if the targetted control can be deemed as logically empty, even if not null, affecting the current hint display. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a3b834df8aff96a44935f982b2894e15f}\label{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy_a3b834df8aff96a44935f982b2894e15f}} 
+\index{MaterialDesignThemes.Wpf.IHintProxy@{MaterialDesignThemes.Wpf.IHintProxy}!IsFocused@{IsFocused}}
+\index{IsFocused@{IsFocused}!MaterialDesignThemes.Wpf.IHintProxy@{MaterialDesignThemes.Wpf.IHintProxy}}
+\doxysubsubsection{\texorpdfstring{IsFocused()}{IsFocused()}}
+{\footnotesize\ttfamily bool Material\+Design\+Themes.\+Wpf.\+I\+Hint\+Proxy.\+Is\+Focused (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Targeted control has keyboard focus 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Material\+Design\+Themes.\+2.\+4.\+1.\+1101/src/net45/I\+Hint\+Proxy.\+cs\end{DoxyCompactItemize}

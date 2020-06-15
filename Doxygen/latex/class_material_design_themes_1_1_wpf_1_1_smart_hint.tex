@@ -1,0 +1,199 @@
+\hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint}{}\doxysection{Material\+Design\+Themes.\+Wpf.\+Smart\+Hint Class Reference}
+\label{class_material_design_themes_1_1_wpf_1_1_smart_hint}\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+
+
+A control that implement placeholder behavior. Can work as a simple placeholder either as a floating hint, see Use\+Floating property. 
+
+To set a target control you should set the Hint\+Proxy property. Use the Hint\+Proxy\+Fabric\+Converter.\+Instance converter which converts a control into the \mbox{\hyperlink{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy}{I\+Hint\+Proxy}} interface.  
+
+
+Inheritance diagram for Material\+Design\+Themes.\+Wpf.\+Smart\+Hint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_material_design_themes_1_1_wpf_1_1_smart_hint}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a2fbeaa605095be580252e0935ca99bbd}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a2fbeaa605095be580252e0935ca99bbd}} 
+const string {\bfseries Content\+States\+Group\+Name} = \char`\"{}Content\+States\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_aab34a5c321a6e050464249bbb0442986}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_aab34a5c321a6e050464249bbb0442986}} 
+const string {\bfseries Content\+Empty\+Name} = \char`\"{}Content\+Empty\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a8fc52e839638e1d3f1ae8fe0ecf9afe4}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a8fc52e839638e1d3f1ae8fe0ecf9afe4}} 
+const string {\bfseries Content\+Not\+Empty\+Name} = \char`\"{}Content\+Not\+Empty\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a59f410452a6237eff818452bfba050e5}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a59f410452a6237eff818452bfba050e5}} 
+const string {\bfseries Hint\+Resting\+Position\+Name} = \char`\"{}Hint\+Resting\+Position\char`\"{}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a4865ec22fd67bfaf3c6d5beccdda9e55}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a4865ec22fd67bfaf3c6d5beccdda9e55}} 
+const string {\bfseries Hint\+Floating\+Position\+Name} = \char`\"{}Hint\+Floating\+Position\char`\"{}
+\item 
+static readonly Dependency\+Property {\bfseries Hint\+Proxy\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Hint\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Is\+Content\+Null\+Or\+Empty\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Is\+Hint\+In\+Floating\+Position\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Use\+Floating\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Floating\+Scale\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Floating\+Offset\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Hint\+Opacity\+Property}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a4e78ec69340d21a42c95f862136cd9d2}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a4e78ec69340d21a42c95f862136cd9d2}} 
+virtual void {\bfseries On\+Hint\+Proxy\+Focused\+Changed} (object sender, Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a5ca8613b93086ed6bf0a294824893eba}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a5ca8613b93086ed6bf0a294824893eba}} 
+virtual void {\bfseries On\+Hint\+Proxy\+Content\+Changed} (object sender, Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_af1b195d39fc5c154b1f8ae64cdf01cb7}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_af1b195d39fc5c154b1f8ae64cdf01cb7}} 
+virtual void {\bfseries On\+Hint\+Proxy\+Is\+Visible\+Changed} (object sender, Event\+Args e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a8a099d643bd63040dd01fb6c49dc6482}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a8a099d643bd63040dd01fb6c49dc6482}} 
+\mbox{\hyperlink{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy}{I\+Hint\+Proxy}} {\bfseries Hint\+Proxy}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a050ec04fc818b238e7b15ea1988d6c98}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a050ec04fc818b238e7b15ea1988d6c98}} 
+object {\bfseries Hint}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_aa0e8f73f6e2dfd978d2ebf9339a6c881}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_aa0e8f73f6e2dfd978d2ebf9339a6c881}} 
+bool {\bfseries Is\+Content\+Null\+Or\+Empty}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a74b341d14b7272d910d991bede814f76}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a74b341d14b7272d910d991bede814f76}} 
+bool {\bfseries Is\+Hint\+In\+Floating\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_ad9609c32808fe74db7ee0dadc4a46049}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_ad9609c32808fe74db7ee0dadc4a46049}} 
+bool {\bfseries Use\+Floating}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a9405d359ddf1d3f773c40457a211795d}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a9405d359ddf1d3f773c40457a211795d}} 
+double {\bfseries Floating\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a2229c10c93c873007a83365b36b4f689}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a2229c10c93c873007a83365b36b4f689}} 
+Point {\bfseries Floating\+Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a592acfd7cff064ed1d005ae3a6fd5e54}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a592acfd7cff064ed1d005ae3a6fd5e54}} 
+double {\bfseries Hint\+Opacity}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A control that implement placeholder behavior. Can work as a simple placeholder either as a floating hint, see Use\+Floating property. 
+
+To set a target control you should set the Hint\+Proxy property. Use the Hint\+Proxy\+Fabric\+Converter.\+Instance converter which converts a control into the \mbox{\hyperlink{interface_material_design_themes_1_1_wpf_1_1_i_hint_proxy}{I\+Hint\+Proxy}} interface. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a09637c1853361ef7d1543d8c83b4d5b9}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a09637c1853361ef7d1543d8c83b4d5b9}} 
+\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}!FloatingOffsetProperty@{FloatingOffsetProperty}}
+\index{FloatingOffsetProperty@{FloatingOffsetProperty}!MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+\doxysubsubsection{\texorpdfstring{FloatingOffsetProperty}{FloatingOffsetProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Smart\+Hint.\+Floating\+Offset\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(FloatingOffset), typeof(Point), typeof(SmartHint), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{new} Point(1, -\/16)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a3bb30a587acb1c88148b097c7cd92d30}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a3bb30a587acb1c88148b097c7cd92d30}} 
+\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}!FloatingScaleProperty@{FloatingScaleProperty}}
+\index{FloatingScaleProperty@{FloatingScaleProperty}!MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+\doxysubsubsection{\texorpdfstring{FloatingScaleProperty}{FloatingScaleProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Smart\+Hint.\+Floating\+Scale\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(FloatingScale), typeof(\textcolor{keywordtype}{double}), typeof(SmartHint), \textcolor{keyword}{new} PropertyMetadata(.74))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a1a1990eda0d697b41fd8f1d28298931b}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a1a1990eda0d697b41fd8f1d28298931b}} 
+\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}!HintOpacityProperty@{HintOpacityProperty}}
+\index{HintOpacityProperty@{HintOpacityProperty}!MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+\doxysubsubsection{\texorpdfstring{HintOpacityProperty}{HintOpacityProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Smart\+Hint.\+Hint\+Opacity\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(HintOpacity), typeof(\textcolor{keywordtype}{double}), typeof(SmartHint), \textcolor{keyword}{new} PropertyMetadata(.46))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a810aa876c18426cba9d9b48bffc18d42}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a810aa876c18426cba9d9b48bffc18d42}} 
+\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}!HintProperty@{HintProperty}}
+\index{HintProperty@{HintProperty}!MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+\doxysubsubsection{\texorpdfstring{HintProperty}{HintProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Smart\+Hint.\+Hint\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(Hint), typeof(\textcolor{keywordtype}{object}), typeof(SmartHint), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{null}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_ab90d3305150472d3d2475d18e98c3f35}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_ab90d3305150472d3d2475d18e98c3f35}} 
+\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}!HintProxyProperty@{HintProxyProperty}}
+\index{HintProxyProperty@{HintProxyProperty}!MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+\doxysubsubsection{\texorpdfstring{HintProxyProperty}{HintProxyProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Smart\+Hint.\+Hint\+Proxy\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(HintProxy), typeof(IHintProxy), typeof(SmartHint), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(IHintProxy), HintProxyPropertyChangedCallback))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_ad4da0cb23653e7879e66f3fbf7a30ec6}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_ad4da0cb23653e7879e66f3fbf7a30ec6}} 
+\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}!IsContentNullOrEmptyProperty@{IsContentNullOrEmptyProperty}}
+\index{IsContentNullOrEmptyProperty@{IsContentNullOrEmptyProperty}!MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+\doxysubsubsection{\texorpdfstring{IsContentNullOrEmptyProperty}{IsContentNullOrEmptyProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Smart\+Hint.\+Is\+Content\+Null\+Or\+Empty\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            IsContentNullOrEmptyPropertyKey.DependencyProperty}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_aa193b4aeb0e2574249c420fae0d7a76f}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_aa193b4aeb0e2574249c420fae0d7a76f}} 
+\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}!IsHintInFloatingPositionProperty@{IsHintInFloatingPositionProperty}}
+\index{IsHintInFloatingPositionProperty@{IsHintInFloatingPositionProperty}!MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+\doxysubsubsection{\texorpdfstring{IsHintInFloatingPositionProperty}{IsHintInFloatingPositionProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Smart\+Hint.\+Is\+Hint\+In\+Floating\+Position\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            IsHintInFloatingPositionPropertyKey.DependencyProperty}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_smart_hint_a53a95e906e1ac5bb7a3370b386ff4d20}\label{class_material_design_themes_1_1_wpf_1_1_smart_hint_a53a95e906e1ac5bb7a3370b386ff4d20}} 
+\index{MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}!UseFloatingProperty@{UseFloatingProperty}}
+\index{UseFloatingProperty@{UseFloatingProperty}!MaterialDesignThemes.Wpf.SmartHint@{MaterialDesignThemes.Wpf.SmartHint}}
+\doxysubsubsection{\texorpdfstring{UseFloatingProperty}{UseFloatingProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Smart\+Hint.\+Use\+Floating\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(UseFloating), typeof(\textcolor{keywordtype}{bool}), typeof(SmartHint), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{false}))}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Material\+Design\+Themes.\+2.\+4.\+1.\+1101/src/net45/Smart\+Hint.\+cs\end{DoxyCompactItemize}

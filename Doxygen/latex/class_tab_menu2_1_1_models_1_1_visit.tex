@@ -1,0 +1,74 @@
+\hypertarget{class_tab_menu2_1_1_models_1_1_visit}{}\doxysection{Tab\+Menu2.\+Models.\+Visit Class Reference}
+\label{class_tab_menu2_1_1_models_1_1_visit}\index{TabMenu2.Models.Visit@{TabMenu2.Models.Visit}}
+
+
+Klasa reprezentująca dane wizyty  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a17b7e755276a8530820adabe41b68b8f}\label{class_tab_menu2_1_1_models_1_1_visit_a17b7e755276a8530820adabe41b68b8f}} 
+{\bfseries Visit} (\mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_physiotherapist}{Physiotherapist}} physio, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_referral}{Referral}} referral, Date\+Time date, string time, bool visit\+Completed=false, bool visit\+Settled=false)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_adee59426e18273ae1d979acadd059c7d}\label{class_tab_menu2_1_1_models_1_1_visit_adee59426e18273ae1d979acadd059c7d}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_aac3c1458cc11b558fa404f46e46e834f}\label{class_tab_menu2_1_1_models_1_1_visit_aac3c1458cc11b558fa404f46e46e834f}} 
+static void {\bfseries Add\+Visit} (\mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_physiotherapist}{Physiotherapist}} physio, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_referral}{Referral}} referral, Date\+Time date, string time, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_af7e5a8c86818d8fd56dd258b3c62171f}\label{class_tab_menu2_1_1_models_1_1_visit_af7e5a8c86818d8fd56dd258b3c62171f}} 
+static void {\bfseries Delete\+Visit} (\mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_visit}{Visit}} vis, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a64441bc0f01357cdc17bc259b174bff9}\label{class_tab_menu2_1_1_models_1_1_visit_a64441bc0f01357cdc17bc259b174bff9}} 
+static I\+Enumerable$<$ \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_visit}{Visit}} $>$ {\bfseries Search\+Visit} (\mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient}{Patient}} patient, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_physiotherapist}{Physiotherapist}} physio, Date\+Time? sel\+Date, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a8acbd2f40518d78a8345e96763d1b2f4}\label{class_tab_menu2_1_1_models_1_1_visit_a8acbd2f40518d78a8345e96763d1b2f4}} 
+int {\bfseries Id\+Visit}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a733874a51ff86fa63f079e78f96fe95e}\label{class_tab_menu2_1_1_models_1_1_visit_a733874a51ff86fa63f079e78f96fe95e}} 
+int {\bfseries Id\+Physiotherapist}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_aea041e804efd3068943ee92434bde642}\label{class_tab_menu2_1_1_models_1_1_visit_aea041e804efd3068943ee92434bde642}} 
+int {\bfseries Id\+Referral}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a9eb0342e0c17e14d339a3555cf617bdb}\label{class_tab_menu2_1_1_models_1_1_visit_a9eb0342e0c17e14d339a3555cf617bdb}} 
+Date\+Time {\bfseries Visit\+Date}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a62c1242d17bfaf2f4e6ba41783f1005e}\label{class_tab_menu2_1_1_models_1_1_visit_a62c1242d17bfaf2f4e6ba41783f1005e}} 
+string {\bfseries Visit\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a15baa0ab0e673b9a6f37852311e12c38}\label{class_tab_menu2_1_1_models_1_1_visit_a15baa0ab0e673b9a6f37852311e12c38}} 
+Date\+Time {\bfseries Date\+Saved}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a6d0d3a322e4728ba479c1479b2cfaf15}\label{class_tab_menu2_1_1_models_1_1_visit_a6d0d3a322e4728ba479c1479b2cfaf15}} 
+bool {\bfseries Visit\+Completed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a0eebdc24c6da2259e8fe30e4dc5481ce}\label{class_tab_menu2_1_1_models_1_1_visit_a0eebdc24c6da2259e8fe30e4dc5481ce}} 
+bool {\bfseries Visit\+Settled}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_a0e5f67bd73841ad7dc45c82573f2a265}\label{class_tab_menu2_1_1_models_1_1_visit_a0e5f67bd73841ad7dc45c82573f2a265}} 
+virtual \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_physiotherapist}{Physiotherapist}} {\bfseries Physiotherapist}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_ab106a88f9d9b4fb627262e986af90a51}\label{class_tab_menu2_1_1_models_1_1_visit_ab106a88f9d9b4fb627262e986af90a51}} 
+virtual \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_referral}{Referral}} {\bfseries Referral}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_visit_ae51196950e718e56e6454d5b9a77a0f6}\label{class_tab_menu2_1_1_models_1_1_visit_ae51196950e718e56e6454d5b9a77a0f6}} 
+virtual I\+Collection$<$ \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_report}{Report}} $>$ {\bfseries Reports}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca dane wizyty 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Fizjo\+Term/\+Models/Visit.\+cs\end{DoxyCompactItemize}

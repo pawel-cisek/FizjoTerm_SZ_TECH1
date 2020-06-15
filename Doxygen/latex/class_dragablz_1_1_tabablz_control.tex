@@ -1,0 +1,1300 @@
+\hypertarget{class_dragablz_1_1_tabablz_control}{}\doxysection{Dragablz.\+Tabablz\+Control Class Reference}
+\label{class_dragablz_1_1_tabablz_control}\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+
+
+Extended tab control which supports tab repositioning, and drag and drop. Also uses the common W\+PF technique for pesisting the visual tree across tabs.  
+
+
+Inheritance diagram for Dragablz.\+Tabablz\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dragablz_1_1_tabablz_control}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ac323560e360845073b3bfcbb7fbb37eb}{Tabablz\+Control}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a240b62150c9c634f4e83e496533025de}{Add\+To\+Source}} (object item)
+\begin{DoxyCompactList}\small\item\em Adds an item to the source collection. If the Inter\+Tab\+Controller.\+Inter\+Tab\+Client is set that instance will be deferred to. Otherwise an attempt will be made to add to the Items\+Source property, and lastly Items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5ea85ad1711b4fea5326a23efb21e9e0}{Remove\+From\+Source}} (object item)
+\begin{DoxyCompactList}\small\item\em Removes an item from the source collection. If the Inter\+Tab\+Controller.\+Inter\+Tab\+Client is set that instance will be deferred to. Otherwise an attempt will be made to remove from the Items\+Source property, and lastly Items. \end{DoxyCompactList}\item 
+I\+Enumerable$<$ \mbox{\hyperlink{class_dragablz_1_1_dragablz_item}{Dragablz\+Item}} $>$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a233069baf2cb52efc1d8f8af584c0e95}{Get\+Ordered\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em Gets the header items, ordered according to their current visual position in the tab header. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a1f3b13f76807426801f6de95b40f3370}{On\+Apply\+Template}} ()
+\begin{DoxyCompactList}\small\item\em Called when M\+:\+System.\+Windows.\+Framework\+Element.\+Apply\+Template is called. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ac323560e360845073b3bfcbb7fbb37eb}{Tabablz\+Control}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a240b62150c9c634f4e83e496533025de}{Add\+To\+Source}} (object item)
+\begin{DoxyCompactList}\small\item\em Adds an item to the source collection. If the Inter\+Tab\+Controller.\+Inter\+Tab\+Client is set that instance will be deferred to. Otherwise an attempt will be made to add to the Items\+Source property, and lastly Items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5ea85ad1711b4fea5326a23efb21e9e0}{Remove\+From\+Source}} (object item)
+\begin{DoxyCompactList}\small\item\em Removes an item from the source collection. If the Inter\+Tab\+Controller.\+Inter\+Tab\+Client is set that instance will be deferred to. Otherwise an attempt will be made to remove from the Items\+Source property, and lastly Items. \end{DoxyCompactList}\item 
+I\+Enumerable$<$ \mbox{\hyperlink{class_dragablz_1_1_dragablz_item}{Dragablz\+Item}} $>$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a233069baf2cb52efc1d8f8af584c0e95}{Get\+Ordered\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em Gets the header items, ordered according to their current visual position in the tab header. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a1f3b13f76807426801f6de95b40f3370}{On\+Apply\+Template}} ()
+\begin{DoxyCompactList}\small\item\em Called when M\+:\+System.\+Windows.\+Framework\+Element.\+Apply\+Template is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Enumerable$<$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} $>$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a18e89dc6eb2659824684e660e332716e}{Get\+Loaded\+Instances}} ()
+\begin{DoxyCompactList}\small\item\em Helper method which returns all the currently loaded instances. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a500791225877e859fec5cce37d6d048e}{Close\+Item}} (object tab\+Content\+Item)
+\begin{DoxyCompactList}\small\item\em Helper method to close all tabs where the item is the tab\textquotesingle{}s content (helpful with M\+V\+VM scenarios) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5ccc13ffc66f8fb854a93479dc8b4f93}{Add\+Item}} (object item, object near\+Item, \mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Add\+Location\+Hint}} add\+Location\+Hint)
+\begin{DoxyCompactList}\small\item\em Helper method to add an item next to an existing item. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ad8852979dc53bba0b3daed5cdfc0e8f9}{Select\+Item}} (object item)
+\begin{DoxyCompactList}\small\item\em Finds and selects an item. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_acc5eba056fb02e2ca171c22532fc0628}{Get\+Is\+Closing\+As\+Part\+Of\+Drag\+Operation}} (Window element)
+\begin{DoxyCompactList}\small\item\em Helper method which can tell you if a Window is being automatically closed due to a user instigated drag operation (typically when a single tab is dropped into another window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a3ad47d0adf12ab01e75151af7c4ce375}\label{class_dragablz_1_1_tabablz_control_a3ad47d0adf12ab01e75151af7c4ce375}} 
+static bool {\bfseries Get\+Is\+Wrapping\+Tab\+Item} (Dependency\+Object element)
+\item 
+static I\+Enumerable$<$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} $>$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a18e89dc6eb2659824684e660e332716e}{Get\+Loaded\+Instances}} ()
+\begin{DoxyCompactList}\small\item\em Helper method which returns all the currently loaded instances. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a500791225877e859fec5cce37d6d048e}{Close\+Item}} (object tab\+Content\+Item)
+\begin{DoxyCompactList}\small\item\em Helper method to close all tabs where the item is the tab\textquotesingle{}s content (helpful with M\+V\+VM scenarios) \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5ccc13ffc66f8fb854a93479dc8b4f93}{Add\+Item}} (object item, object near\+Item, \mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Add\+Location\+Hint}} add\+Location\+Hint)
+\begin{DoxyCompactList}\small\item\em Helper method to add an item next to an existing item. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ad8852979dc53bba0b3daed5cdfc0e8f9}{Select\+Item}} (object item)
+\begin{DoxyCompactList}\small\item\em Finds and selects an item. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_acc5eba056fb02e2ca171c22532fc0628}{Get\+Is\+Closing\+As\+Part\+Of\+Drag\+Operation}} (Window element)
+\begin{DoxyCompactList}\small\item\em Helper method which can tell you if a Window is being automatically closed due to a user instigated drag operation (typically when a single tab is dropped into another window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a3ad47d0adf12ab01e75151af7c4ce375}\label{class_dragablz_1_1_tabablz_control_a3ad47d0adf12ab01e75151af7c4ce375}} 
+static bool {\bfseries Get\+Is\+Wrapping\+Tab\+Item} (Dependency\+Object element)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a0c8a4c6046aecc7b51fa02d82f746f12}{Header\+Items\+Control\+Part\+Name}} = \char`\"{}P\+A\+R\+T\+\_\+\+Header\+Items\+Control\char`\"{}
+\begin{DoxyCompactList}\small\item\em Template part. \end{DoxyCompactList}\item 
+const string \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_abef0685e59acce66c9a4fdbb56d04ac4}{Items\+Holder\+Part\+Name}} = \char`\"{}P\+A\+R\+T\+\_\+\+Items\+Holder\char`\"{}
+\begin{DoxyCompactList}\small\item\em Template part. \end{DoxyCompactList}\item 
+static Routed\+Command \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_af05b5fd0b25eeccb0443140819736f43}{Close\+Item\+Command}} = new Routed\+U\+I\+Command(\char`\"{}Close\char`\"{}, \char`\"{}Close\char`\"{}, typeof(\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}))
+\begin{DoxyCompactList}\small\item\em Routed command which can be used to close a tab. \end{DoxyCompactList}\item 
+static Routed\+Command \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}{Add\+Item\+Command}} = new Routed\+U\+I\+Command(\char`\"{}Add\char`\"{}, \char`\"{}Add\char`\"{}, typeof(\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}))
+\begin{DoxyCompactList}\small\item\em Routed command which can be used to add a new tab. See \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ad57b4e6df0fd5cf4a641023461a676f7}{New\+Item\+Factory}}. \end{DoxyCompactList}\item 
+static readonly Dependency\+Property {\bfseries Custom\+Header\+Item\+Style\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Custom\+Header\+Item\+Template\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Default\+Header\+Item\+Style\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Adjacent\+Header\+Item\+Offset\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Items\+Organiser\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Member\+Path\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Item\+Template\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Prefix\+Content\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Prefix\+Content\+String\+Format\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Prefix\+Content\+Template\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Prefix\+Content\+Template\+Selector\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Suffix\+Content\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Suffix\+Content\+String\+Format\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Suffix\+Content\+Template\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Header\+Suffix\+Content\+Template\+Selector\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Show\+Default\+Close\+Button\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Show\+Default\+Add\+Button\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Is\+Header\+Panel\+Visible\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Add\+Location\+Hint\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Fixed\+Header\+Count\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Inter\+Tab\+Controller\+Property}
+\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ad703567d24232c4cf9d59cd53c8a96fc}{New\+Item\+Factory\+Property}}
+\begin{DoxyCompactList}\small\item\em Allows a factory to be provided for generating new items. Typically used in conjunction with \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}{Add\+Item\+Command}}. \end{DoxyCompactList}\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a34e172558a5ccfee07e8c20eaaac5ffc}{Is\+Empty\+Property}}
+\begin{DoxyCompactList}\small\item\em Indicates if there are no current tab items. \end{DoxyCompactList}\item 
+static readonly Routed\+Event \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a620086cb6e61a1b51b4e56db0e9fe474}{Is\+Empty\+Changed\+Event}}
+\begin{DoxyCompactList}\small\item\em Raised when \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_af7ecbea93431d462b9cff09a20ddbcee}{Is\+Empty}} changes. \end{DoxyCompactList}\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_af6169b0260eeb28e74aaae25d3a17bae}{Closing\+Item\+Callback\+Property}}
+\begin{DoxyCompactList}\small\item\em Optionally allows a close item hook to be bound in. If this propety is provided, the func must return true for the close to continue. \end{DoxyCompactList}\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_aca9a9ff95dcb91d3ff8335be36b8424f}{Consolidate\+Orphaned\+Items\+Property}}
+\begin{DoxyCompactList}\small\item\em Set to {\ttfamily true} to have tabs automatically be moved to another tab is a window is closed, so that they arent lost. Can be useful for fixed/persistant tabs that may have been dragged into another Window. You can further control this behaviour on a per tab item basis by providing \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ab966608a405bddec32b6b99f255df631}{Consolidating\+Orphaned\+Item\+Callback}}. \end{DoxyCompactList}\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ab50b39248956773599bdb5b18b4efa59}{Consolidating\+Orphaned\+Item\+Callback\+Property}}
+\begin{DoxyCompactList}\small\item\em Assuming \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a431ef361c28f456a66893c18191f0bb5}{Consolidate\+Orphaned\+Items}} is set to {\ttfamily true}, consolidation of individual tab items can be cancelled by providing this call back and cancelling the Item\+Action\+Callback\+Args$<$\+T\+Owner$>$ instance. \end{DoxyCompactList}\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_add6c29b97a3526ee52ff988e3f5db0e2}{Is\+Dragging\+Window\+Property}}
+\begin{DoxyCompactList}\small\item\em Readonly dependency property which indicates whether the owning Window is currently dragged \end{DoxyCompactList}\item 
+static readonly Routed\+Event \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ae003379ef4e82d242fcd93f99b56ad55}{Is\+Dragging\+Window\+Changed\+Event}}
+\begin{DoxyCompactList}\small\item\em Event indicating \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a1438afeec50c6d8e7f02f112dcfc169e}{Is\+Dragging\+Window}} has changed. \end{DoxyCompactList}\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ad3754ad8987ec9eb5507ab7895f56503}{Is\+Closing\+As\+Part\+Of\+Drag\+Operation\+Property}}
+\begin{DoxyCompactList}\small\item\em Temporarily set by the framework if a users drag opration causes a Window to close (e.\+g if a tab is dragging into another tab). \end{DoxyCompactList}\item 
+static readonly Dependency\+Property \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a8643ed6df4bb25d2ded6efc78e4d8075}{Empty\+Header\+Sizing\+Hint\+Property}}
+\begin{DoxyCompactList}\small\item\em Provide a hint for how the header should size itself if there are no tabs left (and a Window is still open). \end{DoxyCompactList}\item 
+static readonly Dependency\+Property {\bfseries Is\+Wrapping\+Tab\+Item\+Property}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_aca2d02b5fe8532b156de045511e6308e}{On\+Selection\+Changed}} (Selection\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em update the visible child in the Items\+Holder \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a7700d28e64de84d1de5cfac7dad0d6ed}{On\+Items\+Changed}} (Notify\+Collection\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em when the items change we remove any generated panel children and add any new ones as necessary \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a066fcf5ac1ba7a944a64efa181245e72}{On\+Key\+Down}} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Provides class handling for the E\+:\+System.\+Windows.\+Content\+Element.\+Key\+Down routed event that occurs when the user presses a key. \end{DoxyCompactList}\item 
+override Automation\+Peer \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a4aaa7a717314407c4a73c3ea7141588c}{On\+Create\+Automation\+Peer}} ()
+\begin{DoxyCompactList}\small\item\em Provides an appropriate automation peer implementation for this control as part of the W\+PF automation infrastructure. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_aca2d02b5fe8532b156de045511e6308e}{On\+Selection\+Changed}} (Selection\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em update the visible child in the Items\+Holder \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a7700d28e64de84d1de5cfac7dad0d6ed}{On\+Items\+Changed}} (Notify\+Collection\+Changed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em when the items change we remove any generated panel children and add any new ones as necessary \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a066fcf5ac1ba7a944a64efa181245e72}{On\+Key\+Down}} (Key\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em Provides class handling for the E\+:\+System.\+Windows.\+Content\+Element.\+Key\+Down routed event that occurs when the user presses a key. \end{DoxyCompactList}\item 
+override Automation\+Peer \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a4aaa7a717314407c4a73c3ea7141588c}{On\+Create\+Automation\+Peer}} ()
+\begin{DoxyCompactList}\small\item\em Provides an appropriate automation peer implementation for this control as part of the W\+PF automation infrastructure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Style \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a1fb96fb4c8a42d9fc866206338365ba7}{Custom\+Header\+Item\+Style}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Style to apply to header items which are not their own item container (Tab\+Item). Typically items bound via the Items\+Source will use this style. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a3a2fc44350c0e350aad1ec631a2e5526}\label{class_dragablz_1_1_tabablz_control_a3a2fc44350c0e350aad1ec631a2e5526}} 
+Data\+Template {\bfseries Custom\+Header\+Item\+Template}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a7cf294890f13b4bbbff26099088aa547}\label{class_dragablz_1_1_tabablz_control_a7cf294890f13b4bbbff26099088aa547}} 
+Style {\bfseries Default\+Header\+Item\+Style}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a879172ee3a2cbf751bffada0a9db93ce}\label{class_dragablz_1_1_tabablz_control_a879172ee3a2cbf751bffada0a9db93ce}} 
+double {\bfseries Adjacent\+Header\+Item\+Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a879d1e31a0bfba1bd26d562940dc325b}\label{class_dragablz_1_1_tabablz_control_a879d1e31a0bfba1bd26d562940dc325b}} 
+\mbox{\hyperlink{interface_dragablz_1_1_i_items_organiser}{I\+Items\+Organiser}} {\bfseries Header\+Items\+Organiser}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a0102c565167b1254eefcdbef8f16d825}\label{class_dragablz_1_1_tabablz_control_a0102c565167b1254eefcdbef8f16d825}} 
+string {\bfseries Header\+Member\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a18b5de04670baddc674c460cde7e9874}\label{class_dragablz_1_1_tabablz_control_a18b5de04670baddc674c460cde7e9874}} 
+Data\+Template {\bfseries Header\+Item\+Template}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a55a16b45e2c5e8b1e66d21a679ef32ff}\label{class_dragablz_1_1_tabablz_control_a55a16b45e2c5e8b1e66d21a679ef32ff}} 
+object {\bfseries Header\+Prefix\+Content}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a40b46bce11d1596925ca6a221a747eb6}\label{class_dragablz_1_1_tabablz_control_a40b46bce11d1596925ca6a221a747eb6}} 
+string {\bfseries Header\+Prefix\+Content\+String\+Format}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a9eeb6f693b0e097a631bf2107598d7b9}\label{class_dragablz_1_1_tabablz_control_a9eeb6f693b0e097a631bf2107598d7b9}} 
+Data\+Template {\bfseries Header\+Prefix\+Content\+Template}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a59d9d14feca736e89cd8e5140ff5c1ab}\label{class_dragablz_1_1_tabablz_control_a59d9d14feca736e89cd8e5140ff5c1ab}} 
+Data\+Template\+Selector {\bfseries Header\+Prefix\+Content\+Template\+Selector}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a8235aa2ace4753be1be5fdb19ae05327}\label{class_dragablz_1_1_tabablz_control_a8235aa2ace4753be1be5fdb19ae05327}} 
+object {\bfseries Header\+Suffix\+Content}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ab531c0fdb03df3981026920a563d1c13}\label{class_dragablz_1_1_tabablz_control_ab531c0fdb03df3981026920a563d1c13}} 
+string {\bfseries Header\+Suffix\+Content\+String\+Format}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a2437ae10005a3b949ba0ae15e386f78a}\label{class_dragablz_1_1_tabablz_control_a2437ae10005a3b949ba0ae15e386f78a}} 
+Data\+Template {\bfseries Header\+Suffix\+Content\+Template}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ac0ae05ac59a127fbc38662642f2ca9d8}\label{class_dragablz_1_1_tabablz_control_ac0ae05ac59a127fbc38662642f2ca9d8}} 
+Data\+Template\+Selector {\bfseries Header\+Suffix\+Content\+Template\+Selector}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a6396ea06ec35a90a191fd324a807f9e1}{Show\+Default\+Close\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether a default close button should be displayed. If manually templating the tab header content the close command can be called by executing the \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_af05b5fd0b25eeccb0443140819736f43}{Tabablz\+Control.\+Close\+Item\+Command}} command (typically via a Button). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a2dddddd7ad8df5d29e52e8f5cf6e5846}{Show\+Default\+Add\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether a default add button should be displayed. Alternately an add button could be added in Header\+Prefix\+Content or Header\+Suffix\+Content, utilising \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}{Add\+Item\+Command}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_aba4e7f1df25ce56bb515528d0dc504b3}{Is\+Header\+Panel\+Visible}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates wither the heaeder panel is visible. Default is {\ttfamily true}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Add\+Location\+Hint}} \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a87b1642288772a262a102ed00690754b}{Add\+Location\+Hint}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the location to add new tab items in the header. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_aa80517f87a2cd4cd6426a1df601aa54c}{Fixed\+Header\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows a the first adjacent tabs to be fixed (no dragging, and default close button will not show). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dragablz_1_1_inter_tab_controller}{Inter\+Tab\+Controller}} \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ab1667be8ff36fc2bf0ac3524818fda38}{Inter\+Tab\+Controller}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An \mbox{\hyperlink{class_dragablz_1_1_inter_tab_controller}{Inter\+Tab\+Controller}} must be provided to enable tab tearing. Behaviour customisations can be applied vie the controller. \end{DoxyCompactList}\item 
+Func$<$ object $>$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ad57b4e6df0fd5cf4a641023461a676f7}{New\+Item\+Factory}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows a factory to be provided for generating new items. Typically used in conjunction with \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}{Add\+Item\+Command}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_af7ecbea93431d462b9cff09a20ddbcee}{Is\+Empty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if there are no current tab items. \end{DoxyCompactList}\item 
+Routed\+Property\+Changed\+Event\+Handler$<$ bool $>$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a6267e8ed9ac004e93f1dd948a89cd101}{Is\+Empty\+Changed}}
+\begin{DoxyCompactList}\small\item\em Event handler to list to \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a620086cb6e61a1b51b4e56db0e9fe474}{Is\+Empty\+Changed\+Event}}. \end{DoxyCompactList}\item 
+Item\+Action\+Callback \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a83081986862fec940bedadc34397f003}{Closing\+Item\+Callback}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optionally allows a close item hook to be bound in. If this propety is provided, the func must return true for the close to continue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a431ef361c28f456a66893c18191f0bb5}{Consolidate\+Orphaned\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to {\ttfamily true} to have tabs automatically be moved to another tab is a window is closed, so that they arent lost. Can be useful for fixed/persistant tabs that may have been dragged into another Window. You can further control this behaviour on a per tab item basis by providing \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ab966608a405bddec32b6b99f255df631}{Consolidating\+Orphaned\+Item\+Callback}}. \end{DoxyCompactList}\item 
+Item\+Action\+Callback \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ab966608a405bddec32b6b99f255df631}{Consolidating\+Orphaned\+Item\+Callback}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Assuming \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a431ef361c28f456a66893c18191f0bb5}{Consolidate\+Orphaned\+Items}} is set to {\ttfamily true}, consolidation of individual tab items can be cancelled by providing this call back and cancelling the Item\+Action\+Callback\+Args$<$\+T\+Owner$>$ instance. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a1438afeec50c6d8e7f02f112dcfc169e}{Is\+Dragging\+Window}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Readonly dependency property which indicates whether the owning Window is currently dragged \end{DoxyCompactList}\item 
+Routed\+Property\+Changed\+Event\+Handler$<$ bool $>$ \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a10149ea0070e429bd1c42bceabfa4358}{Is\+Dragging\+Window\+Changed}}
+\begin{DoxyCompactList}\small\item\em Event indicating \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a1438afeec50c6d8e7f02f112dcfc169e}{Is\+Dragging\+Window}} has changed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}{Empty\+Header\+Sizing\+Hint}} \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a104a600b3e630bee5afe46cf5173318e}{Empty\+Header\+Sizing\+Hint}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Provide a hint for how the header should size itself if there are no tabs left (and a Window is still open). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extended tab control which supports tab repositioning, and drag and drop. Also uses the common W\+PF technique for pesisting the visual tree across tabs. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ac323560e360845073b3bfcbb7fbb37eb}\label{class_dragablz_1_1_tabablz_control_ac323560e360845073b3bfcbb7fbb37eb}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!TabablzControl@{TabablzControl}}
+\index{TabablzControl@{TabablzControl}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{TabablzControl()}{TabablzControl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dragablz.\+Tabablz\+Control.\+Tabablz\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ac323560e360845073b3bfcbb7fbb37eb}\label{class_dragablz_1_1_tabablz_control_ac323560e360845073b3bfcbb7fbb37eb}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!TabablzControl@{TabablzControl}}
+\index{TabablzControl@{TabablzControl}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{TabablzControl()}{TabablzControl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dragablz.\+Tabablz\+Control.\+Tabablz\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a5ccc13ffc66f8fb854a93479dc8b4f93}\label{class_dragablz_1_1_tabablz_control_a5ccc13ffc66f8fb854a93479dc8b4f93}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Dragablz.\+Tabablz\+Control.\+Add\+Item (\begin{DoxyParamCaption}\item[{object}]{item,  }\item[{object}]{near\+Item,  }\item[{\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Add\+Location\+Hint}}}]{add\+Location\+Hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method to add an item next to an existing item. 
+
+Due to the organisable nature of the control, the order of items may not reflect the order in the source collection. This method will add items to the source collection, managing their initial appearance on screen at the same time. If you are using a Inter\+Tab\+Controller.\+Inter\+Tab\+Client this will be used to add the item into the source collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & New item to add.\\
+\hline
+{\em near\+Item} & Existing object/tab item content which defines which tab control should be used to add the object.\\
+\hline
+{\em add\+Location\+Hint} & Location, relative to the {\itshape near\+Item}  object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a5ccc13ffc66f8fb854a93479dc8b4f93}\label{class_dragablz_1_1_tabablz_control_a5ccc13ffc66f8fb854a93479dc8b4f93}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Dragablz.\+Tabablz\+Control.\+Add\+Item (\begin{DoxyParamCaption}\item[{object}]{item,  }\item[{object}]{near\+Item,  }\item[{\mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Add\+Location\+Hint}}}]{add\+Location\+Hint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method to add an item next to an existing item. 
+
+Due to the organisable nature of the control, the order of items may not reflect the order in the source collection. This method will add items to the source collection, managing their initial appearance on screen at the same time. If you are using a Inter\+Tab\+Controller.\+Inter\+Tab\+Client this will be used to add the item into the source collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & New item to add.\\
+\hline
+{\em near\+Item} & Existing object/tab item content which defines which tab control should be used to add the object.\\
+\hline
+{\em add\+Location\+Hint} & Location, relative to the {\itshape near\+Item}  object\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a240b62150c9c634f4e83e496533025de}\label{class_dragablz_1_1_tabablz_control_a240b62150c9c634f4e83e496533025de}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!AddToSource@{AddToSource}}
+\index{AddToSource@{AddToSource}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{AddToSource()}{AddToSource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Dragablz.\+Tabablz\+Control.\+Add\+To\+Source (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})}
+
+
+
+Adds an item to the source collection. If the Inter\+Tab\+Controller.\+Inter\+Tab\+Client is set that instance will be deferred to. Otherwise an attempt will be made to add to the Items\+Source property, and lastly Items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a240b62150c9c634f4e83e496533025de}\label{class_dragablz_1_1_tabablz_control_a240b62150c9c634f4e83e496533025de}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!AddToSource@{AddToSource}}
+\index{AddToSource@{AddToSource}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{AddToSource()}{AddToSource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Dragablz.\+Tabablz\+Control.\+Add\+To\+Source (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})}
+
+
+
+Adds an item to the source collection. If the Inter\+Tab\+Controller.\+Inter\+Tab\+Client is set that instance will be deferred to. Otherwise an attempt will be made to add to the Items\+Source property, and lastly Items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a500791225877e859fec5cce37d6d048e}\label{class_dragablz_1_1_tabablz_control_a500791225877e859fec5cce37d6d048e}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!CloseItem@{CloseItem}}
+\index{CloseItem@{CloseItem}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{CloseItem()}{CloseItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Dragablz.\+Tabablz\+Control.\+Close\+Item (\begin{DoxyParamCaption}\item[{object}]{tab\+Content\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method to close all tabs where the item is the tab\textquotesingle{}s content (helpful with M\+V\+VM scenarios) 
+
+In M\+V\+VM scenarios where you don\textquotesingle{}t want to bind the routed command to your View\+Model, with this helper method and embedding the \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} in a User\+Control, you can keep the View-\/specific dependencies out of the View\+Model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab\+Content\+Item} & An existing Tab item content (a View\+Model in M\+V\+VM scenarios) which is backing a tab control\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a500791225877e859fec5cce37d6d048e}\label{class_dragablz_1_1_tabablz_control_a500791225877e859fec5cce37d6d048e}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!CloseItem@{CloseItem}}
+\index{CloseItem@{CloseItem}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{CloseItem()}{CloseItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Dragablz.\+Tabablz\+Control.\+Close\+Item (\begin{DoxyParamCaption}\item[{object}]{tab\+Content\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method to close all tabs where the item is the tab\textquotesingle{}s content (helpful with M\+V\+VM scenarios) 
+
+In M\+V\+VM scenarios where you don\textquotesingle{}t want to bind the routed command to your View\+Model, with this helper method and embedding the \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} in a User\+Control, you can keep the View-\/specific dependencies out of the View\+Model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab\+Content\+Item} & An existing Tab item content (a View\+Model in M\+V\+VM scenarios) which is backing a tab control\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_acc5eba056fb02e2ca171c22532fc0628}\label{class_dragablz_1_1_tabablz_control_acc5eba056fb02e2ca171c22532fc0628}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!GetIsClosingAsPartOfDragOperation@{GetIsClosingAsPartOfDragOperation}}
+\index{GetIsClosingAsPartOfDragOperation@{GetIsClosingAsPartOfDragOperation}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{GetIsClosingAsPartOfDragOperation()}{GetIsClosingAsPartOfDragOperation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Dragablz.\+Tabablz\+Control.\+Get\+Is\+Closing\+As\+Part\+Of\+Drag\+Operation (\begin{DoxyParamCaption}\item[{Window}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method which can tell you if a Window is being automatically closed due to a user instigated drag operation (typically when a single tab is dropped into another window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_acc5eba056fb02e2ca171c22532fc0628}\label{class_dragablz_1_1_tabablz_control_acc5eba056fb02e2ca171c22532fc0628}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!GetIsClosingAsPartOfDragOperation@{GetIsClosingAsPartOfDragOperation}}
+\index{GetIsClosingAsPartOfDragOperation@{GetIsClosingAsPartOfDragOperation}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{GetIsClosingAsPartOfDragOperation()}{GetIsClosingAsPartOfDragOperation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool Dragablz.\+Tabablz\+Control.\+Get\+Is\+Closing\+As\+Part\+Of\+Drag\+Operation (\begin{DoxyParamCaption}\item[{Window}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method which can tell you if a Window is being automatically closed due to a user instigated drag operation (typically when a single tab is dropped into another window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a18e89dc6eb2659824684e660e332716e}\label{class_dragablz_1_1_tabablz_control_a18e89dc6eb2659824684e660e332716e}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!GetLoadedInstances@{GetLoadedInstances}}
+\index{GetLoadedInstances@{GetLoadedInstances}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{GetLoadedInstances()}{GetLoadedInstances()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static I\+Enumerable$<$\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}$>$ Dragablz.\+Tabablz\+Control.\+Get\+Loaded\+Instances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method which returns all the currently loaded instances. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a18e89dc6eb2659824684e660e332716e}\label{class_dragablz_1_1_tabablz_control_a18e89dc6eb2659824684e660e332716e}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!GetLoadedInstances@{GetLoadedInstances}}
+\index{GetLoadedInstances@{GetLoadedInstances}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{GetLoadedInstances()}{GetLoadedInstances()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static I\+Enumerable$<$\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}$>$ Dragablz.\+Tabablz\+Control.\+Get\+Loaded\+Instances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Helper method which returns all the currently loaded instances. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a233069baf2cb52efc1d8f8af584c0e95}\label{class_dragablz_1_1_tabablz_control_a233069baf2cb52efc1d8f8af584c0e95}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!GetOrderedHeaders@{GetOrderedHeaders}}
+\index{GetOrderedHeaders@{GetOrderedHeaders}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{GetOrderedHeaders()}{GetOrderedHeaders()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily I\+Enumerable$<$\mbox{\hyperlink{class_dragablz_1_1_dragablz_item}{Dragablz\+Item}}$>$ Dragablz.\+Tabablz\+Control.\+Get\+Ordered\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the header items, ordered according to their current visual position in the tab header. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a233069baf2cb52efc1d8f8af584c0e95}\label{class_dragablz_1_1_tabablz_control_a233069baf2cb52efc1d8f8af584c0e95}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!GetOrderedHeaders@{GetOrderedHeaders}}
+\index{GetOrderedHeaders@{GetOrderedHeaders}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{GetOrderedHeaders()}{GetOrderedHeaders()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily I\+Enumerable$<$\mbox{\hyperlink{class_dragablz_1_1_dragablz_item}{Dragablz\+Item}}$>$ Dragablz.\+Tabablz\+Control.\+Get\+Ordered\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the header items, ordered according to their current visual position in the tab header. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a1f3b13f76807426801f6de95b40f3370}\label{class_dragablz_1_1_tabablz_control_a1f3b13f76807426801f6de95b40f3370}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnApplyTemplate@{OnApplyTemplate}}
+\index{OnApplyTemplate@{OnApplyTemplate}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnApplyTemplate()}{OnApplyTemplate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override void Dragablz.\+Tabablz\+Control.\+On\+Apply\+Template (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when M\+:\+System.\+Windows.\+Framework\+Element.\+Apply\+Template is called. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a1f3b13f76807426801f6de95b40f3370}\label{class_dragablz_1_1_tabablz_control_a1f3b13f76807426801f6de95b40f3370}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnApplyTemplate@{OnApplyTemplate}}
+\index{OnApplyTemplate@{OnApplyTemplate}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnApplyTemplate()}{OnApplyTemplate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override void Dragablz.\+Tabablz\+Control.\+On\+Apply\+Template (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when M\+:\+System.\+Windows.\+Framework\+Element.\+Apply\+Template is called. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a4aaa7a717314407c4a73c3ea7141588c}\label{class_dragablz_1_1_tabablz_control_a4aaa7a717314407c4a73c3ea7141588c}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnCreateAutomationPeer@{OnCreateAutomationPeer}}
+\index{OnCreateAutomationPeer@{OnCreateAutomationPeer}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnCreateAutomationPeer()}{OnCreateAutomationPeer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override Automation\+Peer Dragablz.\+Tabablz\+Control.\+On\+Create\+Automation\+Peer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Provides an appropriate automation peer implementation for this control as part of the W\+PF automation infrastructure. 
+
+\begin{DoxyReturn}{Returns}
+The type-\/specific System.\+Windows.\+Automation.\+Peers.\+Automation\+Peer implementation.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a4aaa7a717314407c4a73c3ea7141588c}\label{class_dragablz_1_1_tabablz_control_a4aaa7a717314407c4a73c3ea7141588c}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnCreateAutomationPeer@{OnCreateAutomationPeer}}
+\index{OnCreateAutomationPeer@{OnCreateAutomationPeer}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnCreateAutomationPeer()}{OnCreateAutomationPeer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override Automation\+Peer Dragablz.\+Tabablz\+Control.\+On\+Create\+Automation\+Peer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Provides an appropriate automation peer implementation for this control as part of the W\+PF automation infrastructure. 
+
+\begin{DoxyReturn}{Returns}
+The type-\/specific System.\+Windows.\+Automation.\+Peers.\+Automation\+Peer implementation.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a7700d28e64de84d1de5cfac7dad0d6ed}\label{class_dragablz_1_1_tabablz_control_a7700d28e64de84d1de5cfac7dad0d6ed}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnItemsChanged@{OnItemsChanged}}
+\index{OnItemsChanged@{OnItemsChanged}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnItemsChanged()}{OnItemsChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override void Dragablz.\+Tabablz\+Control.\+On\+Items\+Changed (\begin{DoxyParamCaption}\item[{Notify\+Collection\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+when the items change we remove any generated panel children and add any new ones as necessary 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a7700d28e64de84d1de5cfac7dad0d6ed}\label{class_dragablz_1_1_tabablz_control_a7700d28e64de84d1de5cfac7dad0d6ed}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnItemsChanged@{OnItemsChanged}}
+\index{OnItemsChanged@{OnItemsChanged}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnItemsChanged()}{OnItemsChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override void Dragablz.\+Tabablz\+Control.\+On\+Items\+Changed (\begin{DoxyParamCaption}\item[{Notify\+Collection\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+when the items change we remove any generated panel children and add any new ones as necessary 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a066fcf5ac1ba7a944a64efa181245e72}\label{class_dragablz_1_1_tabablz_control_a066fcf5ac1ba7a944a64efa181245e72}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnKeyDown@{OnKeyDown}}
+\index{OnKeyDown@{OnKeyDown}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnKeyDown()}{OnKeyDown()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override void Dragablz.\+Tabablz\+Control.\+On\+Key\+Down (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Provides class handling for the E\+:\+System.\+Windows.\+Content\+Element.\+Key\+Down routed event that occurs when the user presses a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Provides data for T\+:\+System.\+Windows.\+Input.\+Key\+Event\+Args.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a066fcf5ac1ba7a944a64efa181245e72}\label{class_dragablz_1_1_tabablz_control_a066fcf5ac1ba7a944a64efa181245e72}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnKeyDown@{OnKeyDown}}
+\index{OnKeyDown@{OnKeyDown}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnKeyDown()}{OnKeyDown()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override void Dragablz.\+Tabablz\+Control.\+On\+Key\+Down (\begin{DoxyParamCaption}\item[{Key\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Provides class handling for the E\+:\+System.\+Windows.\+Content\+Element.\+Key\+Down routed event that occurs when the user presses a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Provides data for T\+:\+System.\+Windows.\+Input.\+Key\+Event\+Args.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_aca2d02b5fe8532b156de045511e6308e}\label{class_dragablz_1_1_tabablz_control_aca2d02b5fe8532b156de045511e6308e}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnSelectionChanged@{OnSelectionChanged}}
+\index{OnSelectionChanged@{OnSelectionChanged}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnSelectionChanged()}{OnSelectionChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override void Dragablz.\+Tabablz\+Control.\+On\+Selection\+Changed (\begin{DoxyParamCaption}\item[{Selection\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+update the visible child in the Items\+Holder 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_aca2d02b5fe8532b156de045511e6308e}\label{class_dragablz_1_1_tabablz_control_aca2d02b5fe8532b156de045511e6308e}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!OnSelectionChanged@{OnSelectionChanged}}
+\index{OnSelectionChanged@{OnSelectionChanged}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{OnSelectionChanged()}{OnSelectionChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override void Dragablz.\+Tabablz\+Control.\+On\+Selection\+Changed (\begin{DoxyParamCaption}\item[{Selection\+Changed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+update the visible child in the Items\+Holder 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a5ea85ad1711b4fea5326a23efb21e9e0}\label{class_dragablz_1_1_tabablz_control_a5ea85ad1711b4fea5326a23efb21e9e0}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!RemoveFromSource@{RemoveFromSource}}
+\index{RemoveFromSource@{RemoveFromSource}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{RemoveFromSource()}{RemoveFromSource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Dragablz.\+Tabablz\+Control.\+Remove\+From\+Source (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})}
+
+
+
+Removes an item from the source collection. If the Inter\+Tab\+Controller.\+Inter\+Tab\+Client is set that instance will be deferred to. Otherwise an attempt will be made to remove from the Items\+Source property, and lastly Items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a5ea85ad1711b4fea5326a23efb21e9e0}\label{class_dragablz_1_1_tabablz_control_a5ea85ad1711b4fea5326a23efb21e9e0}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!RemoveFromSource@{RemoveFromSource}}
+\index{RemoveFromSource@{RemoveFromSource}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{RemoveFromSource()}{RemoveFromSource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Dragablz.\+Tabablz\+Control.\+Remove\+From\+Source (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})}
+
+
+
+Removes an item from the source collection. If the Inter\+Tab\+Controller.\+Inter\+Tab\+Client is set that instance will be deferred to. Otherwise an attempt will be made to remove from the Items\+Source property, and lastly Items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ad8852979dc53bba0b3daed5cdfc0e8f9}\label{class_dragablz_1_1_tabablz_control_ad8852979dc53bba0b3daed5cdfc0e8f9}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!SelectItem@{SelectItem}}
+\index{SelectItem@{SelectItem}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{SelectItem()}{SelectItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Dragablz.\+Tabablz\+Control.\+Select\+Item (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds and selects an item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ad8852979dc53bba0b3daed5cdfc0e8f9}\label{class_dragablz_1_1_tabablz_control_ad8852979dc53bba0b3daed5cdfc0e8f9}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!SelectItem@{SelectItem}}
+\index{SelectItem@{SelectItem}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{SelectItem()}{SelectItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Dragablz.\+Tabablz\+Control.\+Select\+Item (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds and selects an item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}\label{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!AddItemCommand@{AddItemCommand}}
+\index{AddItemCommand@{AddItemCommand}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{AddItemCommand}{AddItemCommand}}
+{\footnotesize\ttfamily static Routed\+Command Dragablz.\+Tabablz\+Control.\+Add\+Item\+Command = new Routed\+U\+I\+Command(\char`\"{}Add\char`\"{}, \char`\"{}Add\char`\"{}, typeof(\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}))\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Routed command which can be used to add a new tab. See \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ad57b4e6df0fd5cf4a641023461a676f7}{New\+Item\+Factory}}. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a99bf25ecaf92b0495c18f1c4fe22b9a3}\label{class_dragablz_1_1_tabablz_control_a99bf25ecaf92b0495c18f1c4fe22b9a3}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!AddLocationHintProperty@{AddLocationHintProperty}}
+\index{AddLocationHintProperty@{AddLocationHintProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{AddLocationHintProperty}{AddLocationHintProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Add\+Location\+Hint\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"AddLocationHint"}, typeof (\mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a87b1642288772a262a102ed00690754b}{AddLocationHint}}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a87b1642288772a262a102ed00690754b}{AddLocationHint}}.Last))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_af4766472aada2109044cd7ac5dba89e9}\label{class_dragablz_1_1_tabablz_control_af4766472aada2109044cd7ac5dba89e9}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!AdjacentHeaderItemOffsetProperty@{AdjacentHeaderItemOffsetProperty}}
+\index{AdjacentHeaderItemOffsetProperty@{AdjacentHeaderItemOffsetProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{AdjacentHeaderItemOffsetProperty}{AdjacentHeaderItemOffsetProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Adjacent\+Header\+Item\+Offset\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"AdjacentHeaderItemOffset"}, typeof (\textcolor{keywordtype}{double}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{double}), AdjacentHeaderItemOffsetPropertyChangedCallback))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_af05b5fd0b25eeccb0443140819736f43}\label{class_dragablz_1_1_tabablz_control_af05b5fd0b25eeccb0443140819736f43}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!CloseItemCommand@{CloseItemCommand}}
+\index{CloseItemCommand@{CloseItemCommand}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{CloseItemCommand}{CloseItemCommand}}
+{\footnotesize\ttfamily static Routed\+Command Dragablz.\+Tabablz\+Control.\+Close\+Item\+Command = new Routed\+U\+I\+Command(\char`\"{}Close\char`\"{}, \char`\"{}Close\char`\"{}, typeof(\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}))\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Routed command which can be used to close a tab. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_af6169b0260eeb28e74aaae25d3a17bae}\label{class_dragablz_1_1_tabablz_control_af6169b0260eeb28e74aaae25d3a17bae}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ClosingItemCallbackProperty@{ClosingItemCallbackProperty}}
+\index{ClosingItemCallbackProperty@{ClosingItemCallbackProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ClosingItemCallbackProperty}{ClosingItemCallbackProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Closing\+Item\+Callback\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"ClosingItemCallback"}, typeof(ItemActionCallback), typeof(TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(ItemActionCallback)))}
+
+\end{DoxyCode}
+
+
+Optionally allows a close item hook to be bound in. If this propety is provided, the func must return true for the close to continue. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_aca9a9ff95dcb91d3ff8335be36b8424f}\label{class_dragablz_1_1_tabablz_control_aca9a9ff95dcb91d3ff8335be36b8424f}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ConsolidateOrphanedItemsProperty@{ConsolidateOrphanedItemsProperty}}
+\index{ConsolidateOrphanedItemsProperty@{ConsolidateOrphanedItemsProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ConsolidateOrphanedItemsProperty}{ConsolidateOrphanedItemsProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Consolidate\+Orphaned\+Items\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"ConsolidateOrphanedItems"}, typeof (\textcolor{keywordtype}{bool}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{bool})))}
+
+\end{DoxyCode}
+
+
+Set to {\ttfamily true} to have tabs automatically be moved to another tab is a window is closed, so that they arent lost. Can be useful for fixed/persistant tabs that may have been dragged into another Window. You can further control this behaviour on a per tab item basis by providing \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ab966608a405bddec32b6b99f255df631}{Consolidating\+Orphaned\+Item\+Callback}}. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ab50b39248956773599bdb5b18b4efa59}\label{class_dragablz_1_1_tabablz_control_ab50b39248956773599bdb5b18b4efa59}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ConsolidatingOrphanedItemCallbackProperty@{ConsolidatingOrphanedItemCallbackProperty}}
+\index{ConsolidatingOrphanedItemCallbackProperty@{ConsolidatingOrphanedItemCallbackProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ConsolidatingOrphanedItemCallbackProperty}{ConsolidatingOrphanedItemCallbackProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Consolidating\+Orphaned\+Item\+Callback\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"ConsolidatingOrphanedItemCallback"}, typeof (ItemActionCallback), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(ItemActionCallback)))}
+
+\end{DoxyCode}
+
+
+Assuming \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a431ef361c28f456a66893c18191f0bb5}{Consolidate\+Orphaned\+Items}} is set to {\ttfamily true}, consolidation of individual tab items can be cancelled by providing this call back and cancelling the Item\+Action\+Callback\+Args$<$\+T\+Owner$>$ instance. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_af3d318ea95564a4c9a71c5d0d3921b1f}\label{class_dragablz_1_1_tabablz_control_af3d318ea95564a4c9a71c5d0d3921b1f}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!CustomHeaderItemStyleProperty@{CustomHeaderItemStyleProperty}}
+\index{CustomHeaderItemStyleProperty@{CustomHeaderItemStyleProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{CustomHeaderItemStyleProperty}{CustomHeaderItemStyleProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Custom\+Header\+Item\+Style\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"CustomHeaderItemStyle"}, typeof (Style), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(Style)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a12b346056f74715512f5832cf5c5d1b4}\label{class_dragablz_1_1_tabablz_control_a12b346056f74715512f5832cf5c5d1b4}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!CustomHeaderItemTemplateProperty@{CustomHeaderItemTemplateProperty}}
+\index{CustomHeaderItemTemplateProperty@{CustomHeaderItemTemplateProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{CustomHeaderItemTemplateProperty}{CustomHeaderItemTemplateProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Custom\+Header\+Item\+Template\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"CustomHeaderItemTemplate"}, typeof (DataTemplate), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplate)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a006ed851e83f5993c5793762e0e26ef2}\label{class_dragablz_1_1_tabablz_control_a006ed851e83f5993c5793762e0e26ef2}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!DefaultHeaderItemStyleProperty@{DefaultHeaderItemStyleProperty}}
+\index{DefaultHeaderItemStyleProperty@{DefaultHeaderItemStyleProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{DefaultHeaderItemStyleProperty}{DefaultHeaderItemStyleProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Default\+Header\+Item\+Style\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"DefaultHeaderItemStyle"}, typeof (Style), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(Style)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a8643ed6df4bb25d2ded6efc78e4d8075}\label{class_dragablz_1_1_tabablz_control_a8643ed6df4bb25d2ded6efc78e4d8075}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!EmptyHeaderSizingHintProperty@{EmptyHeaderSizingHintProperty}}
+\index{EmptyHeaderSizingHintProperty@{EmptyHeaderSizingHintProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{EmptyHeaderSizingHintProperty}{EmptyHeaderSizingHintProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Empty\+Header\+Sizing\+Hint\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"EmptyHeaderSizingHint"}, typeof (\mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a104a600b3e630bee5afe46cf5173318e}{EmptyHeaderSizingHint}}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a104a600b3e630bee5afe46cf5173318e}{EmptyHeaderSizingHint}})))}
+
+\end{DoxyCode}
+
+
+Provide a hint for how the header should size itself if there are no tabs left (and a Window is still open). 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a2c7450c8295c4305925d62d13762e082}\label{class_dragablz_1_1_tabablz_control_a2c7450c8295c4305925d62d13762e082}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!FixedHeaderCountProperty@{FixedHeaderCountProperty}}
+\index{FixedHeaderCountProperty@{FixedHeaderCountProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{FixedHeaderCountProperty}{FixedHeaderCountProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Fixed\+Header\+Count\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"FixedHeaderCount"}, typeof (\textcolor{keywordtype}{int}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{int})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a0c8a4c6046aecc7b51fa02d82f746f12}\label{class_dragablz_1_1_tabablz_control_a0c8a4c6046aecc7b51fa02d82f746f12}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderItemsControlPartName@{HeaderItemsControlPartName}}
+\index{HeaderItemsControlPartName@{HeaderItemsControlPartName}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderItemsControlPartName}{HeaderItemsControlPartName}}
+{\footnotesize\ttfamily const string Dragablz.\+Tabablz\+Control.\+Header\+Items\+Control\+Part\+Name = \char`\"{}P\+A\+R\+T\+\_\+\+Header\+Items\+Control\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Template part. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_af69e9b53fa9d48d832bdda642dc01eb7}\label{class_dragablz_1_1_tabablz_control_af69e9b53fa9d48d832bdda642dc01eb7}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderItemsOrganiserProperty@{HeaderItemsOrganiserProperty}}
+\index{HeaderItemsOrganiserProperty@{HeaderItemsOrganiserProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderItemsOrganiserProperty}{HeaderItemsOrganiserProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Items\+Organiser\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderItemsOrganiser"}, typeof (IItemsOrganiser), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{new} HorizontalOrganiser()))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ab0c6f78d5e126a235e0c80937e9d83c0}\label{class_dragablz_1_1_tabablz_control_ab0c6f78d5e126a235e0c80937e9d83c0}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderItemTemplateProperty@{HeaderItemTemplateProperty}}
+\index{HeaderItemTemplateProperty@{HeaderItemTemplateProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderItemTemplateProperty}{HeaderItemTemplateProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Item\+Template\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderItemTemplate"}, typeof (DataTemplate), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplate)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a9c3c6a587bc02f2a901522481c5cf5a1}\label{class_dragablz_1_1_tabablz_control_a9c3c6a587bc02f2a901522481c5cf5a1}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderMemberPathProperty@{HeaderMemberPathProperty}}
+\index{HeaderMemberPathProperty@{HeaderMemberPathProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderMemberPathProperty}{HeaderMemberPathProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Member\+Path\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderMemberPath"}, typeof (\textcolor{keywordtype}{string}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{string})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a0785b18eeb0b2bce7a61af6a39787402}\label{class_dragablz_1_1_tabablz_control_a0785b18eeb0b2bce7a61af6a39787402}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderPrefixContentProperty@{HeaderPrefixContentProperty}}
+\index{HeaderPrefixContentProperty@{HeaderPrefixContentProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderPrefixContentProperty}{HeaderPrefixContentProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Prefix\+Content\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderPrefixContent"}, typeof (\textcolor{keywordtype}{object}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{object})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a85c4186fd3788b3460b6ddea362414db}\label{class_dragablz_1_1_tabablz_control_a85c4186fd3788b3460b6ddea362414db}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderPrefixContentStringFormatProperty@{HeaderPrefixContentStringFormatProperty}}
+\index{HeaderPrefixContentStringFormatProperty@{HeaderPrefixContentStringFormatProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderPrefixContentStringFormatProperty}{HeaderPrefixContentStringFormatProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Prefix\+Content\+String\+Format\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderPrefixContentStringFormat"}, typeof (\textcolor{keywordtype}{string}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{string})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_af9f5158f84d3538cc641279be01090b4}\label{class_dragablz_1_1_tabablz_control_af9f5158f84d3538cc641279be01090b4}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderPrefixContentTemplateProperty@{HeaderPrefixContentTemplateProperty}}
+\index{HeaderPrefixContentTemplateProperty@{HeaderPrefixContentTemplateProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderPrefixContentTemplateProperty}{HeaderPrefixContentTemplateProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Prefix\+Content\+Template\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderPrefixContentTemplate"}, typeof (DataTemplate), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplate)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_aa180acadd08c9e49c36aeff2fd87def6}\label{class_dragablz_1_1_tabablz_control_aa180acadd08c9e49c36aeff2fd87def6}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderPrefixContentTemplateSelectorProperty@{HeaderPrefixContentTemplateSelectorProperty}}
+\index{HeaderPrefixContentTemplateSelectorProperty@{HeaderPrefixContentTemplateSelectorProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderPrefixContentTemplateSelectorProperty}{HeaderPrefixContentTemplateSelectorProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Prefix\+Content\+Template\+Selector\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderPrefixContentTemplateSelector"}, typeof (DataTemplateSelector), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplateSelector)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a5fd8724676443e7b530c704842507713}\label{class_dragablz_1_1_tabablz_control_a5fd8724676443e7b530c704842507713}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderSuffixContentProperty@{HeaderSuffixContentProperty}}
+\index{HeaderSuffixContentProperty@{HeaderSuffixContentProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderSuffixContentProperty}{HeaderSuffixContentProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Suffix\+Content\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{                    \textcolor{stringliteral}{"HeaderSuffixContent"}, typeof(\textcolor{keywordtype}{object}), typeof(TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{object})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a6b7a2ac47616e7921e340e5343f4e4c9}\label{class_dragablz_1_1_tabablz_control_a6b7a2ac47616e7921e340e5343f4e4c9}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderSuffixContentStringFormatProperty@{HeaderSuffixContentStringFormatProperty}}
+\index{HeaderSuffixContentStringFormatProperty@{HeaderSuffixContentStringFormatProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderSuffixContentStringFormatProperty}{HeaderSuffixContentStringFormatProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Suffix\+Content\+String\+Format\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderSuffixContentStringFormat"}, typeof(\textcolor{keywordtype}{string}), typeof(TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{string})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_af8f5ae45af08bf6d005c09f74a29ae1c}\label{class_dragablz_1_1_tabablz_control_af8f5ae45af08bf6d005c09f74a29ae1c}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderSuffixContentTemplateProperty@{HeaderSuffixContentTemplateProperty}}
+\index{HeaderSuffixContentTemplateProperty@{HeaderSuffixContentTemplateProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderSuffixContentTemplateProperty}{HeaderSuffixContentTemplateProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Suffix\+Content\+Template\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderSuffixContentTemplate"}, typeof(DataTemplate), typeof(TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplate)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a4f7b7e7b46051b034a0847356963badb}\label{class_dragablz_1_1_tabablz_control_a4f7b7e7b46051b034a0847356963badb}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!HeaderSuffixContentTemplateSelectorProperty@{HeaderSuffixContentTemplateSelectorProperty}}
+\index{HeaderSuffixContentTemplateSelectorProperty@{HeaderSuffixContentTemplateSelectorProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{HeaderSuffixContentTemplateSelectorProperty}{HeaderSuffixContentTemplateSelectorProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Header\+Suffix\+Content\+Template\+Selector\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"HeaderSuffixContentTemplateSelector"}, typeof(DataTemplateSelector), typeof(TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(DataTemplateSelector)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a7479bbe7a7cc5ce0b9e1d2068d70d484}\label{class_dragablz_1_1_tabablz_control_a7479bbe7a7cc5ce0b9e1d2068d70d484}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!InterTabControllerProperty@{InterTabControllerProperty}}
+\index{InterTabControllerProperty@{InterTabControllerProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{InterTabControllerProperty}{InterTabControllerProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Inter\+Tab\+Controller\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"InterTabController"}, typeof (\mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ab1667be8ff36fc2bf0ac3524818fda38}{InterTabController}}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{null}, InterTabControllerPropertyChangedCallback))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ad3754ad8987ec9eb5507ab7895f56503}\label{class_dragablz_1_1_tabablz_control_ad3754ad8987ec9eb5507ab7895f56503}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsClosingAsPartOfDragOperationProperty@{IsClosingAsPartOfDragOperationProperty}}
+\index{IsClosingAsPartOfDragOperationProperty@{IsClosingAsPartOfDragOperationProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsClosingAsPartOfDragOperationProperty}{IsClosingAsPartOfDragOperationProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Is\+Closing\+As\+Part\+Of\+Drag\+Operation\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.RegisterAttached(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"IsClosingAsPartOfDragOperation"}, typeof (\textcolor{keywordtype}{bool}), typeof (TabablzControl), \textcolor{keyword}{new} FrameworkPropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{bool}), FrameworkPropertyMetadataOptions.NotDataBindable))}
+
+\end{DoxyCode}
+
+
+Temporarily set by the framework if a users drag opration causes a Window to close (e.\+g if a tab is dragging into another tab). 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ae003379ef4e82d242fcd93f99b56ad55}\label{class_dragablz_1_1_tabablz_control_ae003379ef4e82d242fcd93f99b56ad55}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsDraggingWindowChangedEvent@{IsDraggingWindowChangedEvent}}
+\index{IsDraggingWindowChangedEvent@{IsDraggingWindowChangedEvent}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsDraggingWindowChangedEvent}{IsDraggingWindowChangedEvent}}
+{\footnotesize\ttfamily static readonly Routed\+Event Dragablz.\+Tabablz\+Control.\+Is\+Dragging\+Window\+Changed\+Event\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            EventManager.RegisterRoutedEvent(}
+\DoxyCodeLine{                \textcolor{stringliteral}{"IsDraggingWindowChanged"},}
+\DoxyCodeLine{                RoutingStrategy.Bubble,}
+\DoxyCodeLine{                typeof (RoutedPropertyChangedEventHandler<bool>),}
+\DoxyCodeLine{                typeof (TabablzControl))}
+
+\end{DoxyCode}
+
+
+Event indicating \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a1438afeec50c6d8e7f02f112dcfc169e}{Is\+Dragging\+Window}} has changed. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_add6c29b97a3526ee52ff988e3f5db0e2}\label{class_dragablz_1_1_tabablz_control_add6c29b97a3526ee52ff988e3f5db0e2}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsDraggingWindowProperty@{IsDraggingWindowProperty}}
+\index{IsDraggingWindowProperty@{IsDraggingWindowProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsDraggingWindowProperty}{IsDraggingWindowProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Is\+Dragging\+Window\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            IsDraggingWindowPropertyKey.DependencyProperty}
+
+\end{DoxyCode}
+
+
+Readonly dependency property which indicates whether the owning Window is currently dragged 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a620086cb6e61a1b51b4e56db0e9fe474}\label{class_dragablz_1_1_tabablz_control_a620086cb6e61a1b51b4e56db0e9fe474}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsEmptyChangedEvent@{IsEmptyChangedEvent}}
+\index{IsEmptyChangedEvent@{IsEmptyChangedEvent}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsEmptyChangedEvent}{IsEmptyChangedEvent}}
+{\footnotesize\ttfamily static readonly Routed\+Event Dragablz.\+Tabablz\+Control.\+Is\+Empty\+Changed\+Event\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            EventManager.RegisterRoutedEvent(}
+\DoxyCodeLine{                \textcolor{stringliteral}{"IsEmptyChanged"},}
+\DoxyCodeLine{                RoutingStrategy.Bubble,}
+\DoxyCodeLine{                typeof (RoutedPropertyChangedEventHandler<bool>),}
+\DoxyCodeLine{                typeof (TabablzControl))}
+
+\end{DoxyCode}
+
+
+Raised when \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_af7ecbea93431d462b9cff09a20ddbcee}{Is\+Empty}} changes. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a34e172558a5ccfee07e8c20eaaac5ffc}\label{class_dragablz_1_1_tabablz_control_a34e172558a5ccfee07e8c20eaaac5ffc}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsEmptyProperty@{IsEmptyProperty}}
+\index{IsEmptyProperty@{IsEmptyProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsEmptyProperty}{IsEmptyProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Is\+Empty\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            IsEmptyPropertyKey.DependencyProperty}
+
+\end{DoxyCode}
+
+
+Indicates if there are no current tab items. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a63f73c2a7023eeac447bb4dd38380def}\label{class_dragablz_1_1_tabablz_control_a63f73c2a7023eeac447bb4dd38380def}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsHeaderPanelVisibleProperty@{IsHeaderPanelVisibleProperty}}
+\index{IsHeaderPanelVisibleProperty@{IsHeaderPanelVisibleProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsHeaderPanelVisibleProperty}{IsHeaderPanelVisibleProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Is\+Header\+Panel\+Visible\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"IsHeaderPanelVisible"}, typeof(\textcolor{keywordtype}{bool}), typeof(TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{true}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ae0153913077b335de67d03e620508a0f}\label{class_dragablz_1_1_tabablz_control_ae0153913077b335de67d03e620508a0f}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsWrappingTabItemProperty@{IsWrappingTabItemProperty}}
+\index{IsWrappingTabItemProperty@{IsWrappingTabItemProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsWrappingTabItemProperty}{IsWrappingTabItemProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Is\+Wrapping\+Tab\+Item\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.RegisterAttached(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"IsWrappingTabItem"}, typeof (\textcolor{keywordtype}{bool}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{bool})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_abef0685e59acce66c9a4fdbb56d04ac4}\label{class_dragablz_1_1_tabablz_control_abef0685e59acce66c9a4fdbb56d04ac4}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ItemsHolderPartName@{ItemsHolderPartName}}
+\index{ItemsHolderPartName@{ItemsHolderPartName}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ItemsHolderPartName}{ItemsHolderPartName}}
+{\footnotesize\ttfamily const string Dragablz.\+Tabablz\+Control.\+Items\+Holder\+Part\+Name = \char`\"{}P\+A\+R\+T\+\_\+\+Items\+Holder\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Template part. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ad703567d24232c4cf9d59cd53c8a96fc}\label{class_dragablz_1_1_tabablz_control_ad703567d24232c4cf9d59cd53c8a96fc}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!NewItemFactoryProperty@{NewItemFactoryProperty}}
+\index{NewItemFactoryProperty@{NewItemFactoryProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{NewItemFactoryProperty}{NewItemFactoryProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+New\+Item\+Factory\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"NewItemFactory"}, typeof (Func<object>), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(Func<object>)))}
+
+\end{DoxyCode}
+
+
+Allows a factory to be provided for generating new items. Typically used in conjunction with \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}{Add\+Item\+Command}}. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a0e57affcb487cccffe8f6f13879482de}\label{class_dragablz_1_1_tabablz_control_a0e57affcb487cccffe8f6f13879482de}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ShowDefaultAddButtonProperty@{ShowDefaultAddButtonProperty}}
+\index{ShowDefaultAddButtonProperty@{ShowDefaultAddButtonProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ShowDefaultAddButtonProperty}{ShowDefaultAddButtonProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Show\+Default\+Add\+Button\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"ShowDefaultAddButton"}, typeof (\textcolor{keywordtype}{bool}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{bool})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a62535c9b28f600a475c7fc62ea20f8f0}\label{class_dragablz_1_1_tabablz_control_a62535c9b28f600a475c7fc62ea20f8f0}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ShowDefaultCloseButtonProperty@{ShowDefaultCloseButtonProperty}}
+\index{ShowDefaultCloseButtonProperty@{ShowDefaultCloseButtonProperty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ShowDefaultCloseButtonProperty}{ShowDefaultCloseButtonProperty}}
+{\footnotesize\ttfamily static readonly Dependency\+Property Dragablz.\+Tabablz\+Control.\+Show\+Default\+Close\+Button\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"ShowDefaultCloseButton"}, typeof (\textcolor{keywordtype}{bool}), typeof (TabablzControl), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{bool})))}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a87b1642288772a262a102ed00690754b}\label{class_dragablz_1_1_tabablz_control_a87b1642288772a262a102ed00690754b}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!AddLocationHint@{AddLocationHint}}
+\index{AddLocationHint@{AddLocationHint}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{AddLocationHint}{AddLocationHint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dragablz_ae3e952b0e071a0261ced7a1fffece3be}{Add\+Location\+Hint}} Dragablz.\+Tabablz\+Control.\+Add\+Location\+Hint\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the location to add new tab items in the header. 
+
+The logical order of the header items might not add match the content of the source items, so this property allows control of where new items should appear. \mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a83081986862fec940bedadc34397f003}\label{class_dragablz_1_1_tabablz_control_a83081986862fec940bedadc34397f003}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ClosingItemCallback@{ClosingItemCallback}}
+\index{ClosingItemCallback@{ClosingItemCallback}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ClosingItemCallback}{ClosingItemCallback}}
+{\footnotesize\ttfamily Item\+Action\+Callback Dragablz.\+Tabablz\+Control.\+Closing\+Item\+Callback\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optionally allows a close item hook to be bound in. If this propety is provided, the func must return true for the close to continue. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a431ef361c28f456a66893c18191f0bb5}\label{class_dragablz_1_1_tabablz_control_a431ef361c28f456a66893c18191f0bb5}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ConsolidateOrphanedItems@{ConsolidateOrphanedItems}}
+\index{ConsolidateOrphanedItems@{ConsolidateOrphanedItems}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ConsolidateOrphanedItems}{ConsolidateOrphanedItems}}
+{\footnotesize\ttfamily bool Dragablz.\+Tabablz\+Control.\+Consolidate\+Orphaned\+Items\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Set to {\ttfamily true} to have tabs automatically be moved to another tab is a window is closed, so that they arent lost. Can be useful for fixed/persistant tabs that may have been dragged into another Window. You can further control this behaviour on a per tab item basis by providing \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_ab966608a405bddec32b6b99f255df631}{Consolidating\+Orphaned\+Item\+Callback}}. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ab966608a405bddec32b6b99f255df631}\label{class_dragablz_1_1_tabablz_control_ab966608a405bddec32b6b99f255df631}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ConsolidatingOrphanedItemCallback@{ConsolidatingOrphanedItemCallback}}
+\index{ConsolidatingOrphanedItemCallback@{ConsolidatingOrphanedItemCallback}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ConsolidatingOrphanedItemCallback}{ConsolidatingOrphanedItemCallback}}
+{\footnotesize\ttfamily Item\+Action\+Callback Dragablz.\+Tabablz\+Control.\+Consolidating\+Orphaned\+Item\+Callback\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Assuming \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a431ef361c28f456a66893c18191f0bb5}{Consolidate\+Orphaned\+Items}} is set to {\ttfamily true}, consolidation of individual tab items can be cancelled by providing this call back and cancelling the Item\+Action\+Callback\+Args$<$\+T\+Owner$>$ instance. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a1fb96fb4c8a42d9fc866206338365ba7}\label{class_dragablz_1_1_tabablz_control_a1fb96fb4c8a42d9fc866206338365ba7}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!CustomHeaderItemStyle@{CustomHeaderItemStyle}}
+\index{CustomHeaderItemStyle@{CustomHeaderItemStyle}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{CustomHeaderItemStyle}{CustomHeaderItemStyle}}
+{\footnotesize\ttfamily Style Dragablz.\+Tabablz\+Control.\+Custom\+Header\+Item\+Style\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Style to apply to header items which are not their own item container (Tab\+Item). Typically items bound via the Items\+Source will use this style. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a104a600b3e630bee5afe46cf5173318e}\label{class_dragablz_1_1_tabablz_control_a104a600b3e630bee5afe46cf5173318e}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!EmptyHeaderSizingHint@{EmptyHeaderSizingHint}}
+\index{EmptyHeaderSizingHint@{EmptyHeaderSizingHint}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{EmptyHeaderSizingHint}{EmptyHeaderSizingHint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dragablz_af092cd9b1b346fb723efff6ade5a6c68}{Empty\+Header\+Sizing\+Hint}} Dragablz.\+Tabablz\+Control.\+Empty\+Header\+Sizing\+Hint\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Provide a hint for how the header should size itself if there are no tabs left (and a Window is still open). 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_aa80517f87a2cd4cd6426a1df601aa54c}\label{class_dragablz_1_1_tabablz_control_aa80517f87a2cd4cd6426a1df601aa54c}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!FixedHeaderCount@{FixedHeaderCount}}
+\index{FixedHeaderCount@{FixedHeaderCount}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{FixedHeaderCount}{FixedHeaderCount}}
+{\footnotesize\ttfamily int Dragablz.\+Tabablz\+Control.\+Fixed\+Header\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows a the first adjacent tabs to be fixed (no dragging, and default close button will not show). 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ab1667be8ff36fc2bf0ac3524818fda38}\label{class_dragablz_1_1_tabablz_control_ab1667be8ff36fc2bf0ac3524818fda38}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!InterTabController@{InterTabController}}
+\index{InterTabController@{InterTabController}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{InterTabController}{InterTabController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dragablz_1_1_inter_tab_controller}{Inter\+Tab\+Controller}} Dragablz.\+Tabablz\+Control.\+Inter\+Tab\+Controller\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An \mbox{\hyperlink{class_dragablz_1_1_inter_tab_controller}{Inter\+Tab\+Controller}} must be provided to enable tab tearing. Behaviour customisations can be applied vie the controller. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a1438afeec50c6d8e7f02f112dcfc169e}\label{class_dragablz_1_1_tabablz_control_a1438afeec50c6d8e7f02f112dcfc169e}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsDraggingWindow@{IsDraggingWindow}}
+\index{IsDraggingWindow@{IsDraggingWindow}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsDraggingWindow}{IsDraggingWindow}}
+{\footnotesize\ttfamily bool Dragablz.\+Tabablz\+Control.\+Is\+Dragging\+Window\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Readonly dependency property which indicates whether the owning Window is currently dragged 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a10149ea0070e429bd1c42bceabfa4358}\label{class_dragablz_1_1_tabablz_control_a10149ea0070e429bd1c42bceabfa4358}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsDraggingWindowChanged@{IsDraggingWindowChanged}}
+\index{IsDraggingWindowChanged@{IsDraggingWindowChanged}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsDraggingWindowChanged}{IsDraggingWindowChanged}}
+{\footnotesize\ttfamily Routed\+Property\+Changed\+Event\+Handler$<$ bool $>$ Dragablz.\+Tabablz\+Control.\+Is\+Dragging\+Window\+Changed\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Event indicating \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a1438afeec50c6d8e7f02f112dcfc169e}{Is\+Dragging\+Window}} has changed. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_af7ecbea93431d462b9cff09a20ddbcee}\label{class_dragablz_1_1_tabablz_control_af7ecbea93431d462b9cff09a20ddbcee}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsEmpty}{IsEmpty}}
+{\footnotesize\ttfamily bool Dragablz.\+Tabablz\+Control.\+Is\+Empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Indicates if there are no current tab items. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a6267e8ed9ac004e93f1dd948a89cd101}\label{class_dragablz_1_1_tabablz_control_a6267e8ed9ac004e93f1dd948a89cd101}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsEmptyChanged@{IsEmptyChanged}}
+\index{IsEmptyChanged@{IsEmptyChanged}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsEmptyChanged}{IsEmptyChanged}}
+{\footnotesize\ttfamily Routed\+Property\+Changed\+Event\+Handler$<$ bool $>$ Dragablz.\+Tabablz\+Control.\+Is\+Empty\+Changed\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Event handler to list to \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a620086cb6e61a1b51b4e56db0e9fe474}{Is\+Empty\+Changed\+Event}}. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_aba4e7f1df25ce56bb515528d0dc504b3}\label{class_dragablz_1_1_tabablz_control_aba4e7f1df25ce56bb515528d0dc504b3}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!IsHeaderPanelVisible@{IsHeaderPanelVisible}}
+\index{IsHeaderPanelVisible@{IsHeaderPanelVisible}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{IsHeaderPanelVisible}{IsHeaderPanelVisible}}
+{\footnotesize\ttfamily bool Dragablz.\+Tabablz\+Control.\+Is\+Header\+Panel\+Visible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates wither the heaeder panel is visible. Default is {\ttfamily true}. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_ad57b4e6df0fd5cf4a641023461a676f7}\label{class_dragablz_1_1_tabablz_control_ad57b4e6df0fd5cf4a641023461a676f7}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!NewItemFactory@{NewItemFactory}}
+\index{NewItemFactory@{NewItemFactory}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{NewItemFactory}{NewItemFactory}}
+{\footnotesize\ttfamily Func$<$ object $>$ Dragablz.\+Tabablz\+Control.\+New\+Item\+Factory\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows a factory to be provided for generating new items. Typically used in conjunction with \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}{Add\+Item\+Command}}. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a2dddddd7ad8df5d29e52e8f5cf6e5846}\label{class_dragablz_1_1_tabablz_control_a2dddddd7ad8df5d29e52e8f5cf6e5846}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ShowDefaultAddButton@{ShowDefaultAddButton}}
+\index{ShowDefaultAddButton@{ShowDefaultAddButton}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ShowDefaultAddButton}{ShowDefaultAddButton}}
+{\footnotesize\ttfamily bool Dragablz.\+Tabablz\+Control.\+Show\+Default\+Add\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates whether a default add button should be displayed. Alternately an add button could be added in Header\+Prefix\+Content or Header\+Suffix\+Content, utilising \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_a5a6dbce75b8328afce64d8652641b344}{Add\+Item\+Command}}. 
+
+\mbox{\Hypertarget{class_dragablz_1_1_tabablz_control_a6396ea06ec35a90a191fd324a807f9e1}\label{class_dragablz_1_1_tabablz_control_a6396ea06ec35a90a191fd324a807f9e1}} 
+\index{Dragablz.TabablzControl@{Dragablz.TabablzControl}!ShowDefaultCloseButton@{ShowDefaultCloseButton}}
+\index{ShowDefaultCloseButton@{ShowDefaultCloseButton}!Dragablz.TabablzControl@{Dragablz.TabablzControl}}
+\doxysubsubsection{\texorpdfstring{ShowDefaultCloseButton}{ShowDefaultCloseButton}}
+{\footnotesize\ttfamily bool Dragablz.\+Tabablz\+Control.\+Show\+Default\+Close\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicates whether a default close button should be displayed. If manually templating the tab header content the close command can be called by executing the \mbox{\hyperlink{class_dragablz_1_1_tabablz_control_af05b5fd0b25eeccb0443140819736f43}{Tabablz\+Control.\+Close\+Item\+Command}} command (typically via a Button). 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Dragablz.\+0.\+0.\+3.\+203/src/net40/Tabablz\+Control.\+cs\end{DoxyCompactItemize}

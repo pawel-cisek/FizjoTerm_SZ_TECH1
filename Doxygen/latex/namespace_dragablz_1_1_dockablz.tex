@@ -1,0 +1,99 @@
+\hypertarget{namespace_dragablz_1_1_dockablz}{}\doxysection{Dragablz.\+Dockablz Namespace Reference}
+\label{namespace_dragablz_1_1_dockablz}\index{Dragablz.Dockablz@{Dragablz.Dockablz}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_branch}{Branch}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_branch_accessor}{Branch\+Accessor}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_branch_result}{Branch\+Result}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_could_be_headered_style_selector}{Could\+Be\+Headered\+Style\+Selector}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_drop_zone}{Drop\+Zone}}
+\item 
+class {\bfseries Extensions}
+\item 
+class {\bfseries Finder}
+\item 
+class {\bfseries Floating\+Item\+Snap\+Shot}
+\begin{DoxyCompactList}\small\item\em experimentational. might have to puish this back to mvvm only \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_float_requested_event_args}{Float\+Requested\+Event\+Args}}
+\item 
+class {\bfseries Float\+Transfer}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_layout}{Layout}}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_layout_accessor}{Layout\+Accessor}}
+\begin{DoxyCompactList}\small\item\em Provides information about the \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_layout}{Layout}} instance. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_location_report}{Location\+Report}}
+\begin{DoxyCompactList}\small\item\em Provides information about where a tab control is withing a layout structure. \end{DoxyCompactList}\item 
+class {\bfseries Location\+Report\+Builder}
+\item 
+class \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_location_report_exception}{Location\+Report\+Exception}}
+\item 
+class {\bfseries Location\+Snap\+Shot}
+\begin{DoxyCompactList}\small\item\em Initially needed to restore M\+DI dragablz items styles after a max then restore, as the trigger which binds the item width to the canvas width sets the Width back to the default (e.\+g double.\+NaN) when the trigger is unset. so we need to re-\/apply sizes manually \end{DoxyCompactList}\item 
+class {\bfseries Tiler}
+\item 
+class {\bfseries Tiler\+Calculator}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_dragablz_1_1_dockablz_a6a690fa8e530ea21cc268ccb4cdb08ef}\label{namespace_dragablz_1_1_dockablz_a6a690fa8e530ea21cc268ccb4cdb08ef}} 
+enum {\bfseries Branch\+Item} \{ {\bfseries First}, 
+{\bfseries Second}, 
+{\bfseries First}, 
+{\bfseries Second}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_dragablz_1_1_dockablz_aae1f790d71597708d0e3a7373159cddd}\label{namespace_dragablz_1_1_dockablz_aae1f790d71597708d0e3a7373159cddd}} 
+enum {\bfseries Drop\+Zone\+Location} \{ \newline
+{\bfseries Top}, 
+{\bfseries Right}, 
+{\bfseries Bottom}, 
+{\bfseries Left}, 
+\newline
+{\bfseries Floating}, 
+{\bfseries Top}, 
+{\bfseries Right}, 
+{\bfseries Bottom}, 
+\newline
+{\bfseries Left}, 
+{\bfseries Floating}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_dragablz_1_1_dockablz_a6a690fa8e530ea21cc268ccb4cdb08ef}\label{namespace_dragablz_1_1_dockablz_a6a690fa8e530ea21cc268ccb4cdb08ef}} 
+enum {\bfseries Branch\+Item} \{ {\bfseries First}, 
+{\bfseries Second}, 
+{\bfseries First}, 
+{\bfseries Second}
+ \}
+\item 
+\mbox{\Hypertarget{namespace_dragablz_1_1_dockablz_aae1f790d71597708d0e3a7373159cddd}\label{namespace_dragablz_1_1_dockablz_aae1f790d71597708d0e3a7373159cddd}} 
+enum {\bfseries Drop\+Zone\+Location} \{ \newline
+{\bfseries Top}, 
+{\bfseries Right}, 
+{\bfseries Bottom}, 
+{\bfseries Left}, 
+\newline
+{\bfseries Floating}, 
+{\bfseries Top}, 
+{\bfseries Right}, 
+{\bfseries Bottom}, 
+\newline
+{\bfseries Left}, 
+{\bfseries Floating}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_dragablz_1_1_dockablz_a2a08aedca5d52206c79f161fd7cce14d}\label{namespace_dragablz_1_1_dockablz_a2a08aedca5d52206c79f161fd7cce14d}} 
+delegate void {\bfseries Float\+Requested\+Event\+Handler} (object sender, \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_float_requested_event_args}{Float\+Requested\+Event\+Args}} e)
+\item 
+\mbox{\Hypertarget{namespace_dragablz_1_1_dockablz_a1663441ac12a2e622d9c460fe318cc97}\label{namespace_dragablz_1_1_dockablz_a1663441ac12a2e622d9c460fe318cc97}} 
+delegate void {\bfseries Closing\+Floating\+Item\+Callback} (\mbox{\hyperlink{class_dragablz_1_1_item_action_callback_args}{Item\+Action\+Callback\+Args}}$<$ \mbox{\hyperlink{class_dragablz_1_1_dockablz_1_1_layout}{Layout}} $>$ args)
+\end{DoxyCompactItemize}

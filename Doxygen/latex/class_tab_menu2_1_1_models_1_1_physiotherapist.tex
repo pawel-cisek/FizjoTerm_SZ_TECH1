@@ -1,0 +1,76 @@
+\hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist}{}\doxysection{Tab\+Menu2.\+Models.\+Physiotherapist Class Reference}
+\label{class_tab_menu2_1_1_models_1_1_physiotherapist}\index{TabMenu2.Models.Physiotherapist@{TabMenu2.Models.Physiotherapist}}
+
+
+Klasa reprezentująca dane fizjoteraapeuty  
+
+
+Inheritance diagram for Tab\+Menu2.\+Models.\+Physiotherapist\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tab_menu2_1_1_models_1_1_physiotherapist}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist_a8140b913c83784504322d6847935806e}\label{class_tab_menu2_1_1_models_1_1_physiotherapist_a8140b913c83784504322d6847935806e}} 
+{\bfseries Physiotherapist} (string name, string surname, string adress, string phone, string email, int npwz)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist_a44fd659353c93c2f06189b9fa0d8af11}\label{class_tab_menu2_1_1_models_1_1_physiotherapist_a44fd659353c93c2f06189b9fa0d8af11}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist_a16a17f3256d56b1e7f5c271adefb89ab}\label{class_tab_menu2_1_1_models_1_1_physiotherapist_a16a17f3256d56b1e7f5c271adefb89ab}} 
+static void {\bfseries Add\+Physiotherapist} (string name, string surname, string adress, string phone, string email, int npwz, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist_a33c72d5a06e569cc4315f466b2848ed6}\label{class_tab_menu2_1_1_models_1_1_physiotherapist_a33c72d5a06e569cc4315f466b2848ed6}} 
+static void {\bfseries Delete\+Physiotherapist} (\mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_physiotherapist}{Physiotherapist}} physio, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist_a179eed07766d660cd8f53d10562b7458}\label{class_tab_menu2_1_1_models_1_1_physiotherapist_a179eed07766d660cd8f53d10562b7458}} 
+static I\+Enumerable$<$ \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_physiotherapist}{Physiotherapist}} $>$ {\bfseries Search\+Physiotherapist} (string name, string surname, string adress, string phone, string email, string npwz, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+static bool \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_physiotherapist_ab4d0247b17791e13853dfa58db3a92d0}{Nwpz\+Validation}} (string nwpz)
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzająca czy podany ciąg znaków jest numerem \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist_a86059c78c4410dc4c895e7bc8ea7028f}\label{class_tab_menu2_1_1_models_1_1_physiotherapist_a86059c78c4410dc4c895e7bc8ea7028f}} 
+string {\bfseries Email}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist_a06d16ae035723f692d37a9c3941bafac}\label{class_tab_menu2_1_1_models_1_1_physiotherapist_a06d16ae035723f692d37a9c3941bafac}} 
+int {\bfseries Npwz}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca dane fizjoteraapeuty 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_physiotherapist_ab4d0247b17791e13853dfa58db3a92d0}\label{class_tab_menu2_1_1_models_1_1_physiotherapist_ab4d0247b17791e13853dfa58db3a92d0}} 
+\index{TabMenu2.Models.Physiotherapist@{TabMenu2.Models.Physiotherapist}!NwpzValidation@{NwpzValidation}}
+\index{NwpzValidation@{NwpzValidation}!TabMenu2.Models.Physiotherapist@{TabMenu2.Models.Physiotherapist}}
+\doxysubsubsection{\texorpdfstring{NwpzValidation()}{NwpzValidation()}}
+{\footnotesize\ttfamily static bool Tab\+Menu2.\+Models.\+Physiotherapist.\+Nwpz\+Validation (\begin{DoxyParamCaption}\item[{string}]{nwpz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda sprawdzająca czy podany ciąg znaków jest numerem 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nwpz} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ podany ciąg jest numerem
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Fizjo\+Term/\+Models/Physiotherapist.\+cs\end{DoxyCompactItemize}

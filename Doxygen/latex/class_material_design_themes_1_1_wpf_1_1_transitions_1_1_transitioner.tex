@@ -1,0 +1,142 @@
+\hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner}{}\doxysection{Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner Class Reference}
+\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner}\index{MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}}
+
+
+The transitioner provides an easy way to move between content with a default in-\/place circular transition.  
+
+
+Inheritance diagram for Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.642229cm]{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Routed\+Command \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a55166c740fbe1b777085284aa6535455}{Move\+Next\+Command}} = new Routed\+Command()
+\begin{DoxyCompactList}\small\item\em Causes the the next slide to be displayed (affectively increments Selector.\+Selected\+Index). \end{DoxyCompactList}\item 
+static Routed\+Command \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a7fed27ed3a2dcb68e61bfda65720caa4}{Move\+Previous\+Command}} = new Routed\+Command()
+\begin{DoxyCompactList}\small\item\em Causes the the previous slide to be displayed (affectively decrements Selector.\+Selected\+Index). \end{DoxyCompactList}\item 
+static Routed\+Command \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_ad05fdeb8e6bff327970475fd1ff20930}{Move\+First\+Command}} = new Routed\+Command()
+\begin{DoxyCompactList}\small\item\em Moves to the first slide. \end{DoxyCompactList}\item 
+static Routed\+Command \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_afff549f2a4e79b82765857859e1c2a83}{Move\+Last\+Command}} = new Routed\+Command()
+\begin{DoxyCompactList}\small\item\em Moves to the last slide. \end{DoxyCompactList}\item 
+static readonly Dependency\+Property {\bfseries Auto\+Apply\+Transition\+Origins\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Default\+Transition\+Origin\+Property}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_aaad878a53a590124aad48b4d195e0162}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_aaad878a53a590124aad48b4d195e0162}} 
+override bool {\bfseries Is\+Item\+Its\+Own\+Container\+Override} (object item)
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_aa422582d7f26ac59a545e4f6fa99e205}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_aa422582d7f26ac59a545e4f6fa99e205}} 
+override Dependency\+Object {\bfseries Get\+Container\+For\+Item\+Override} ()
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_abbc92c1b38f2a7f91c86a1dbc5c6c7d1}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_abbc92c1b38f2a7f91c86a1dbc5c6c7d1}} 
+override void {\bfseries On\+Preview\+Mouse\+Left\+Button\+Down} (Mouse\+Button\+Event\+Args e)
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a040d13367a9647cf870c767f0517b9ba}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a040d13367a9647cf870c767f0517b9ba}} 
+override void {\bfseries On\+Selection\+Changed} (Selection\+Changed\+Event\+Args e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a66a1872acf569ed75e6e0aabe467e485}{Auto\+Apply\+Transition\+Origins}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If enabled, transition origins will be applied to wipes, according to where a transition was triggered from. For example, the mouse point where a user clicks a button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a155f9980e9a8f2ff41fc1c81862b084e}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a155f9980e9a8f2ff41fc1c81862b084e}} 
+Point {\bfseries Default\+Transition\+Origin}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The transitioner provides an easy way to move between content with a default in-\/place circular transition. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_aa332fdc159d9f8df64138238cdfdd439}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_aa332fdc159d9f8df64138238cdfdd439}} 
+\index{MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}!AutoApplyTransitionOriginsProperty@{AutoApplyTransitionOriginsProperty}}
+\index{AutoApplyTransitionOriginsProperty@{AutoApplyTransitionOriginsProperty}!MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}}
+\doxysubsubsection{\texorpdfstring{AutoApplyTransitionOriginsProperty}{AutoApplyTransitionOriginsProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner.\+Auto\+Apply\+Transition\+Origins\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"AutoApplyTransitionOrigins"}, typeof(\textcolor{keywordtype}{bool}), typeof(Transitioner), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keywordflow}{default}(\textcolor{keywordtype}{bool})))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a343b48aefa0bf0b5723f6b60998ecb2d}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a343b48aefa0bf0b5723f6b60998ecb2d}} 
+\index{MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}!DefaultTransitionOriginProperty@{DefaultTransitionOriginProperty}}
+\index{DefaultTransitionOriginProperty@{DefaultTransitionOriginProperty}!MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}}
+\doxysubsubsection{\texorpdfstring{DefaultTransitionOriginProperty}{DefaultTransitionOriginProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner.\+Default\+Transition\+Origin\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            \textcolor{stringliteral}{"DefaultTransitionOrigin"}, typeof(Point), typeof(Transitioner), \textcolor{keyword}{new} PropertyMetadata(\textcolor{keyword}{new} Point(0.5, 0.5)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_ad05fdeb8e6bff327970475fd1ff20930}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_ad05fdeb8e6bff327970475fd1ff20930}} 
+\index{MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}!MoveFirstCommand@{MoveFirstCommand}}
+\index{MoveFirstCommand@{MoveFirstCommand}!MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}}
+\doxysubsubsection{\texorpdfstring{MoveFirstCommand}{MoveFirstCommand}}
+{\footnotesize\ttfamily Routed\+Command Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner.\+Move\+First\+Command = new Routed\+Command()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Moves to the first slide. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_afff549f2a4e79b82765857859e1c2a83}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_afff549f2a4e79b82765857859e1c2a83}} 
+\index{MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}!MoveLastCommand@{MoveLastCommand}}
+\index{MoveLastCommand@{MoveLastCommand}!MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}}
+\doxysubsubsection{\texorpdfstring{MoveLastCommand}{MoveLastCommand}}
+{\footnotesize\ttfamily Routed\+Command Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner.\+Move\+Last\+Command = new Routed\+Command()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Moves to the last slide. 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a55166c740fbe1b777085284aa6535455}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a55166c740fbe1b777085284aa6535455}} 
+\index{MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}!MoveNextCommand@{MoveNextCommand}}
+\index{MoveNextCommand@{MoveNextCommand}!MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}}
+\doxysubsubsection{\texorpdfstring{MoveNextCommand}{MoveNextCommand}}
+{\footnotesize\ttfamily Routed\+Command Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner.\+Move\+Next\+Command = new Routed\+Command()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Causes the the next slide to be displayed (affectively increments Selector.\+Selected\+Index). 
+
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a7fed27ed3a2dcb68e61bfda65720caa4}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a7fed27ed3a2dcb68e61bfda65720caa4}} 
+\index{MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}!MovePreviousCommand@{MovePreviousCommand}}
+\index{MovePreviousCommand@{MovePreviousCommand}!MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}}
+\doxysubsubsection{\texorpdfstring{MovePreviousCommand}{MovePreviousCommand}}
+{\footnotesize\ttfamily Routed\+Command Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner.\+Move\+Previous\+Command = new Routed\+Command()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Causes the the previous slide to be displayed (affectively decrements Selector.\+Selected\+Index). 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a66a1872acf569ed75e6e0aabe467e485}\label{class_material_design_themes_1_1_wpf_1_1_transitions_1_1_transitioner_a66a1872acf569ed75e6e0aabe467e485}} 
+\index{MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}!AutoApplyTransitionOrigins@{AutoApplyTransitionOrigins}}
+\index{AutoApplyTransitionOrigins@{AutoApplyTransitionOrigins}!MaterialDesignThemes.Wpf.Transitions.Transitioner@{MaterialDesignThemes.Wpf.Transitions.Transitioner}}
+\doxysubsubsection{\texorpdfstring{AutoApplyTransitionOrigins}{AutoApplyTransitionOrigins}}
+{\footnotesize\ttfamily bool Material\+Design\+Themes.\+Wpf.\+Transitions.\+Transitioner.\+Auto\+Apply\+Transition\+Origins\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If enabled, transition origins will be applied to wipes, according to where a transition was triggered from. For example, the mouse point where a user clicks a button. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Material\+Design\+Themes.\+2.\+4.\+1.\+1101/src/net45/\+Transitions/Transitioner.\+cs\end{DoxyCompactItemize}

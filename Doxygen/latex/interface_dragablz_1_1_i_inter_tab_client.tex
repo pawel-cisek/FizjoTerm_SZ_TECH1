@@ -1,0 +1,137 @@
+\hypertarget{interface_dragablz_1_1_i_inter_tab_client}{}\doxysection{Dragablz.\+I\+Inter\+Tab\+Client Interface Reference}
+\label{interface_dragablz_1_1_i_inter_tab_client}\index{Dragablz.IInterTabClient@{Dragablz.IInterTabClient}}
+
+
+Implementors should provide mechanisms for providing new windows and closing old windows.  
+
+
+Inheritance diagram for Dragablz.\+I\+Inter\+Tab\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_dragablz_1_1_i_inter_tab_client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_dragablz_1_1_i_new_tab_host}{I\+New\+Tab\+Host}}$<$ Window $>$ \mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client_a5319eb3a1021c5d204b15e8424e21d45}{Get\+New\+Host}} (\mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client}{I\+Inter\+Tab\+Client}} inter\+Tab\+Client, object partition, \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} source)
+\begin{DoxyCompactList}\small\item\em Provide a new host window so a tab can be teared from an existing window into a new window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}{Tab\+Emptied\+Response}} \mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client_a6ee65df1ce5c4c0e5dd5fb43e177c8de}{Tab\+Emptied\+Handler}} (\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} tab\+Control, Window window)
+\begin{DoxyCompactList}\small\item\em Called when a tab has been emptied, and thus typically a window needs closing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_dragablz_1_1_i_new_tab_host}{I\+New\+Tab\+Host}}$<$ Window $>$ \mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client_a5319eb3a1021c5d204b15e8424e21d45}{Get\+New\+Host}} (\mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client}{I\+Inter\+Tab\+Client}} inter\+Tab\+Client, object partition, \mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} source)
+\begin{DoxyCompactList}\small\item\em Provide a new host window so a tab can be teared from an existing window into a new window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}{Tab\+Emptied\+Response}} \mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client_a6ee65df1ce5c4c0e5dd5fb43e177c8de}{Tab\+Emptied\+Handler}} (\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}} tab\+Control, Window window)
+\begin{DoxyCompactList}\small\item\em Called when a tab has been emptied, and thus typically a window needs closing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementors should provide mechanisms for providing new windows and closing old windows. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_dragablz_1_1_i_inter_tab_client_a5319eb3a1021c5d204b15e8424e21d45}\label{interface_dragablz_1_1_i_inter_tab_client_a5319eb3a1021c5d204b15e8424e21d45}} 
+\index{Dragablz.IInterTabClient@{Dragablz.IInterTabClient}!GetNewHost@{GetNewHost}}
+\index{GetNewHost@{GetNewHost}!Dragablz.IInterTabClient@{Dragablz.IInterTabClient}}
+\doxysubsubsection{\texorpdfstring{GetNewHost()}{GetNewHost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_dragablz_1_1_i_new_tab_host}{I\+New\+Tab\+Host}}$<$Window$>$ Dragablz.\+I\+Inter\+Tab\+Client.\+Get\+New\+Host (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client}{I\+Inter\+Tab\+Client}}}]{inter\+Tab\+Client,  }\item[{object}]{partition,  }\item[{\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}}]{source }\end{DoxyParamCaption})}
+
+
+
+Provide a new host window so a tab can be teared from an existing window into a new window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inter\+Tab\+Client} & \\
+\hline
+{\em partition} & Provides the partition where the drag operation was initiated.\\
+\hline
+{\em source} & The source control where a dragging operation was initiated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client_af7d7eb4a54b66c41db12df54dbc9a970}{Dragablz.\+Default\+Inter\+Tab\+Client}}, and \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client_af7d7eb4a54b66c41db12df54dbc9a970}{Dragablz.\+Default\+Inter\+Tab\+Client}}.
+
+\mbox{\Hypertarget{interface_dragablz_1_1_i_inter_tab_client_a5319eb3a1021c5d204b15e8424e21d45}\label{interface_dragablz_1_1_i_inter_tab_client_a5319eb3a1021c5d204b15e8424e21d45}} 
+\index{Dragablz.IInterTabClient@{Dragablz.IInterTabClient}!GetNewHost@{GetNewHost}}
+\index{GetNewHost@{GetNewHost}!Dragablz.IInterTabClient@{Dragablz.IInterTabClient}}
+\doxysubsubsection{\texorpdfstring{GetNewHost()}{GetNewHost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_dragablz_1_1_i_new_tab_host}{I\+New\+Tab\+Host}}$<$Window$>$ Dragablz.\+I\+Inter\+Tab\+Client.\+Get\+New\+Host (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_dragablz_1_1_i_inter_tab_client}{I\+Inter\+Tab\+Client}}}]{inter\+Tab\+Client,  }\item[{object}]{partition,  }\item[{\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}}]{source }\end{DoxyParamCaption})}
+
+
+
+Provide a new host window so a tab can be teared from an existing window into a new window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inter\+Tab\+Client} & \\
+\hline
+{\em partition} & Provides the partition where the drag operation was initiated.\\
+\hline
+{\em source} & The source control where a dragging operation was initiated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client_af7d7eb4a54b66c41db12df54dbc9a970}{Dragablz.\+Default\+Inter\+Tab\+Client}}, and \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client_af7d7eb4a54b66c41db12df54dbc9a970}{Dragablz.\+Default\+Inter\+Tab\+Client}}.
+
+\mbox{\Hypertarget{interface_dragablz_1_1_i_inter_tab_client_a6ee65df1ce5c4c0e5dd5fb43e177c8de}\label{interface_dragablz_1_1_i_inter_tab_client_a6ee65df1ce5c4c0e5dd5fb43e177c8de}} 
+\index{Dragablz.IInterTabClient@{Dragablz.IInterTabClient}!TabEmptiedHandler@{TabEmptiedHandler}}
+\index{TabEmptiedHandler@{TabEmptiedHandler}!Dragablz.IInterTabClient@{Dragablz.IInterTabClient}}
+\doxysubsubsection{\texorpdfstring{TabEmptiedHandler()}{TabEmptiedHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}{Tab\+Emptied\+Response}} Dragablz.\+I\+Inter\+Tab\+Client.\+Tab\+Emptied\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}}]{tab\+Control,  }\item[{Window}]{window }\end{DoxyParamCaption})}
+
+
+
+Called when a tab has been emptied, and thus typically a window needs closing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab\+Control} & \\
+\hline
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client_ad6739e27e5c6317c899a9da7ffc2768f}{Dragablz.\+Default\+Inter\+Tab\+Client}}, and \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client_ad6739e27e5c6317c899a9da7ffc2768f}{Dragablz.\+Default\+Inter\+Tab\+Client}}.
+
+\mbox{\Hypertarget{interface_dragablz_1_1_i_inter_tab_client_a6ee65df1ce5c4c0e5dd5fb43e177c8de}\label{interface_dragablz_1_1_i_inter_tab_client_a6ee65df1ce5c4c0e5dd5fb43e177c8de}} 
+\index{Dragablz.IInterTabClient@{Dragablz.IInterTabClient}!TabEmptiedHandler@{TabEmptiedHandler}}
+\index{TabEmptiedHandler@{TabEmptiedHandler}!Dragablz.IInterTabClient@{Dragablz.IInterTabClient}}
+\doxysubsubsection{\texorpdfstring{TabEmptiedHandler()}{TabEmptiedHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_dragablz_ad4a2d8dbbe98563cb71be886868cc5d4}{Tab\+Emptied\+Response}} Dragablz.\+I\+Inter\+Tab\+Client.\+Tab\+Emptied\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dragablz_1_1_tabablz_control}{Tabablz\+Control}}}]{tab\+Control,  }\item[{Window}]{window }\end{DoxyParamCaption})}
+
+
+
+Called when a tab has been emptied, and thus typically a window needs closing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab\+Control} & \\
+\hline
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client_ad6739e27e5c6317c899a9da7ffc2768f}{Dragablz.\+Default\+Inter\+Tab\+Client}}, and \mbox{\hyperlink{class_dragablz_1_1_default_inter_tab_client_ad6739e27e5c6317c899a9da7ffc2768f}{Dragablz.\+Default\+Inter\+Tab\+Client}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Dragablz.\+0.\+0.\+3.\+203/src/net40/I\+Inter\+Tab\+Client.\+cs\end{DoxyCompactItemize}

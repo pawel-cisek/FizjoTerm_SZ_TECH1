@@ -1,0 +1,81 @@
+\hypertarget{class_material_design_themes_1_1_wpf_1_1_card}{}\doxysection{Material\+Design\+Themes.\+Wpf.\+Card Class Reference}
+\label{class_material_design_themes_1_1_wpf_1_1_card}\index{MaterialDesignThemes.Wpf.Card@{MaterialDesignThemes.Wpf.Card}}
+
+
+A card is a content control, styled according to Material Design guidelines.  
+
+
+Inheritance diagram for Material\+Design\+Themes.\+Wpf.\+Card\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_material_design_themes_1_1_wpf_1_1_card}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_card_a86a19b93264cda28cafa0cbd88f8bb3e}\label{class_material_design_themes_1_1_wpf_1_1_card_a86a19b93264cda28cafa0cbd88f8bb3e}} 
+override void {\bfseries On\+Apply\+Template} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_card_aed4656fb278d5d51323e7fe3b585ea81}\label{class_material_design_themes_1_1_wpf_1_1_card_aed4656fb278d5d51323e7fe3b585ea81}} 
+const string {\bfseries Clip\+Border\+Part\+Name} = \char`\"{}P\+A\+R\+T\+\_\+\+Clip\+Border\char`\"{}
+\item 
+static readonly Dependency\+Property {\bfseries Uniform\+Corner\+Radius\+Property}
+\item 
+static readonly Dependency\+Property {\bfseries Content\+Clip\+Property}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_card_aa9e82f7d30cdff91f854d9afe2a77a53}\label{class_material_design_themes_1_1_wpf_1_1_card_aa9e82f7d30cdff91f854d9afe2a77a53}} 
+override void {\bfseries On\+Render\+Size\+Changed} (Size\+Changed\+Info size\+Info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_card_aa4901b5b1643a9775cedfdfc87ac50a9}\label{class_material_design_themes_1_1_wpf_1_1_card_aa4901b5b1643a9775cedfdfc87ac50a9}} 
+double {\bfseries Uniform\+Corner\+Radius}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_card_a9e02125ff1f2e55a3862421e4639c28a}\label{class_material_design_themes_1_1_wpf_1_1_card_a9e02125ff1f2e55a3862421e4639c28a}} 
+Geometry {\bfseries Content\+Clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A card is a content control, styled according to Material Design guidelines. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_card_a6f72c06caacf9a81f3b1efdd27832a35}\label{class_material_design_themes_1_1_wpf_1_1_card_a6f72c06caacf9a81f3b1efdd27832a35}} 
+\index{MaterialDesignThemes.Wpf.Card@{MaterialDesignThemes.Wpf.Card}!ContentClipProperty@{ContentClipProperty}}
+\index{ContentClipProperty@{ContentClipProperty}!MaterialDesignThemes.Wpf.Card@{MaterialDesignThemes.Wpf.Card}}
+\doxysubsubsection{\texorpdfstring{ContentClipProperty}{ContentClipProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Card.\+Content\+Clip\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            ContentClipPropertyKey.DependencyProperty}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_material_design_themes_1_1_wpf_1_1_card_a568e65990771c84244e3ee5515201386}\label{class_material_design_themes_1_1_wpf_1_1_card_a568e65990771c84244e3ee5515201386}} 
+\index{MaterialDesignThemes.Wpf.Card@{MaterialDesignThemes.Wpf.Card}!UniformCornerRadiusProperty@{UniformCornerRadiusProperty}}
+\index{UniformCornerRadiusProperty@{UniformCornerRadiusProperty}!MaterialDesignThemes.Wpf.Card@{MaterialDesignThemes.Wpf.Card}}
+\doxysubsubsection{\texorpdfstring{UniformCornerRadiusProperty}{UniformCornerRadiusProperty}}
+{\footnotesize\ttfamily readonly Dependency\+Property Material\+Design\+Themes.\+Wpf.\+Card.\+Uniform\+Corner\+Radius\+Property\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= DependencyProperty.Register(}
+\DoxyCodeLine{            nameof(UniformCornerRadius), typeof (\textcolor{keywordtype}{double}), typeof (Card), \textcolor{keyword}{new} FrameworkPropertyMetadata(2.0, FrameworkPropertyMetadataOptions.AffectsMeasure))}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Material\+Design\+Themes.\+2.\+4.\+1.\+1101/src/net45/Card.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\hypertarget{class_tab_menu2_1_1_models_1_1_patient}{}\doxysection{Tab\+Menu2.\+Models.\+Patient Class Reference}
+\label{class_tab_menu2_1_1_models_1_1_patient}\index{TabMenu2.Models.Patient@{TabMenu2.Models.Patient}}
+
+
+Klasa reprezentująca dane pacjenta  
+
+
+Inheritance diagram for Tab\+Menu2.\+Models.\+Patient\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tab_menu2_1_1_models_1_1_patient}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_patient_afad579d81cf9d1c4ad0fb6e960498e33}\label{class_tab_menu2_1_1_models_1_1_patient_afad579d81cf9d1c4ad0fb6e960498e33}} 
+{\bfseries Patient} (string name, string surname, string pesel, string adress, string phone)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_patient_a37a36e432972b7d65c8a153bd429a928}\label{class_tab_menu2_1_1_models_1_1_patient_a37a36e432972b7d65c8a153bd429a928}} 
+override string {\bfseries To\+String} ()
+\item 
+override bool \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient_abfafac314596be2edc90c0a6399f7857}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em Metoda porównująca dwa obiekty \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_patient_a4aa6a6094f3ff4914dc9dd4c746c324b}\label{class_tab_menu2_1_1_models_1_1_patient_a4aa6a6094f3ff4914dc9dd4c746c324b}} 
+static void {\bfseries Add\+Patient} (string name, string surname, string pesel, string adress, string phone, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_patient_a7e05fbfd64c70399cefc75b43ab3684d}\label{class_tab_menu2_1_1_models_1_1_patient_a7e05fbfd64c70399cefc75b43ab3684d}} 
+static void {\bfseries Delete\+Patient} (\mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient}{Patient}} pat, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_patient_af9c7e0c363bd1414d7565bd5b21c19cd}\label{class_tab_menu2_1_1_models_1_1_patient_af9c7e0c363bd1414d7565bd5b21c19cd}} 
+static I\+Enumerable$<$ \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient}{Patient}} $>$ {\bfseries Search\+Patient} (string name, string surname, string pesel, string adress, string phone, \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_application_db_context}{Application\+Db\+Context}} dbcontext)
+\item 
+static bool \mbox{\hyperlink{class_tab_menu2_1_1_models_1_1_patient_a5f19a12bcad5a0007d878b39c29b5ea4}{Pesel\+Validation}} (string pesel)
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzająca czy podany numer jest numerem P\+E\+S\+EL \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_patient_ad8eb24d52b1908f6652cfb2b2236722d}\label{class_tab_menu2_1_1_models_1_1_patient_ad8eb24d52b1908f6652cfb2b2236722d}} 
+string {\bfseries Pesel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca dane pacjenta 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_patient_abfafac314596be2edc90c0a6399f7857}\label{class_tab_menu2_1_1_models_1_1_patient_abfafac314596be2edc90c0a6399f7857}} 
+\index{TabMenu2.Models.Patient@{TabMenu2.Models.Patient}!Equals@{Equals}}
+\index{Equals@{Equals}!TabMenu2.Models.Patient@{TabMenu2.Models.Patient}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily override bool Tab\+Menu2.\+Models.\+Patient.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+Metoda porównująca dwa obiekty 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ obiekty posiadają takie same dane, False -\/ obiekty posiadają różne dane
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tab_menu2_1_1_models_1_1_patient_a5f19a12bcad5a0007d878b39c29b5ea4}\label{class_tab_menu2_1_1_models_1_1_patient_a5f19a12bcad5a0007d878b39c29b5ea4}} 
+\index{TabMenu2.Models.Patient@{TabMenu2.Models.Patient}!PeselValidation@{PeselValidation}}
+\index{PeselValidation@{PeselValidation}!TabMenu2.Models.Patient@{TabMenu2.Models.Patient}}
+\doxysubsubsection{\texorpdfstring{PeselValidation()}{PeselValidation()}}
+{\footnotesize\ttfamily static bool Tab\+Menu2.\+Models.\+Patient.\+Pesel\+Validation (\begin{DoxyParamCaption}\item[{string}]{pesel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Metoda sprawdzająca czy podany numer jest numerem P\+E\+S\+EL 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pesel} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True -\/ P\+E\+S\+EL poprawny, False -\/ P\+E\+S\+EL błędny
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Fizjo\+Term/\+Models/Patient.\+cs\end{DoxyCompactItemize}

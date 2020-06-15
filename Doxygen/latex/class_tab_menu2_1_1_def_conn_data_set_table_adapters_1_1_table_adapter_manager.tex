@@ -1,0 +1,74 @@
+\hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager}{}\doxysection{Tab\+Menu2.\+Def\+Conn\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager Class Reference}
+\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager}\index{TabMenu2.DefConnDataSetTableAdapters.TableAdapterManager@{TabMenu2.DefConnDataSetTableAdapters.TableAdapterManager}}
+
+
+\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager}{Table\+Adapter\+Manager}} is used to coordinate Table\+Adapters in the dataset to enable Hierarchical Update scenarios /summary$>$  
+
+
+Inheritance diagram for Tab\+Menu2.\+Def\+Conn\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_abe20507f7dc6293fbb61dcbe8065aa09}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_abe20507f7dc6293fbb61dcbe8065aa09}} 
+enum \mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_abe20507f7dc6293fbb61dcbe8065aa09}{Update\+Order\+Option}} \{ {\bfseries Insert\+Update\+Delete} = 0, 
+{\bfseries Update\+Insert\+Delete} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Update Order Option /summary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_ae13a377b8fd40dab1534075896fdfbdf}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_ae13a377b8fd40dab1534075896fdfbdf}} 
+virtual int \mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_ae13a377b8fd40dab1534075896fdfbdf}{Update\+All}} (\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set}{Def\+Conn\+Data\+Set}} data\+Set)
+\begin{DoxyCompactList}\small\item\em Update all changes to the dataset. /summary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a0025a75898f07c5550d00f2fe0cf4a8e}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a0025a75898f07c5550d00f2fe0cf4a8e}} 
+virtual void {\bfseries Sort\+Self\+Reference\+Rows} (global\+::\+System.\+Data.\+Data\+Row\mbox{[}$\,$\mbox{]} rows, global\+::\+System.\+Data.\+Data\+Relation relation, bool child\+First)
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a3360207cdc09e3eab31ae24b80bcd162}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a3360207cdc09e3eab31ae24b80bcd162}} 
+virtual bool {\bfseries Match\+Table\+Adapter\+Connection} (global\+::\+System.\+Data.\+I\+Db\+Connection input\+Connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a5945e57a6e6b2a9e70524d4ba0f3707a}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a5945e57a6e6b2a9e70524d4ba0f3707a}} 
+\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_abe20507f7dc6293fbb61dcbe8065aa09}{Update\+Order\+Option}} {\bfseries Update\+Order}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a62ab9e7f989b19f37a184f77e113cb4d}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a62ab9e7f989b19f37a184f77e113cb4d}} 
+\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_patient_table_adapter}{Patient\+Table\+Adapter}} {\bfseries Patient\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_aa9e3af1226cc3ef136f2df419e273337}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_aa9e3af1226cc3ef136f2df419e273337}} 
+\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_physiotherapist_table_adapter}{Physiotherapist\+Table\+Adapter}} {\bfseries Physiotherapist\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a4172f64b673bff578f85043b872075a3}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a4172f64b673bff578f85043b872075a3}} 
+\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_referral_table_adapter}{Referral\+Table\+Adapter}} {\bfseries Referral\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_acc90c29dab58e63df6f47093484f9284}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_acc90c29dab58e63df6f47093484f9284}} 
+\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_report_table_adapter}{Report\+Table\+Adapter}} {\bfseries Report\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a0ed5a1c570fc51e23570985b2e881dab}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a0ed5a1c570fc51e23570985b2e881dab}} 
+\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_visit_table_adapter}{Visit\+Table\+Adapter}} {\bfseries Visit\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_aaa9d9b31be15f3c5aa744cc0a944d5c9}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_aaa9d9b31be15f3c5aa744cc0a944d5c9}} 
+bool {\bfseries Backup\+Data\+Set\+Before\+Update}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a2e011a306a6bed804e1b0ab0bb778496}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a2e011a306a6bed804e1b0ab0bb778496}} 
+global\+::\+System.\+Data.\+I\+Db\+Connection {\bfseries Connection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a8f03434403df0a02112f326b7b1c6c43}\label{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager_a8f03434403df0a02112f326b7b1c6c43}} 
+int {\bfseries Table\+Adapter\+Instance\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_tab_menu2_1_1_def_conn_data_set_table_adapters_1_1_table_adapter_manager}{Table\+Adapter\+Manager}} is used to coordinate Table\+Adapters in the dataset to enable Hierarchical Update scenarios /summary$>$ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Fizjo\+Term/Def\+Conn\+Data\+Set.\+Designer.\+cs\end{DoxyCompactItemize}
